@@ -1,0 +1,36 @@
+{
+ "attach_files": "",
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.check==1",
+ "condition_type": "Python",
+ "creation": "2026-07-27 17:01:16.291344",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Details",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Mail Sent</p>",
+ "message_type": "HTML",
+ "minutes_offset": 0,
+ "modified": "2026-07-27 17:11:48.040314",
+ "modified_by": "Administrator",
+ "module": "Practice_App",
+ "name": "Email_Notification",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "email",
+   "receiver_by_role": "All"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "Sowmiya",
+ "sender_email": "sowmiyaselvaraj8025@gmail.com",
+ "subject": "{{doc.name1}}",
+ "value_changed": "check"
+}

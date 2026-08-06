@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-07-27 16:50:09.825550",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "email",
+  "check",
+  "new_data",
+  "attachment",
+  "status",
+  "table"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "name1",
+   "options": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "check",
+   "fieldtype": "Check",
+   "label": "check"
+  },
+  {
+   "fieldname": "new_data",
+   "fieldtype": "Data",
+   "label": "new_data",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "attachment"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "status",
+   "options": "Pending\nApprove\nReject"
+  },
+  {
+   "fieldname": "table",
+   "fieldtype": "Table",
+   "label": "table",
+   "options": "Child_Table"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-01 16:41:44.457417",
+ "modified_by": "Administrator",
+ "module": "Practice_App",
+ "name": "Details",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "name1"
+}
