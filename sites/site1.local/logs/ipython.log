@@ -1,0 +1,137 @@
+2026-07-14 11:37:00,093 INFO ipython === bench console session ===
+2026-07-14 11:37:00,093 INFO ipython import frappe
+2026-07-14 11:37:00,094 INFO ipython frappe.get_doc("User", "Administrator").enabled
+2026-07-14 11:37:00,094 INFO ipython frappe.get_doc("User", "Administrator").name
+2026-07-14 11:37:00,094 INFO ipython frappe.db.get_value("User", "Administrator", ["enabled", "login_after", "last_active"], as_dict=True)
+2026-07-14 11:37:00,094 INFO ipython === session end ===
+2026-07-28 09:41:49,503 INFO ipython === bench console session ===
+2026-07-28 09:41:49,512 INFO ipython doc = frappe.new_doc("Details")
+2026-07-28 09:41:49,512 INFO ipython doc.name1 = "sanju"
+2026-07-28 09:41:49,512 INFO ipython doc.email = "sanju@email.com"
+2026-07-28 09:41:49,513 INFO ipython doc.check = 1
+2026-07-28 09:41:49,513 INFO ipython doc.insert()
+2026-07-28 09:41:49,513 INFO ipython frappe.get_doc("Details", "6fgco8t9u9")
+2026-07-28 09:41:49,513 INFO ipython doc = frappe.new_doc("Details","6fgco8t9u9")
+2026-07-28 09:41:49,513 INFO ipython doc = frappe.get_doc("Details","6fgco8t9u9")
+2026-07-28 09:41:49,513 INFO ipython print(doc.name1)
+2026-07-28 09:41:49,513 INFO ipython doc.name1 = "sanjana"
+2026-07-28 09:41:49,513 INFO ipython p
+2026-07-28 09:41:49,513 INFO ipython print(doc.has_value_changed("name1"))
+2026-07-28 09:41:49,513 INFO ipython doc.save()
+2026-07-28 09:41:49,513 INFO ipython frappe.delete_doc("Details", "6fgco8t9u9")
+2026-07-28 09:41:49,513 INFO ipython frappe.get_doc("Details","6fgco8t9u9")
+2026-07-28 09:41:49,513 INFO ipython === session end ===
+2026-07-28 09:55:45,931 INFO ipython === bench console session ===
+2026-07-28 09:55:45,931 INFO ipython doc = frappe.new_doc("Details")
+2026-07-28 09:55:45,931 INFO ipython doc.name1 = "sanju"
+2026-07-28 09:55:45,931 INFO ipython doc.email = "sanju@email.com"
+2026-07-28 09:55:45,932 INFO ipython doc.check = 1
+2026-07-28 09:55:45,932 INFO ipython doc.in
+2026-07-28 09:55:45,932 INFO ipython doc.insert()
+2026-07-28 09:55:45,932 INFO ipython === session end ===
+2026-07-28 10:00:31,486 INFO ipython === bench console session ===
+2026-07-28 10:00:31,486 INFO ipython === session end ===
+2026-07-28 11:01:31,889 INFO ipython === bench console session ===
+2026-07-28 11:01:31,890 INFO ipython === session end ===
+2026-07-28 11:02:18,901 INFO ipython === bench console session ===
+2026-07-28 11:02:18,901 INFO ipython frappe.db.commit()
+2026-07-28 11:02:18,901 INFO ipython === session end ===
+2026-07-28 13:24:29,291 INFO ipython === bench console session ===
+2026-07-28 13:24:29,318 INFO ipython doc = frappe.get_doc("Details","6fgco8t9u9")
+2026-07-28 13:24:29,318 INFO ipython doc = frappe.new_doc("Details")
+2026-07-28 13:24:29,318 INFO ipython doc.name1 = "sanjuram"
+2026-07-28 13:24:29,318 INFO ipython doc.email = "sanjuram@email.com"
+2026-07-28 13:24:29,318 INFO ipython doc.check = 1
+2026-07-28 13:24:29,319 INFO ipython doc.insert()
+2026-07-28 13:24:29,319 INFO ipython frappe.db.commit()
+2026-07-28 13:24:29,319 INFO ipython doc = frappe.get_doc("Details","5mpk28mlsv")
+2026-07-28 13:24:29,319 INFO ipython doc.name1 = "sanjuram123"
+2026-07-28 13:24:29,319 INFO ipython frappe.db.commit()
+2026-07-28 13:24:29,319 INFO ipython doc.name1 = "sanjuram123"
+2026-07-28 13:24:29,319 INFO ipython doc.s
+2026-07-28 13:24:29,319 INFO ipython doc.save()
+2026-07-28 13:24:29,319 INFO ipython frappe.db.commit()
+2026-07-28 13:24:29,319 INFO ipython === session end ===
+2026-08-04 09:20:30,968 INFO ipython === bench console session ===
+2026-08-04 09:20:30,970 INFO ipython import frappe
+2026-08-04 09:20:30,970 INFO ipython frappe.get_hooks("app_include_css")
+2026-08-04 09:20:30,970 INFO ipython === session end ===
+2026-08-05 05:32:52,424 INFO ipython === bench console session ===
+2026-08-05 05:32:52,425 INFO ipython import frappe
+frappe.get_hooks("homepage")
+2026-08-05 05:32:52,425 INFO ipython === session end ===
+2026-08-05 05:37:49,555 INFO ipython === bench console session ===
+2026-08-05 05:37:49,555 INFO ipython settings = frappe.get_single("Website Settings")
+print(settings.home_page)
+2026-08-05 05:37:49,555 INFO ipython print(frappe.get_hooks("role_home_page"))
+print(frappe.get_hooks("get_website_user_home_page"))
+2026-08-05 05:37:49,555 INFO ipython settings = frappe.get_single("Website Settings")
+print("home_page:", settings.home_page)
+print("app_name:", settings.app_name)
+2026-08-05 05:37:49,556 INFO ipython frappe.get_all(
+    "Website Route Redirect",
+    fields=["source", "target", "redirect_http_status"]
+)
+2026-08-05 05:37:49,556 INFO ipython system_settings = frappe.get_single("System Settings")
+print(system_settings.allow_login_using_mobile_number)
+2026-08-05 05:37:49,556 INFO ipython === session end ===
+2026-08-05 05:44:07,184 INFO ipython === bench console session ===
+2026-08-05 05:44:07,186 INFO ipython import frappe
+
+settings = frappe.get_single("Website Settings")
+settings.home_page = ""
+settings.save()
+
+frappe.db.commit()
+2026-08-05 05:44:07,186 INFO ipython === session end ===
+2026-08-05 06:16:52,287 INFO ipython === bench console session ===
+2026-08-05 06:16:52,296 INFO ipython import frappe
+
+print(frappe.local.site)
+print(frappe.get_hooks("homepage"))
+print(frappe.db.get_single_value("Website Settings", "home_page"))
+2026-08-05 06:16:52,296 INFO ipython from frappe.website.utils import get_home_page
+
+print(get_home_page())
+2026-08-05 06:16:52,296 INFO ipython import frappe
+
+frappe.set_user("Guest")
+
+from frappe.website.utils import get_home_page
+
+print(get_home_page())
+2026-08-05 06:16:52,296 INFO ipython settings = frappe.get_single("Website Settings")
+
+print("home_page:", repr(settings.home_page))
+print("login_required:", settings.login_required)
+2026-08-05 06:16:52,296 INFO ipython import inspect
+from frappe.website.utils import get_home_page
+
+print(inspect.getsource(get_home_page))
+2026-08-05 06:16:52,296 INFO ipython import frappe
+
+user = frappe.get_doc("User", "sanjay@email.com")
+
+print("User Type:", user.user_type)
+print("Roles:", user.get_roles())
+2026-08-05 06:16:52,296 INFO ipython === session end ===
+2026-08-05 06:31:13,344 INFO ipython === bench console session ===
+2026-08-05 06:31:13,345 INFO ipython import frappe
+
+print(frappe.get_hooks("portal_menu_items"))
+2026-08-05 06:31:13,345 INFO ipython import frappe
+
+print(frappe.get_roles("sanjay@email.com"))
+2026-08-05 06:31:13,345 INFO ipython === session end ===
+2026-08-05 06:34:48,295 INFO ipython === bench console session ===
+2026-08-05 06:34:48,295 INFO ipython import frappe
+
+menu = frappe.get_hooks("portal_menu_items")
+print(menu[0]["role"])
+2026-08-05 06:34:48,295 INFO ipython import frappe
+from frappe.website.portal import get_sidebar_items
+
+frappe.set_user("sanjay@email.com")
+
+print(get_sidebar_items())
+2026-08-05 06:34:48,295 INFO ipython === session end ===

@@ -1,0 +1,3 @@
+2026-08-01 08:12:00,546 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for doctypesite
+2026-08-01 08:12:00,558 ERROR scheduler Skipped queueing frappe.email.doctype.notification.notification.trigger_offset_alerts because it was found in queue for doctypesite
+2026-08-01 08:12:00,559 ERROR scheduler Skipped queueing frappe.utils.telemetry.pulse.client.send_queued_events because it was found in queue for doctypesite

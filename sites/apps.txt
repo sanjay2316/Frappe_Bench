@@ -1,0 +1,7 @@
+frappe
+doctypeapp
+test2_app
+testapp
+practice_app
+student_management
+fieldapp

@@ -1,0 +1,11 @@
+{
+ "db_name": "_0e0e8f4505c3c9e6",
+ "db_password": "9CcShzm9koin6C8E",
+ "db_type": "mariadb",
+ "db_user": "_0e0e8f4505c3c9e6",
+ "encryption_key": "AqmUbYJ_bw1dGvht7NHD6J2xELBmVgi0-ETUMxquIbY=",
+ "installed_apps": [
+  "frappe",
+  "doctypeapp"
+ ]
+}

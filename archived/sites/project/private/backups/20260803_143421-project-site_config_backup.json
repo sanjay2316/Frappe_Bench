@@ -1,0 +1,10 @@
+{
+ "db_name": "_cc001b8908fd52e2",
+ "db_password": "MkfhelKK7676ix1L",
+ "db_type": "mariadb",
+ "db_user": "_cc001b8908fd52e2",
+ "installed_apps": [
+  "frappe",
+  "student_management"
+ ]
+}

@@ -1,0 +1,83 @@
+Wrote document file for DocType Test_Document at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/test_document/test_document.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/test_document/test_document.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/test_document/test_test_document.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/test_document/test_document.js already exists, skipping...
+Wrote document file for DocType Test_Document at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/test_document/test_document.json
+Traceback (most recent call last):
+  File "apps/frappe/frappe/model/base_document.py", line 766, in db_insert
+    name = frappe.db.sql(
+    	"""INSERT INTO `tab{doctype}` ({columns})
+    ...<7 lines>...
+    	list(d.values()),
+    )
+  File "apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "env/lib/python3.14/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "env/lib/python3.14/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+    ~~~~~~~~^^^
+  File "env/lib/python3.14/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+MySQLdb.IntegrityError: (1062, "Duplicate entry 'Test_Document' for key 'PRIMARY'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/client.py", line 211, in insert
+    return insert_doc(doc).as_dict()
+           ~~~~~~~~~~^^^^^
+  File "apps/frappe/frappe/client.py", line 527, in insert_doc
+    return frappe.get_doc(doc).insert()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/model/document.py", line 490, in insert
+    self.db_insert(ignore_if_duplicate=ignore_if_duplicate)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/base_document.py", line 793, in db_insert
+    raise frappe.DuplicateEntryError(self.doctype, self.name, e)
+frappe.exceptions.DuplicateEntryError: ('DocType', 'Test_Document', IntegrityError(1062, "Duplicate entry 'Test_Document' for key 'PRIMARY'"))
+
+Wrote document file for Web Form test-webform at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/web_form/test_webform/test_webform.json
+Wrote document file for Web Form test-webform at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/web_form/test_webform/test_webform.json
+Wrote document file for Web Form test-webform at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/web_form/test_webform/test_webform.json
+Wrote document file for Web Form test-webform at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/web_form/test_webform/test_webform.json
+Hook called for: sanjay@email.com
+Hook called for: Administrator
+Hook called for: Guest
+Hook called for: sanjay@email.com
+Hook called for: sanjay@email.com
+Hook called for: Administrator
+Hook called for: sanjay@email.com
+Hook called for: Administrator
+Hook called for: Guest
+Hook called for: sanjay@email.com
+Hook called for: Administrator
+Hook called for: sanjay@email.com
+Hook called for: Guest
+Hook called for: Administrator
+Hook called for: Guest
+Hook called for: sanjay@email.com
+Hook called for: Administrator
+Hook called for: sanjay@email.com
+Hook called for: sanjay@email.com

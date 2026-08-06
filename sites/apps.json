@@ -1,0 +1,71 @@
+{
+    "frappe": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 1,
+        "version": "16.26.3"
+    },
+    "testapp": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "d33880424babe753a0f2b7484d83530105e15c1f",
+            "branch": "testbranch"
+        },
+        "required": [],
+        "idx": 2,
+        "version": "0.0.1"
+    },
+    "test2_app": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "0b8c86fafbc0be4de7c7e518747da9505d49b46f",
+            "branch": "test2_branch"
+        },
+        "required": [],
+        "idx": 3,
+        "version": "0.0.1"
+    },
+    "fieldapp": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "a7e0b3ff4905e96e8395ecb26afb8fd46058ed76",
+            "branch": "newbranch"
+        },
+        "required": [],
+        "idx": 4,
+        "version": "0.0.1"
+    },
+    "doctypeapp": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "0455c9f9f002b4407540afa0be6a08fd2c2aad4e",
+            "branch": "doctypebench"
+        },
+        "required": [],
+        "idx": 5,
+        "version": "0.0.1"
+    },
+    "student_management": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "dacbdf53df1d72cdc3caeaa3de8387370427087f",
+            "branch": "projectbranch"
+        },
+        "required": [],
+        "idx": 6,
+        "version": "0.0.1"
+    },
+    "practice_app": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "6fb9be1c3e5047d0ec670e5e765cdac50046978b",
+            "branch": "practicebranch"
+        },
+        "required": [],
+        "idx": 7,
+        "version": "0.0.1"
+    }
+}

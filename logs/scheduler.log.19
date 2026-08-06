@@ -1,0 +1,1492 @@
+2026-07-31 13:08:00,247 ERROR scheduler Exception in Enqueue Events for Site project1
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x76557a780ea0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 161, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 173, in is_scheduler_disabled
+    scheduler_disabled = not frappe.get_system_settings("enable_scheduler")
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/core/doctype/system_settings/system_settings.py", line 252, in get_system_settings
+    system_settings = frappe.client_cache.get_doc("System Settings")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in get_doc
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 544, in get_value
+    val = generator()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in <lambda>
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/utils/__init__.py", line 225, in wrapper
+    return dispatch(args[0])(*args, **kw)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/document.py", line 143, in get_doc_str
+    if controller := get_controller(doctype):
+                     ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 667, in get_values
+    query = frappe.qb.get_query(
+    	table=doctype,
+    ...<7 lines>...
+    	limit=limit,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 293, in get_query
+    self.apply_filters(filters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 389, in apply_filters
+    self.apply_dict_filters(filters, collect=collect)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 528, in apply_dict_filters
+    self._apply_filter(field, value, operator, collect=collect)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 539, in _apply_filter
+    criterion = self._build_criterion_for_simple_filter(field, value, operator, doctype)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 557, in _build_criterion_for_simple_filter
+    additional_filters_config = get_additional_filters_from_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/boot.py", line 304, in get_additional_filters_from_hooks
+    filter_hooks = frappe.get_hooks("filters_config")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 966, in _load_app_hooks
+    apps = [app_name] if app_name else get_installed_apps(_ensure_on_bench=True)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
+2026-07-31 13:12:00,414 ERROR scheduler Exception in Enqueue Events for Site project1
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x76557a780ea0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 161, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 173, in is_scheduler_disabled
+    scheduler_disabled = not frappe.get_system_settings("enable_scheduler")
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/core/doctype/system_settings/system_settings.py", line 252, in get_system_settings
+    system_settings = frappe.client_cache.get_doc("System Settings")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in get_doc
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 544, in get_value
+    val = generator()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in <lambda>
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/utils/__init__.py", line 225, in wrapper
+    return dispatch(args[0])(*args, **kw)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/document.py", line 143, in get_doc_str
+    if controller := get_controller(doctype):
+                     ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 667, in get_values
+    query = frappe.qb.get_query(
+    	table=doctype,
+    ...<7 lines>...
+    	limit=limit,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 293, in get_query
+    self.apply_filters(filters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 389, in apply_filters
+    self.apply_dict_filters(filters, collect=collect)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 528, in apply_dict_filters
+    self._apply_filter(field, value, operator, collect=collect)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 539, in _apply_filter
+    criterion = self._build_criterion_for_simple_filter(field, value, operator, doctype)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 557, in _build_criterion_for_simple_filter
+    additional_filters_config = get_additional_filters_from_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/boot.py", line 304, in get_additional_filters_from_hooks
+    filter_hooks = frappe.get_hooks("filters_config")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 966, in _load_app_hooks
+    apps = [app_name] if app_name else get_installed_apps(_ensure_on_bench=True)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
+2026-07-31 13:16:00,459 ERROR scheduler Exception in Enqueue Events for Site project1
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x76557a780ea0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 161, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 173, in is_scheduler_disabled
+    scheduler_disabled = not frappe.get_system_settings("enable_scheduler")
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/core/doctype/system_settings/system_settings.py", line 252, in get_system_settings
+    system_settings = frappe.client_cache.get_doc("System Settings")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in get_doc
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 544, in get_value
+    val = generator()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in <lambda>
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/utils/__init__.py", line 225, in wrapper
+    return dispatch(args[0])(*args, **kw)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/document.py", line 143, in get_doc_str
+    if controller := get_controller(doctype):
+                     ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 667, in get_values
+    query = frappe.qb.get_query(
+    	table=doctype,
+    ...<7 lines>...
+    	limit=limit,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 293, in get_query
+    self.apply_filters(filters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 389, in apply_filters
+    self.apply_dict_filters(filters, collect=collect)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 528, in apply_dict_filters
+    self._apply_filter(field, value, operator, collect=collect)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 539, in _apply_filter
+    criterion = self._build_criterion_for_simple_filter(field, value, operator, doctype)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 557, in _build_criterion_for_simple_filter
+    additional_filters_config = get_additional_filters_from_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/boot.py", line 304, in get_additional_filters_from_hooks
+    filter_hooks = frappe.get_hooks("filters_config")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 966, in _load_app_hooks
+    apps = [app_name] if app_name else get_installed_apps(_ensure_on_bench=True)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
+2026-07-31 13:20:00,772 ERROR scheduler Exception in Enqueue Events for Site project1
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x76557a780ea0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 161, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 173, in is_scheduler_disabled
+    scheduler_disabled = not frappe.get_system_settings("enable_scheduler")
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/core/doctype/system_settings/system_settings.py", line 252, in get_system_settings
+    system_settings = frappe.client_cache.get_doc("System Settings")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in get_doc
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 544, in get_value
+    val = generator()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in <lambda>
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/utils/__init__.py", line 225, in wrapper
+    return dispatch(args[0])(*args, **kw)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/document.py", line 143, in get_doc_str
+    if controller := get_controller(doctype):
+                     ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 667, in get_values
+    query = frappe.qb.get_query(
+    	table=doctype,
+    ...<7 lines>...
+    	limit=limit,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 293, in get_query
+    self.apply_filters(filters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 389, in apply_filters
+    self.apply_dict_filters(filters, collect=collect)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 528, in apply_dict_filters
+    self._apply_filter(field, value, operator, collect=collect)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 539, in _apply_filter
+    criterion = self._build_criterion_for_simple_filter(field, value, operator, doctype)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 557, in _build_criterion_for_simple_filter
+    additional_filters_config = get_additional_filters_from_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/boot.py", line 304, in get_additional_filters_from_hooks
+    filter_hooks = frappe.get_hooks("filters_config")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 966, in _load_app_hooks
+    apps = [app_name] if app_name else get_installed_apps(_ensure_on_bench=True)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
+2026-07-31 13:24:03,341 ERROR scheduler Exception in Enqueue Events for Site project1
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7f38930bcea0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 161, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 173, in is_scheduler_disabled
+    scheduler_disabled = not frappe.get_system_settings("enable_scheduler")
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/core/doctype/system_settings/system_settings.py", line 252, in get_system_settings
+    system_settings = frappe.client_cache.get_doc("System Settings")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in get_doc
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 544, in get_value
+    val = generator()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in <lambda>
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/utils/__init__.py", line 225, in wrapper
+    return dispatch(args[0])(*args, **kw)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/document.py", line 143, in get_doc_str
+    if controller := get_controller(doctype):
+                     ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 667, in get_values
+    query = frappe.qb.get_query(
+    	table=doctype,
+    ...<7 lines>...
+    	limit=limit,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 293, in get_query
+    self.apply_filters(filters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 389, in apply_filters
+    self.apply_dict_filters(filters, collect=collect)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 528, in apply_dict_filters
+    self._apply_filter(field, value, operator, collect=collect)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 539, in _apply_filter
+    criterion = self._build_criterion_for_simple_filter(field, value, operator, doctype)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 557, in _build_criterion_for_simple_filter
+    additional_filters_config = get_additional_filters_from_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/boot.py", line 304, in get_additional_filters_from_hooks
+    filter_hooks = frappe.get_hooks("filters_config")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 966, in _load_app_hooks
+    apps = [app_name] if app_name else get_installed_apps(_ensure_on_bench=True)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
+2026-07-31 13:28:00,439 ERROR scheduler Exception in Enqueue Events for Site project1
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7f38930bcea0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 161, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 173, in is_scheduler_disabled
+    scheduler_disabled = not frappe.get_system_settings("enable_scheduler")
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/core/doctype/system_settings/system_settings.py", line 252, in get_system_settings
+    system_settings = frappe.client_cache.get_doc("System Settings")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in get_doc
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 544, in get_value
+    val = generator()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in <lambda>
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/utils/__init__.py", line 225, in wrapper
+    return dispatch(args[0])(*args, **kw)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/document.py", line 143, in get_doc_str
+    if controller := get_controller(doctype):
+                     ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 667, in get_values
+    query = frappe.qb.get_query(
+    	table=doctype,
+    ...<7 lines>...
+    	limit=limit,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 293, in get_query
+    self.apply_filters(filters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 389, in apply_filters
+    self.apply_dict_filters(filters, collect=collect)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 528, in apply_dict_filters
+    self._apply_filter(field, value, operator, collect=collect)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 539, in _apply_filter
+    criterion = self._build_criterion_for_simple_filter(field, value, operator, doctype)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 557, in _build_criterion_for_simple_filter
+    additional_filters_config = get_additional_filters_from_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/boot.py", line 304, in get_additional_filters_from_hooks
+    filter_hooks = frappe.get_hooks("filters_config")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 966, in _load_app_hooks
+    apps = [app_name] if app_name else get_installed_apps(_ensure_on_bench=True)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
+2026-07-31 13:32:00,700 ERROR scheduler Exception in Enqueue Events for Site project1
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7f38930bcea0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 161, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 173, in is_scheduler_disabled
+    scheduler_disabled = not frappe.get_system_settings("enable_scheduler")
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/core/doctype/system_settings/system_settings.py", line 252, in get_system_settings
+    system_settings = frappe.client_cache.get_doc("System Settings")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in get_doc
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 544, in get_value
+    val = generator()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in <lambda>
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/utils/__init__.py", line 225, in wrapper
+    return dispatch(args[0])(*args, **kw)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/document.py", line 143, in get_doc_str
+    if controller := get_controller(doctype):
+                     ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 667, in get_values
+    query = frappe.qb.get_query(
+    	table=doctype,
+    ...<7 lines>...
+    	limit=limit,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 293, in get_query
+    self.apply_filters(filters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 389, in apply_filters
+    self.apply_dict_filters(filters, collect=collect)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 528, in apply_dict_filters
+    self._apply_filter(field, value, operator, collect=collect)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 539, in _apply_filter
+    criterion = self._build_criterion_for_simple_filter(field, value, operator, doctype)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 557, in _build_criterion_for_simple_filter
+    additional_filters_config = get_additional_filters_from_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/boot.py", line 304, in get_additional_filters_from_hooks
+    filter_hooks = frappe.get_hooks("filters_config")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 966, in _load_app_hooks
+    apps = [app_name] if app_name else get_installed_apps(_ensure_on_bench=True)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
+2026-07-31 13:36:00,806 ERROR scheduler Exception in Enqueue Events for Site project1
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7f38930bcea0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 161, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 173, in is_scheduler_disabled
+    scheduler_disabled = not frappe.get_system_settings("enable_scheduler")
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/core/doctype/system_settings/system_settings.py", line 252, in get_system_settings
+    system_settings = frappe.client_cache.get_doc("System Settings")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in get_doc
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 544, in get_value
+    val = generator()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in <lambda>
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/utils/__init__.py", line 225, in wrapper
+    return dispatch(args[0])(*args, **kw)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/document.py", line 143, in get_doc_str
+    if controller := get_controller(doctype):
+                     ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 667, in get_values
+    query = frappe.qb.get_query(
+    	table=doctype,
+    ...<7 lines>...
+    	limit=limit,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 293, in get_query
+    self.apply_filters(filters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 389, in apply_filters
+    self.apply_dict_filters(filters, collect=collect)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 528, in apply_dict_filters
+    self._apply_filter(field, value, operator, collect=collect)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 539, in _apply_filter
+    criterion = self._build_criterion_for_simple_filter(field, value, operator, doctype)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 557, in _build_criterion_for_simple_filter
+    additional_filters_config = get_additional_filters_from_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/boot.py", line 304, in get_additional_filters_from_hooks
+    filter_hooks = frappe.get_hooks("filters_config")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 966, in _load_app_hooks
+    apps = [app_name] if app_name else get_installed_apps(_ensure_on_bench=True)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
+2026-07-31 13:40:00,153 ERROR scheduler Exception in Enqueue Events for Site project1
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7f38930bcea0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 161, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 173, in is_scheduler_disabled
+    scheduler_disabled = not frappe.get_system_settings("enable_scheduler")
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/core/doctype/system_settings/system_settings.py", line 252, in get_system_settings
+    system_settings = frappe.client_cache.get_doc("System Settings")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in get_doc
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 544, in get_value
+    val = generator()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in <lambda>
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/utils/__init__.py", line 225, in wrapper
+    return dispatch(args[0])(*args, **kw)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/document.py", line 143, in get_doc_str
+    if controller := get_controller(doctype):
+                     ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 667, in get_values
+    query = frappe.qb.get_query(
+    	table=doctype,
+    ...<7 lines>...
+    	limit=limit,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 293, in get_query
+    self.apply_filters(filters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 389, in apply_filters
+    self.apply_dict_filters(filters, collect=collect)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 528, in apply_dict_filters
+    self._apply_filter(field, value, operator, collect=collect)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 539, in _apply_filter
+    criterion = self._build_criterion_for_simple_filter(field, value, operator, doctype)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 557, in _build_criterion_for_simple_filter
+    additional_filters_config = get_additional_filters_from_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/boot.py", line 304, in get_additional_filters_from_hooks
+    filter_hooks = frappe.get_hooks("filters_config")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 966, in _load_app_hooks
+    apps = [app_name] if app_name else get_installed_apps(_ensure_on_bench=True)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
+2026-07-31 13:44:00,271 ERROR scheduler Exception in Enqueue Events for Site project1
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7f38930bcea0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 161, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 173, in is_scheduler_disabled
+    scheduler_disabled = not frappe.get_system_settings("enable_scheduler")
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/core/doctype/system_settings/system_settings.py", line 252, in get_system_settings
+    system_settings = frappe.client_cache.get_doc("System Settings")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in get_doc
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 544, in get_value
+    val = generator()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in <lambda>
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/utils/__init__.py", line 225, in wrapper
+    return dispatch(args[0])(*args, **kw)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/document.py", line 143, in get_doc_str
+    if controller := get_controller(doctype):
+                     ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 667, in get_values
+    query = frappe.qb.get_query(
+    	table=doctype,
+    ...<7 lines>...
+    	limit=limit,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 293, in get_query
+    self.apply_filters(filters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 389, in apply_filters
+    self.apply_dict_filters(filters, collect=collect)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 528, in apply_dict_filters
+    self._apply_filter(field, value, operator, collect=collect)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 539, in _apply_filter
+    criterion = self._build_criterion_for_simple_filter(field, value, operator, doctype)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 557, in _build_criterion_for_simple_filter
+    additional_filters_config = get_additional_filters_from_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/boot.py", line 304, in get_additional_filters_from_hooks
+    filter_hooks = frappe.get_hooks("filters_config")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 966, in _load_app_hooks
+    apps = [app_name] if app_name else get_installed_apps(_ensure_on_bench=True)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
+2026-07-31 13:48:00,585 ERROR scheduler Exception in Enqueue Events for Site project1
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7f38930bcea0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 161, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 173, in is_scheduler_disabled
+    scheduler_disabled = not frappe.get_system_settings("enable_scheduler")
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/core/doctype/system_settings/system_settings.py", line 252, in get_system_settings
+    system_settings = frappe.client_cache.get_doc("System Settings")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in get_doc
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 544, in get_value
+    val = generator()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in <lambda>
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/utils/__init__.py", line 225, in wrapper
+    return dispatch(args[0])(*args, **kw)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/document.py", line 143, in get_doc_str
+    if controller := get_controller(doctype):
+                     ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 667, in get_values
+    query = frappe.qb.get_query(
+    	table=doctype,
+    ...<7 lines>...
+    	limit=limit,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 293, in get_query
+    self.apply_filters(filters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 389, in apply_filters
+    self.apply_dict_filters(filters, collect=collect)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 528, in apply_dict_filters
+    self._apply_filter(field, value, operator, collect=collect)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 539, in _apply_filter
+    criterion = self._build_criterion_for_simple_filter(field, value, operator, doctype)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 557, in _build_criterion_for_simple_filter
+    additional_filters_config = get_additional_filters_from_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/boot.py", line 304, in get_additional_filters_from_hooks
+    filter_hooks = frappe.get_hooks("filters_config")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 966, in _load_app_hooks
+    apps = [app_name] if app_name else get_installed_apps(_ensure_on_bench=True)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
+2026-08-01 04:56:02,083 ERROR scheduler Exception in Enqueue Events for Site project1
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7ac713980ea0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 161, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 173, in is_scheduler_disabled
+    scheduler_disabled = not frappe.get_system_settings("enable_scheduler")
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/core/doctype/system_settings/system_settings.py", line 252, in get_system_settings
+    system_settings = frappe.client_cache.get_doc("System Settings")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in get_doc
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 544, in get_value
+    val = generator()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in <lambda>
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/utils/__init__.py", line 225, in wrapper
+    return dispatch(args[0])(*args, **kw)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/document.py", line 143, in get_doc_str
+    if controller := get_controller(doctype):
+                     ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 667, in get_values
+    query = frappe.qb.get_query(
+    	table=doctype,
+    ...<7 lines>...
+    	limit=limit,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 293, in get_query
+    self.apply_filters(filters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 389, in apply_filters
+    self.apply_dict_filters(filters, collect=collect)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 528, in apply_dict_filters
+    self._apply_filter(field, value, operator, collect=collect)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 539, in _apply_filter
+    criterion = self._build_criterion_for_simple_filter(field, value, operator, doctype)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 557, in _build_criterion_for_simple_filter
+    additional_filters_config = get_additional_filters_from_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/boot.py", line 304, in get_additional_filters_from_hooks
+    filter_hooks = frappe.get_hooks("filters_config")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 966, in _load_app_hooks
+    apps = [app_name] if app_name else get_installed_apps(_ensure_on_bench=True)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
+2026-08-01 05:00:00,783 ERROR scheduler Exception in Enqueue Events for Site project1
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7ac713980ea0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 117, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 161, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/scheduler.py", line 173, in is_scheduler_disabled
+    scheduler_disabled = not frappe.get_system_settings("enable_scheduler")
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/core/doctype/system_settings/system_settings.py", line 252, in get_system_settings
+    system_settings = frappe.client_cache.get_doc("System Settings")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in get_doc
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 544, in get_value
+    val = generator()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 581, in <lambda>
+    return self.get_value(key, generator=lambda: frappe.get_doc(doctype, name))
+                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/utils/__init__.py", line 225, in wrapper
+    return dispatch(args[0])(*args, **kw)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/document.py", line 143, in get_doc_str
+    if controller := get_controller(doctype):
+                     ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 92, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/model/base_document.py", line 103, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, ("module", "custom", "is_tree"), as_dict=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 564, in get_value
+    result = self.get_values(
+    	doctype,
+    ...<13 lines>...
+    	wait=wait,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 667, in get_values
+    query = frappe.qb.get_query(
+    	table=doctype,
+    ...<7 lines>...
+    	limit=limit,
+    )
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 293, in get_query
+    self.apply_filters(filters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 389, in apply_filters
+    self.apply_dict_filters(filters, collect=collect)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 528, in apply_dict_filters
+    self._apply_filter(field, value, operator, collect=collect)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 539, in _apply_filter
+    criterion = self._build_criterion_for_simple_filter(field, value, operator, doctype)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/query.py", line 557, in _build_criterion_for_simple_filter
+    additional_filters_config = get_additional_filters_from_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/boot.py", line 304, in get_additional_filters_from_hooks
+    filter_hooks = frappe.get_hooks("filters_config")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 966, in _load_app_hooks
+    apps = [app_name] if app_name else get_installed_apps(_ensure_on_bench=True)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
+2026-08-01 08:12:00,528 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for doctypesite
+2026-08-01 08:12:00,534 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for doctypesite
+2026-08-01 08:12:00,536 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for doctypesite
+2026-08-01 08:12:00,537 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for doctypesite
+2026-08-01 08:12:00,541 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for doctypesite
+2026-08-01 08:12:00,542 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for doctypesite
+2026-08-01 08:12:00,545 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for doctypesite
+2026-08-01 08:12:00,565 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for project
+2026-08-01 08:12:00,591 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for site2.local
+2026-08-01 12:28:00,381 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for site1.local
