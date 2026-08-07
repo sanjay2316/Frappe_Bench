@@ -843,3 +843,11 @@
 2026-08-06 09:22:54,203 INFO /usr/local/bin/bench worker --queue short,default
 2026-08-06 09:22:54,205 INFO /usr/local/bin/bench socketio
 2026-08-06 09:22:54,205 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-07 05:09:30,957 INFO /usr/local/bin/bench schedule
+2026-08-07 05:09:30,960 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-07 05:09:30,961 INFO /usr/local/bin/bench socketio
+2026-08-07 05:09:30,963 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-07 05:09:55,722 INFO /home/sanjayh/.local/bin/bench start
+2026-08-07 05:56:46,205 INFO /home/sanjayh/.local/bin/bench --site site1.local console
+2026-08-07 05:57:39,134 INFO /home/sanjayh/.local/bin/bench --site site1.local console
+2026-08-07 06:00:02,439 INFO /home/sanjayh/.local/bin/bench --verbose --site all backup

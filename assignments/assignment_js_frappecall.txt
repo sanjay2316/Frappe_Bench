@@ -1,0 +1,75 @@
+js-frappecall Assignment
+
+
+Question : In this assignment, you will combine frontend dialogs, AJAX calls, and backend document creation.
+
+Step 1: Backend Method Create a Python method in your custom app and mark it with @frappe.whitelist(). The method should accept a task_subject string. Inside this method, use frappe.new_doc('Task') to create a new Task document, set its subject to the passed argument, call .save(), and return the name of the created document.
+
+Step 2: Frontend Dialog Write a JavaScript snippet (you can test this in the browser console or as a Client Script). Create a frappe.ui.Dialog with a 'Task Subject' field (fieldtype: 'Data', reqd: 1) and a 'Create Task' primary action.
+
+Step 3: Frontend API Call & Feedback Inside the dialog's primary_action, use frappe.call to execute your whitelisted Python method, passing the entered task subject. In the callback function, hide the dialog and use frappe.msgprint to show a success message with a green indicator, confirming the Task was created successfully.
+
+Submission: Submit a URL to a GitHub Gist containing both your Python code and your JavaScript snippet.
+
+
+
+ClientSide_Code
+
+
+ frappe.ui.form.on("Task", {
+    refresh(frm) {
+        frm.add_custom_button("Create Task", function () {
+
+            let dialog = new frappe.ui.Dialog({
+                title: "Create Task",
+                fields: [
+                    {
+                        label: "Task Subject",
+                        fieldname: "task_subject",
+                        fieldtype: "Data",
+                        reqd: 1
+                    }
+                ],
+                primary_action_label: "Create Task",
+                primary_action(values) {
+
+                    frappe.call({
+                        method: "practice_app.api.create_task",
+                        args: {
+                            task_subject: values.task_subject
+                        },
+                        callback: function (r) {
+
+                            dialog.hide();
+
+                            frappe.msgprint({
+                                title: "Success",
+                                indicator: "green",
+                                message: `Task ${r.message} created successfully.`
+                            });
+
+                        }
+                    });
+
+                }
+            });
+
+            dialog.show();
+
+        });
+    }
+});
+
+
+Api.py_Code
+
+
+import frappe
+
+@frappe.whitelist()
+def create_task(task_subject):
+    doc = frappe.new_doc("Task")
+    doc.task_subject = task_subject
+    doc.save()
+
+    return doc.name

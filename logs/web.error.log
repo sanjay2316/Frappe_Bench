@@ -2209,3 +2209,26 @@ AttributeError: is_ajax
 [2026-08-06 09:22:58 +0000] [2701] [INFO] Booting worker with pid: 2701
 [2026-08-06 09:22:58 +0000] [2725] [INFO] Booting worker with pid: 2725
 [2026-08-06 09:22:58 +0000] [2726] [INFO] Booting worker with pid: 2726
+[2026-08-06 11:17:07 +0000] [2012] [INFO] Handling signal: term
+[2026-08-06 11:17:07 +0000] [2551] [INFO] Worker exiting (pid: 2551)
+[2026-08-06 11:17:07 +0000] [2700] [INFO] Worker exiting (pid: 2700)
+[2026-08-06 11:17:07 +0000] [2725] [INFO] Worker exiting (pid: 2725)
+[2026-08-06 11:17:07 +0000] [2481] [INFO] Worker exiting (pid: 2481)
+[2026-08-06 11:17:08 +0000] [2701] [INFO] Worker exiting (pid: 2701)
+[2026-08-06 11:17:08 +0000] [2595] [INFO] Worker exiting (pid: 2595)
+[2026-08-06 11:17:08 +0000] [2439] [INFO] Worker exiting (pid: 2439)
+[2026-08-06 11:17:08 +0000] [2653] [INFO] Worker exiting (pid: 2653)
+[2026-08-06 11:17:08 +0000] [2726] [INFO] Worker exiting (pid: 2726)
+[2026-08-06 11:17:09 +0000] [2012] [INFO] Shutting down: Master
+[2026-08-07 05:09:35 +0000] [378] [INFO] Starting gunicorn 23.0.0
+[2026-08-07 05:09:35 +0000] [378] [INFO] Listening at: http://127.0.0.1:8001 (378)
+[2026-08-07 05:09:35 +0000] [378] [INFO] Using worker: sync
+[2026-08-07 05:09:35 +0000] [565] [INFO] Booting worker with pid: 565
+[2026-08-07 05:09:35 +0000] [567] [INFO] Booting worker with pid: 567
+[2026-08-07 05:09:35 +0000] [570] [INFO] Booting worker with pid: 570
+[2026-08-07 05:09:35 +0000] [575] [INFO] Booting worker with pid: 575
+[2026-08-07 05:09:36 +0000] [581] [INFO] Booting worker with pid: 581
+[2026-08-07 05:09:36 +0000] [582] [INFO] Booting worker with pid: 582
+[2026-08-07 05:09:36 +0000] [583] [INFO] Booting worker with pid: 583
+[2026-08-07 05:09:36 +0000] [584] [INFO] Booting worker with pid: 584
+[2026-08-07 05:09:36 +0000] [588] [INFO] Booting worker with pid: 588

@@ -5612,3 +5612,19 @@ Backup Summary for testsite.local at 2026-08-06 11:30:05.764012
 Config  : /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260806_113004-testsite_local-site_config_backup.json 228.0B
 Database: /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260806_113004-testsite_local-database.sql.gz 235.4KiB
 Backup for Site testsite.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_822c72c2e1855b78 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _822c72c2e1855b78 | /usr/bin/gzip >> ./site1.local/private/backups/20260807_113004-site1_local-database.sql.gz
+
+Backup Summary for site1.local at 2026-08-07 11:30:10.715200
+Config  : /home/sanjayh/frappe16-bench/sites/site1.local/private/backups/20260807_113004-site1_local-site_config_backup.json 261.0B
+Database: /home/sanjayh/frappe16-bench/sites/site1.local/private/backups/20260807_113004-site1_local-database.sql.gz 345.7KiB
+Backup for Site site1.local has been successfully completed
+File ./testsite.local/private/backups/20260806_113004-testsite_local-site_config_backup.json is older than 23 hours
+File ./testsite.local/private/backups/20260805_173004-testsite_local-site_config_backup.json is older than 23 hours
+File ./testsite.local/private/backups/20260805_173004-testsite_local-database.sql.gz is older than 23 hours
+File ./testsite.local/private/backups/20260806_113004-testsite_local-database.sql.gz is older than 23 hours
+set -o pipefail; /usr/bin/mariadb-dump --user=_69fa8765336c1e39 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _69fa8765336c1e39 | /usr/bin/gzip >> ./testsite.local/private/backups/20260807_113010-testsite_local-database.sql.gz
+
+Backup Summary for testsite.local at 2026-08-07 11:30:13.694675
+Config  : /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260807_113010-testsite_local-site_config_backup.json 228.0B
+Database: /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260807_113010-testsite_local-database.sql.gz 235.4KiB
+Backup for Site testsite.local has been successfully completed

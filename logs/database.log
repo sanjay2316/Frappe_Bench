@@ -2027,3 +2027,23 @@ create table if not exists __UserSettings (
 			`data` TEXT,
 			UNIQUE(user, doctype)
 			) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+2026-08-07 05:14:23,317 WARNING database DDL Query made to DB:
+create table `tabTask` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-08-07 05:17:01,537 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTask` ADD COLUMN `task_name` varchar(140), ADD COLUMN `task_subject` varchar(140)
