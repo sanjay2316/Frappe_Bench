@@ -3031,3 +3031,11 @@ index creation(creation))
 			COLLATE=utf8mb4_unicode_ci
 2026-08-07 05:17:01,537 WARNING database DDL Query made to DB:
 ALTER TABLE `tabTask` ADD COLUMN `task_name` varchar(140), ADD COLUMN `task_subject` varchar(140)
+2026-08-12 12:55:24,889 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDetails` ADD UNIQUE INDEX IF NOT EXISTS email (`email`)
+2026-08-12 12:55:43,025 WARNING database DDL Query made to DB:
+create sequence if not exists details_id_seq nocache nocycle
+2026-08-12 12:55:43,069 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDetails` MODIFY `name` bigint
+2026-08-12 13:01:44,245 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDetails_email` ADD COLUMN `emp_id` int(11) NOT NULL DEFAULT 0

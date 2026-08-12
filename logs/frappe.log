@@ -82,3 +82,87 @@ Form Dict: {'recipients': 'sowmiyaselvaraj9025@gmail.com', 'subject': 'Email Acc
 2026-08-11 10:18:34,091 ERROR frappe New Exception collected in error log
 Site: site1.local
 Form Dict: {'recipients': 'sowmiyaselvaraj9025@gmail.com', 'subject': 'Email Account: Sowmiya', 'content': '<div class="ql-editor read-mode"><p>hellooooo</p></div>', 'doctype': 'Email Account', 'name': 'Sowmiya', 'send_email': '1', 'print_html': '', 'send_me_a_copy': '0', 'print_format': 'Standard', 'attachments': '[]', 'read_receipt': '0', 'print_letterhead': '1', 'send_after': '', 'print_language': 'en', 'add_css': '1', 'in_reply_to': '', 'cmd': 'frappe.core.doctype.communication.email.make'}
+2026-08-12 07:01:57,747 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'docname': 'DET-000http://site1.local/api/method/practice_app.api.get_detail_email?docname=sanjaysanjaysanjay', 'cmd': 'practice_app.api.get_detail_email'}
+2026-08-12 07:02:10,751 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'docname': 'DET-000http://site1.local/api/method/practice_app.api.get_detail_email?docname=sanjaysanjaysanjay', 'cmd': 'practice_app.api.get_detail_email'}
+2026-08-12 07:04:06,785 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'docname': 'sanjaysanjaysanjay', 'cmd': 'practice_app.api.get_detail_email'}
+2026-08-12 07:12:49,051 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'docname': 'igvdlia5lq', 'utm_source': 'chatgpt.com', 'cmd': 'practice_app.api.get_detail_info'}
+2026-08-12 07:21:19,788 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.get_approved_name'}
+2026-08-12 07:22:58,081 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'docname': 'igvdlia5lq', 'status': 'Approve', 'cmd': 'practice_app.api.update_status'}
+2026-08-12 07:23:18,922 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'docname': 'igvdlia5lq', 'status': 'Approve', 'cmd': 'practice_app.api.update_status'}
+2026-08-12 07:25:59,054 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'docname': 'igvdlia5lq', 'status': 'Approve', 'cmd': 'practice_app.api.update_status'}
+2026-08-12 07:26:05,004 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'docname': 'igvdlia5lq', 'status': 'Approve', 'cmd': 'practice_app.api.update_status'}
+2026-08-12 07:26:26,603 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'docname': 'igvdlia5lq', 'status': 'Approve', 'cmd': 'practice_app.api.update_status'}
+2026-08-12 08:27:08,367 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'docname': 'igvdlia5lq', 'status': 'Approve', 'cmd': 'practice_app.api.update_status'}
+2026-08-12 08:28:00,092 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'docname': 'igvdlia5lq', 'status': 'Approve', 'cmd': 'practice_app.api.update_status'}
+2026-08-12 09:08:18,967 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'docname': 'igvdlia5lq', 'cmd': 'practice_app.api.check_detail_exists'}
+2026-08-12 09:23:46,655 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.count_details'}
+2026-08-12 09:23:48,516 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.count_details'}
+2026-08-12 09:23:58,098 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.count_details'}
+2026-08-12 09:24:40,927 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.count_details'}
+2026-08-12 09:24:46,399 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.count_details'}
+2026-08-12 09:24:47,717 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.count_details'}
+2026-08-12 09:24:50,922 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.count_details'}
+2026-08-12 09:25:42,769 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.count_details'}
+2026-08-12 09:25:43,623 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.count_details'}
+2026-08-12 09:25:44,155 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.count_details'}
+2026-08-12 09:25:45,000 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.count_details'}
+2026-08-12 09:26:30,765 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.count_details'}
+2026-08-12 09:27:48,238 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.count_details'}
+2026-08-12 09:27:51,288 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.count_details'}
+2026-08-12 13:18:40,482 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.process_details'}

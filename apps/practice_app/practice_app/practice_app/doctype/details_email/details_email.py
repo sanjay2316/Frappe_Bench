@@ -15,6 +15,7 @@ class Details_email(Document):
 		from frappe.types import DF
 
 		email: DF.Data | None
+		emp_id: DF.Int
 		select_data: DF.Link | None
 	# end: auto-generated types
 

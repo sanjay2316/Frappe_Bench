@@ -16,6 +16,7 @@ class Details(Document):
         check: DF.Check
         email: DF.Data
         name1: DF.Data
+        name: DF.Int | None
         new_data: DF.Data | None
         status: DF.Literal["Pending", "Approve", "Reject"]
         table: DF.Table[Child_Table]

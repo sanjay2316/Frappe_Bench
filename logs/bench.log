@@ -1044,3 +1044,35 @@
 2026-08-12 05:22:09,511 INFO /usr/local/bin/bench worker --queue long,default,short
 2026-08-12 05:25:53,232 INFO /home/sanjayh/.local/bin/bench --site site1.local build
 2026-08-12 05:26:54,789 INFO /home/sanjayh/.local/bin/bench migrate
+2026-08-12 06:00:02,663 INFO /home/sanjayh/.local/bin/bench --verbose --site all backup
+2026-08-12 07:05:33,425 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-12 07:05:38,251 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-12 07:05:44,662 INFO /usr/local/bin/bench socketio
+2026-08-12 07:05:45,425 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-12 07:05:46,974 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-12 07:05:47,029 INFO /usr/local/bin/bench schedule
+2026-08-12 07:05:47,289 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-12 07:06:52,058 INFO /home/sanjayh/.local/bin/bench console
+2026-08-12 07:23:43,944 INFO /home/sanjayh/.local/bin/bench console
+2026-08-12 09:08:41,862 INFO /home/sanjayh/.local/bin/bench console
+2026-08-12 09:09:38,732 INFO /home/sanjayh/.local/bin/bench console
+2026-08-12 09:24:27,545 INFO /home/sanjayh/.local/bin/bench console
+2026-08-12 09:28:16,989 INFO /home/sanjayh/.local/bin/bench build
+2026-08-12 09:28:59,884 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-12 09:29:07,749 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-12 09:29:10,831 INFO /usr/local/bin/bench socketio
+2026-08-12 09:29:11,962 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-12 09:29:14,401 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-12 09:29:14,411 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-12 09:29:14,438 INFO /usr/local/bin/bench schedule
+2026-08-12 12:00:01,817 INFO /home/sanjayh/.local/bin/bench --verbose --site all backup
+2026-08-12 12:54:00,828 INFO /home/sanjayh/.local/bin/bench --site site1.local mariadb
+2026-08-12 13:17:24,822 INFO /home/sanjayh/.local/bin/bench build
+2026-08-12 13:19:58,592 INFO /home/sanjayh/.local/bin/bench --site site1.local console
+2026-08-12 13:20:47,988 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-12 13:20:52,816 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-12 13:20:59,208 INFO /usr/local/bin/bench socketio
+2026-08-12 13:21:00,099 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-12 13:21:01,171 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-12 13:21:01,237 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-12 13:21:01,310 INFO /usr/local/bin/bench schedule

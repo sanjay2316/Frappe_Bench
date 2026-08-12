@@ -401,3 +401,1204 @@ Traceback (most recent call last):
     return getattr(get_module(modulename), methodname)
 AttributeError: module 'practice_app.overrides' has no attribute 'get_sender_details'
 
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'get_detail_email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.get_detail_email with module 'practice_app.api' has no attribute 'get_detail_email'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'get_detail_email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.get_detail_email with module 'practice_app.api' has no attribute 'get_detail_email'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'get_detail_email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.get_detail_email with module 'practice_app.api' has no attribute 'get_detail_email'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'update_status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.update_status with module 'practice_app.api' has no attribute 'update_status'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'count_details'. Did you mean: 'get_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.count_details with module 'practice_app.api' has no attribute 'count_details'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'check_detail_exists'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.check_detail_exists with module 'practice_app.api' has no attribute 'check_detail_exists'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'count_details'. Did you mean: 'get_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.count_details with module 'practice_app.api' has no attribute 'count_details'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'count_details'. Did you mean: 'get_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.count_details with module 'practice_app.api' has no attribute 'count_details'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'count_details'. Did you mean: 'get_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.count_details with module 'practice_app.api' has no attribute 'count_details'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'count_details'. Did you mean: 'get_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.count_details with module 'practice_app.api' has no attribute 'count_details'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'count_details'. Did you mean: 'get_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.count_details with module 'practice_app.api' has no attribute 'count_details'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'count_details'. Did you mean: 'get_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.count_details with module 'practice_app.api' has no attribute 'count_details'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'count_details'. Did you mean: 'get_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.count_details with module 'practice_app.api' has no attribute 'count_details'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "env/lib/python3.14/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "env/lib/python3.14/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+    ~~~~~~~~^^^
+  File "env/lib/python3.14/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/practice_app/practice_app/api.py", line 105, in update_status
+    return frappe.db.set_value(
+           ~~~~~~~~~~~~~~~~~~~^
+        "Details",
+        ^^^^^^^^^^
+    ...<2 lines>...
+        status
+        ^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/database/database.py", line 1001, in set_value
+    query.run(debug=debug)
+    ~~~~~~~~~^^^^^^^^^^^^^
+  File "apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "apps/frappe/frappe/database/database.py", line 281, in sql
+    raise frappe.QueryTimeoutError(e) from e
+frappe.exceptions.QueryTimeoutError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'count_details'. Did you mean: 'get_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.count_details with module 'practice_app.api' has no attribute 'count_details'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'count_details'. Did you mean: 'get_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.count_details with module 'practice_app.api' has no attribute 'count_details'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'get_detail_info'. Did you mean: 'get_detail_email'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.get_detail_info with module 'practice_app.api' has no attribute 'get_detail_info'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'update_status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.update_status with module 'practice_app.api' has no attribute 'update_status'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'update_status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.update_status with module 'practice_app.api' has no attribute 'update_status'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'count_details'. Did you mean: 'get_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.count_details with module 'practice_app.api' has no attribute 'count_details'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'count_details'. Did you mean: 'get_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.count_details with module 'practice_app.api' has no attribute 'count_details'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "env/lib/python3.14/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "env/lib/python3.14/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+    ~~~~~~~~^^^
+  File "env/lib/python3.14/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/practice_app/practice_app/api.py", line 105, in update_status
+    return frappe.db.set_value(
+           ~~~~~~~~~~~~~~~~~~~^
+        "Details",
+        ^^^^^^^^^^
+    ...<2 lines>...
+        status
+        ^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/database/database.py", line 1001, in set_value
+    query.run(debug=debug)
+    ~~~~~~~~~^^^^^^^^^^^^^
+  File "apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "apps/frappe/frappe/database/database.py", line 281, in sql
+    raise frappe.QueryTimeoutError(e) from e
+frappe.exceptions.QueryTimeoutError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'count_details'. Did you mean: 'get_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.count_details with module 'practice_app.api' has no attribute 'count_details'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'count_details'. Did you mean: 'get_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.count_details with module 'practice_app.api' has no attribute 'count_details'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'update_status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.update_status with module 'practice_app.api' has no attribute 'update_status'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'get_approved_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.get_approved_name with module 'practice_app.api' has no attribute 'get_approved_name'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'update_status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.update_status with module 'practice_app.api' has no attribute 'update_status'
+
+Status Changed
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'process_details'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.process_details with module 'practice_app.api' has no attribute 'process_details'
+
+Status Changed
+Status Changed
+Status Changed
+Status Changed
+Status Changed
+Wrote document file for DocType Details_email at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details_email/details_email.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details_email/details_email.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details_email/test_details_email.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details_email/details_email.js already exists, skipping...
+Status Changed
+Wrote document file for DocType Details at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details/details.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details/details.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details/test_details.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details/details.js already exists, skipping...
+Status Changed
+Status Changed
+Wrote document file for DocType Details at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details/details.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details/details.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details/test_details.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details/details.js already exists, skipping...
+Wrote document file for DocType Details_email at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details_email/details_email.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details_email/details_email.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details_email/test_details_email.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details_email/details_email.js already exists, skipping...

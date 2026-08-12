@@ -4551,3 +4551,72 @@ AttributeError: module 'practice_app.overrides' has no attribute 'send_email'
 [2026-08-12 05:22:10 +0000] [10904] [INFO] Booting worker with pid: 10904
 [2026-08-12 05:22:10 +0000] [10905] [INFO] Booting worker with pid: 10905
 [2026-08-12 05:22:10 +0000] [10910] [INFO] Booting worker with pid: 10910
+[2026-08-12 07:05:38 +0000] [10862] [INFO] Handling signal: term
+[2026-08-12 07:05:38 +0000] [10904] [INFO] Worker exiting (pid: 10904)
+[2026-08-12 07:05:38 +0000] [10902] [INFO] Worker exiting (pid: 10902)
+[2026-08-12 07:05:38 +0000] [10897] [INFO] Worker exiting (pid: 10897)
+[2026-08-12 07:05:38 +0000] [10910] [INFO] Worker exiting (pid: 10910)
+[2026-08-12 07:05:38 +0000] [10896] [INFO] Worker exiting (pid: 10896)
+[2026-08-12 07:05:38 +0000] [10899] [INFO] Worker exiting (pid: 10899)
+[2026-08-12 07:05:38 +0000] [10905] [INFO] Worker exiting (pid: 10905)
+[2026-08-12 07:05:38 +0000] [10898] [INFO] Worker exiting (pid: 10898)
+[2026-08-12 07:05:38 +0000] [10903] [INFO] Worker exiting (pid: 10903)
+[2026-08-12 07:05:42 +0000] [10862] [INFO] Shutting down: Master
+[2026-08-12 07:05:46 +0000] [14088] [INFO] Starting gunicorn 23.0.0
+[2026-08-12 07:05:46 +0000] [14088] [INFO] Listening at: http://127.0.0.1:8001 (14088)
+[2026-08-12 07:05:46 +0000] [14088] [INFO] Using worker: sync
+[2026-08-12 07:05:46 +0000] [14107] [INFO] Booting worker with pid: 14107
+[2026-08-12 07:05:46 +0000] [14108] [INFO] Booting worker with pid: 14108
+[2026-08-12 07:05:46 +0000] [14109] [INFO] Booting worker with pid: 14109
+[2026-08-12 07:05:46 +0000] [14114] [INFO] Booting worker with pid: 14114
+[2026-08-12 07:05:47 +0000] [14120] [INFO] Booting worker with pid: 14120
+[2026-08-12 07:05:47 +0000] [14115] [INFO] Booting worker with pid: 14115
+[2026-08-12 07:05:47 +0000] [14124] [INFO] Booting worker with pid: 14124
+[2026-08-12 07:05:47 +0000] [14123] [INFO] Booting worker with pid: 14123
+[2026-08-12 07:05:47 +0000] [14125] [INFO] Booting worker with pid: 14125
+[2026-08-12 09:29:07 +0000] [14088] [INFO] Handling signal: term
+[2026-08-12 09:29:08 +0000] [14108] [INFO] Worker exiting (pid: 14108)
+[2026-08-12 09:29:08 +0000] [14120] [INFO] Worker exiting (pid: 14120)
+[2026-08-12 09:29:08 +0000] [14115] [INFO] Worker exiting (pid: 14115)
+[2026-08-12 09:29:08 +0000] [14109] [INFO] Worker exiting (pid: 14109)
+[2026-08-12 09:29:08 +0000] [14124] [INFO] Worker exiting (pid: 14124)
+[2026-08-12 09:29:08 +0000] [14107] [INFO] Worker exiting (pid: 14107)
+[2026-08-12 09:29:08 +0000] [14114] [INFO] Worker exiting (pid: 14114)
+[2026-08-12 09:29:08 +0000] [14123] [INFO] Worker exiting (pid: 14123)
+[2026-08-12 09:29:08 +0000] [14125] [INFO] Worker exiting (pid: 14125)
+[2026-08-12 09:29:10 +0000] [14088] [INFO] Shutting down: Master
+[2026-08-12 09:29:11 +0000] [15709] [INFO] Starting gunicorn 23.0.0
+[2026-08-12 09:29:11 +0000] [15709] [INFO] Listening at: http://127.0.0.1:8001 (15709)
+[2026-08-12 09:29:11 +0000] [15709] [INFO] Using worker: sync
+[2026-08-12 09:29:12 +0000] [15725] [INFO] Booting worker with pid: 15725
+[2026-08-12 09:29:12 +0000] [15726] [INFO] Booting worker with pid: 15726
+[2026-08-12 09:29:12 +0000] [15727] [INFO] Booting worker with pid: 15727
+[2026-08-12 09:29:12 +0000] [15728] [INFO] Booting worker with pid: 15728
+[2026-08-12 09:29:12 +0000] [15729] [INFO] Booting worker with pid: 15729
+[2026-08-12 09:29:12 +0000] [15730] [INFO] Booting worker with pid: 15730
+[2026-08-12 09:29:12 +0000] [15731] [INFO] Booting worker with pid: 15731
+[2026-08-12 09:29:12 +0000] [15732] [INFO] Booting worker with pid: 15732
+[2026-08-12 09:29:12 +0000] [15733] [INFO] Booting worker with pid: 15733
+[2026-08-12 13:20:52 +0000] [15709] [INFO] Handling signal: term
+[2026-08-12 13:20:52 +0000] [15733] [INFO] Worker exiting (pid: 15733)
+[2026-08-12 13:20:52 +0000] [15725] [INFO] Worker exiting (pid: 15725)
+[2026-08-12 13:20:52 +0000] [15730] [INFO] Worker exiting (pid: 15730)
+[2026-08-12 13:20:52 +0000] [15727] [INFO] Worker exiting (pid: 15727)
+[2026-08-12 13:20:52 +0000] [15729] [INFO] Worker exiting (pid: 15729)
+[2026-08-12 13:20:52 +0000] [15728] [INFO] Worker exiting (pid: 15728)
+[2026-08-12 13:20:53 +0000] [15731] [INFO] Worker exiting (pid: 15731)
+[2026-08-12 13:20:53 +0000] [15726] [INFO] Worker exiting (pid: 15726)
+[2026-08-12 13:20:52 +0000] [15732] [INFO] Worker exiting (pid: 15732)
+[2026-08-12 13:20:56 +0000] [15709] [INFO] Shutting down: Master
+[2026-08-12 13:21:00 +0000] [19206] [INFO] Starting gunicorn 23.0.0
+[2026-08-12 13:21:00 +0000] [19206] [INFO] Listening at: http://127.0.0.1:8001 (19206)
+[2026-08-12 13:21:00 +0000] [19206] [INFO] Using worker: sync
+[2026-08-12 13:21:00 +0000] [19228] [INFO] Booting worker with pid: 19228
+[2026-08-12 13:21:00 +0000] [19229] [INFO] Booting worker with pid: 19229
+[2026-08-12 13:21:00 +0000] [19230] [INFO] Booting worker with pid: 19230
+[2026-08-12 13:21:01 +0000] [19234] [INFO] Booting worker with pid: 19234
+[2026-08-12 13:21:01 +0000] [19235] [INFO] Booting worker with pid: 19235
+[2026-08-12 13:21:01 +0000] [19238] [INFO] Booting worker with pid: 19238
+[2026-08-12 13:21:01 +0000] [19243] [INFO] Booting worker with pid: 19243
+[2026-08-12 13:21:01 +0000] [19245] [INFO] Booting worker with pid: 19245
+[2026-08-12 13:21:01 +0000] [19247] [INFO] Booting worker with pid: 19247

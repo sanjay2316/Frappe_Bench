@@ -2,6 +2,7 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2026-07-27 16:50:09.825550",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -29,7 +30,8 @@
    "in_list_view": 1,
    "label": "email",
    "options": "Email",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "default": "0",
@@ -65,10 +67,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-07 15:55:07.865729",
+ "modified": "2026-08-12 18:25:42.806244",
  "modified_by": "Administrator",
  "module": "Practice_App",
  "name": "Details",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {

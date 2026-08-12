@@ -153,3 +153,52 @@ In [2]: frappe.db.exists("DocType", "Task")
 2026-08-11 10:27:51,161 INFO ipython === bench console session ===
 2026-08-11 10:27:51,164 INFO ipython EXIT
 2026-08-11 10:27:51,164 INFO ipython === session end ===
+2026-08-12 07:23:33,632 INFO ipython === bench console session ===
+2026-08-12 07:23:33,636 INFO ipython frappe.db.get_value(
+    "Details",
+    "sanjaysanjaysanjay",
+    "email"
+)
+2026-08-12 07:23:33,637 INFO ipython frappe.db.exists("Details", "sanjaysanjaysanjay")
+2026-08-12 07:23:33,637 INFO ipython frappe.db.get_list(
+    "Details",
+    fields=["name", "name1", "email", "status"]
+)
+2026-08-12 07:23:33,637 INFO ipython frappe.db.get_value(
+    "Details",
+    "igvdlia5lq",
+    "email"
+)
+2026-08-12 07:23:33,637 INFO ipython === session end ===
+2026-08-12 09:08:35,046 INFO ipython === bench console session ===
+2026-08-12 09:08:35,062 INFO ipython import practice_app.api
+2026-08-12 09:08:35,062 INFO ipython dir(practice_app.api)
+2026-08-12 09:08:35,062 INFO ipython practice_app.api.update_status("igvdlia5lq", "Approve")
+2026-08-12 09:08:35,062 INFO ipython frappe.db.get_value(
+    "Details",
+    "igvdlia5lq",
+    "status"
+)
+2026-08-12 09:08:35,062 INFO ipython === session end ===
+2026-08-12 09:09:37,083 INFO ipython === bench console session ===
+2026-08-12 09:09:37,083 INFO ipython import practice_app.api
+2026-08-12 09:09:37,083 INFO ipython  dir(practice_app.api)
+2026-08-12 09:09:37,083 INFO ipython import practice_app.api
+2026-08-12 09:09:37,083 INFO ipython  dir(practice_app.api)
+2026-08-12 09:09:37,083 INFO ipython === session end ===
+2026-08-12 09:24:22,018 INFO ipython === bench console session ===
+2026-08-12 09:24:22,023 INFO ipython import practice_app.api
+2026-08-12 09:24:22,024 INFO ipython  dir(practice_app.api)
+2026-08-12 09:24:22,024 INFO ipython import practice_app.api
+2026-08-12 09:24:22,024 INFO ipython  dir(practice_app.api)
+2026-08-12 09:24:22,024 INFO ipython === session end ===
+2026-08-12 09:28:12,293 INFO ipython === bench console session ===
+2026-08-12 09:28:12,294 INFO ipython import practice_app.api
+2026-08-12 09:28:12,294 INFO ipython  dir(practice_app.api)
+2026-08-12 09:28:12,294 INFO ipython practice_app.api.count_details()
+2026-08-12 09:28:12,294 INFO ipython === session end ===
+2026-08-12 13:20:42,208 INFO ipython === bench console session ===
+2026-08-12 13:20:42,211 INFO ipython import practice_app.api
+2026-08-12 13:20:42,211 INFO ipython hasattr(practice_app.api, "process_details")
+2026-08-12 13:20:42,211 INFO ipython dir(practice_app.api)
+2026-08-12 13:20:42,211 INFO ipython === session end ===
