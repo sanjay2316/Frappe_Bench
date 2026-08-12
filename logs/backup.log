@@ -5628,3 +5628,79 @@ Backup Summary for testsite.local at 2026-08-07 11:30:13.694675
 Config  : /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260807_113010-testsite_local-site_config_backup.json 228.0B
 Database: /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260807_113010-testsite_local-database.sql.gz 235.4KiB
 Backup for Site testsite.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_822c72c2e1855b78 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _822c72c2e1855b78 | /usr/bin/gzip >> ./site1.local/private/backups/20260807_173003-site1_local-database.sql.gz
+
+Backup Summary for site1.local at 2026-08-07 17:30:07.274065
+Config  : /home/sanjayh/frappe16-bench/sites/site1.local/private/backups/20260807_173003-site1_local-site_config_backup.json 261.0B
+Database: /home/sanjayh/frappe16-bench/sites/site1.local/private/backups/20260807_173003-site1_local-database.sql.gz 352.2KiB
+Backup for Site site1.local has been successfully completed
+File ./testsite.local/private/backups/20260807_113010-testsite_local-site_config_backup.json is recent
+File ./testsite.local/private/backups/20260807_113010-testsite_local-database.sql.gz is recent
+set -o pipefail; /usr/bin/mariadb-dump --user=_69fa8765336c1e39 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _69fa8765336c1e39 | /usr/bin/gzip >> ./testsite.local/private/backups/20260807_173007-testsite_local-database.sql.gz
+
+Backup Summary for testsite.local at 2026-08-07 17:30:11.521817
+Config  : /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260807_173007-testsite_local-site_config_backup.json 228.0B
+Database: /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260807_173007-testsite_local-database.sql.gz 235.4KiB
+Backup for Site testsite.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_822c72c2e1855b78 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _822c72c2e1855b78 | /usr/bin/gzip >> ./site1.local/private/backups/20260810_113002-site1_local-database.sql.gz
+
+Backup Summary for site1.local at 2026-08-10 11:30:06.283615
+Config  : /home/sanjayh/frappe16-bench/sites/site1.local/private/backups/20260810_113002-site1_local-site_config_backup.json 261.0B
+Database: /home/sanjayh/frappe16-bench/sites/site1.local/private/backups/20260810_113002-site1_local-database.sql.gz 348.6KiB
+Backup for Site site1.local has been successfully completed
+File ./testsite.local/private/backups/20260807_113010-testsite_local-site_config_backup.json is older than 23 hours
+File ./testsite.local/private/backups/20260807_113010-testsite_local-database.sql.gz is older than 23 hours
+File ./testsite.local/private/backups/20260807_173007-testsite_local-database.sql.gz is older than 23 hours
+File ./testsite.local/private/backups/20260807_173007-testsite_local-site_config_backup.json is older than 23 hours
+set -o pipefail; /usr/bin/mariadb-dump --user=_69fa8765336c1e39 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _69fa8765336c1e39 | /usr/bin/gzip >> ./testsite.local/private/backups/20260810_113006-testsite_local-database.sql.gz
+
+Backup Summary for testsite.local at 2026-08-10 11:30:08.892696
+Config  : /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260810_113006-testsite_local-site_config_backup.json 228.0B
+Database: /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260810_113006-testsite_local-database.sql.gz 235.4KiB
+Backup for Site testsite.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_822c72c2e1855b78 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _822c72c2e1855b78 | /usr/bin/gzip >> ./site1.local/private/backups/20260810_173003-site1_local-database.sql.gz
+
+Backup Summary for site1.local at 2026-08-10 17:30:07.942466
+Config  : /home/sanjayh/frappe16-bench/sites/site1.local/private/backups/20260810_173003-site1_local-site_config_backup.json 261.0B
+Database: /home/sanjayh/frappe16-bench/sites/site1.local/private/backups/20260810_173003-site1_local-database.sql.gz 350.4KiB
+Backup for Site site1.local has been successfully completed
+File ./testsite.local/private/backups/20260810_113006-testsite_local-site_config_backup.json is recent
+File ./testsite.local/private/backups/20260810_113006-testsite_local-database.sql.gz is recent
+set -o pipefail; /usr/bin/mariadb-dump --user=_69fa8765336c1e39 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _69fa8765336c1e39 | /usr/bin/gzip >> ./testsite.local/private/backups/20260810_173007-testsite_local-database.sql.gz
+
+Backup Summary for testsite.local at 2026-08-10 17:30:10.824450
+Config  : /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260810_173007-testsite_local-site_config_backup.json 228.0B
+Database: /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260810_173007-testsite_local-database.sql.gz 235.4KiB
+Backup for Site testsite.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_822c72c2e1855b78 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _822c72c2e1855b78 | /usr/bin/gzip >> ./site1.local/private/backups/20260811_113002-site1_local-database.sql.gz
+
+Backup Summary for site1.local at 2026-08-11 11:30:05.993519
+Config  : /home/sanjayh/frappe16-bench/sites/site1.local/private/backups/20260811_113002-site1_local-site_config_backup.json 261.0B
+Database: /home/sanjayh/frappe16-bench/sites/site1.local/private/backups/20260811_113002-site1_local-database.sql.gz 345.5KiB
+Backup for Site site1.local has been successfully completed
+File ./testsite.local/private/backups/20260810_113006-testsite_local-site_config_backup.json is older than 23 hours
+File ./testsite.local/private/backups/20260810_113006-testsite_local-database.sql.gz is older than 23 hours
+File ./testsite.local/private/backups/20260810_173007-testsite_local-site_config_backup.json is recent
+File ./testsite.local/private/backups/20260810_173007-testsite_local-database.sql.gz is recent
+set -o pipefail; /usr/bin/mariadb-dump --user=_69fa8765336c1e39 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _69fa8765336c1e39 | /usr/bin/gzip >> ./testsite.local/private/backups/20260811_113006-testsite_local-database.sql.gz
+
+Backup Summary for testsite.local at 2026-08-11 11:30:09.540086
+Config  : /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260811_113006-testsite_local-site_config_backup.json 228.0B
+Database: /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260811_113006-testsite_local-database.sql.gz 235.4KiB
+Backup for Site testsite.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_822c72c2e1855b78 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _822c72c2e1855b78 | /usr/bin/gzip >> ./site1.local/private/backups/20260811_173003-site1_local-database.sql.gz
+
+Backup Summary for site1.local at 2026-08-11 17:30:06.318010
+Config  : /home/sanjayh/frappe16-bench/sites/site1.local/private/backups/20260811_173003-site1_local-site_config_backup.json 261.0B
+Database: /home/sanjayh/frappe16-bench/sites/site1.local/private/backups/20260811_173003-site1_local-database.sql.gz 365.3KiB
+Backup for Site site1.local has been successfully completed
+File ./testsite.local/private/backups/20260810_173007-testsite_local-site_config_backup.json is older than 23 hours
+File ./testsite.local/private/backups/20260811_113006-testsite_local-database.sql.gz is recent
+File ./testsite.local/private/backups/20260810_173007-testsite_local-database.sql.gz is older than 23 hours
+File ./testsite.local/private/backups/20260811_113006-testsite_local-site_config_backup.json is recent
+set -o pipefail; /usr/bin/mariadb-dump --user=_69fa8765336c1e39 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _69fa8765336c1e39 | /usr/bin/gzip >> ./testsite.local/private/backups/20260811_173006-testsite_local-database.sql.gz
+
+Backup Summary for testsite.local at 2026-08-11 17:30:08.442547
+Config  : /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260811_173006-testsite_local-site_config_backup.json 266.0B
+Database: /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260811_173006-testsite_local-database.sql.gz 235.9KiB
+Backup for Site testsite.local has been successfully completed

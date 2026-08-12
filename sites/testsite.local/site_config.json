@@ -3,11 +3,12 @@
  "db_password": "TTVbPh2AVkSmoCXt",
  "db_type": "mariadb",
  "db_user": "_69fa8765336c1e39",
+ "domain": "internal.testsite.local",
+ "domains": [
+  "internal.testsite.local"
+ ],
  "installed_apps": [
   "frappe"
  ],
- "nginx_port": 82,
- "domains": [
-  "internal.testsite.local"
- ]
+ "nginx_port": 82
 }

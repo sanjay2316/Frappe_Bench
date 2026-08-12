@@ -265,3 +265,21 @@ Form Dict: {'doc': '{"name":"Task","owner":"Administrator","creation":"2026-08-0
 2026-08-07 05:56:01,254 ERROR frappe New Exception collected in error log
 Site: site1.local
 Form Dict: {'task_subject': 'Sanjay', 'cmd': 'practice_app.api.create_task'}
+2026-08-07 10:17:37,836 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'name': 'undefined', 'cmd': 'frappe.desk.desk_page.getpage'}
+2026-08-07 10:17:50,716 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'name': 'undefined', 'cmd': 'frappe.desk.desk_page.getpage'}
+2026-08-10 12:57:01,192 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'login', 'usr': 'Administrator'}
+2026-08-11 10:12:41,867 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'recipients': 'sowmiyaselvaraj9025@gmail.com', 'subject': 'Email Account: Sowmiya', 'content': '<div class="ql-editor read-mode"><p>hellooooo</p></div>', 'doctype': 'Email Account', 'name': 'Sowmiya', 'send_email': '1', 'print_html': '', 'send_me_a_copy': '0', 'print_format': 'Standard', 'attachments': '[]', 'read_receipt': '0', 'print_letterhead': '1', 'send_after': '', 'print_language': 'en', 'add_css': '1', 'in_reply_to': '', 'cmd': 'frappe.core.doctype.communication.email.make'}
+2026-08-11 10:17:49,314 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'recipients': 'sowmiyaselvaraj9025@gmail.com', 'subject': 'Email Account: Sowmiya', 'content': '<div class="ql-editor read-mode"><p>hellooooo</p></div>', 'doctype': 'Email Account', 'name': 'Sowmiya', 'send_email': '1', 'print_html': '', 'send_me_a_copy': '0', 'print_format': 'Standard', 'attachments': '[]', 'read_receipt': '0', 'print_letterhead': '1', 'send_after': '', 'print_language': 'en', 'add_css': '1', 'in_reply_to': '', 'cmd': 'frappe.core.doctype.communication.email.make'}
+2026-08-11 10:18:34,091 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'recipients': 'sowmiyaselvaraj9025@gmail.com', 'subject': 'Email Account: Sowmiya', 'content': '<div class="ql-editor read-mode"><p>hellooooo</p></div>', 'doctype': 'Email Account', 'name': 'Sowmiya', 'send_email': '1', 'print_html': '', 'send_me_a_copy': '0', 'print_format': 'Standard', 'attachments': '[]', 'read_receipt': '0', 'print_letterhead': '1', 'send_after': '', 'print_language': 'en', 'add_css': '1', 'in_reply_to': '', 'cmd': 'frappe.core.doctype.communication.email.make'}

@@ -66149,3 +66149,381 @@ StartedJobRegistry cleanup: site1.local||scheduled_job||37kpllsabp Moved to Fail
 2026-08-06 05:43:36,550 Worker 9a1c2a7e5cb9495887aadbe585f92485: could not connect to Redis instance: Error 111 connecting to 127.0.0.1:11001. Connection refused. retrying in 2 seconds...
 2026-08-06 05:49:42,655 Worker 29fd0bcfb6e34b76a2b256aaa2190503: could not connect to Redis instance: Error 111 connecting to 127.0.0.1:11001. Connection refused. retrying in 2 seconds...
 2026-08-06 05:49:42,856 Worker b66001dba3e64cff90a11e6f920cfd94: could not connect to Redis instance: Error 111 connecting to 127.0.0.1:11001. Connection refused. retrying in 2 seconds...
+2026-08-11 05:14:03,599 Worker 9247eebf46d74b0cb0221e1dacdc792a: could not connect to Redis instance: Error 111 connecting to 127.0.0.1:11001. Connection refused. retrying in 2 seconds...
+2026-08-11 05:14:03,729 Worker b5826bd7ec834389baa039968253248f: could not connect to Redis instance: Error 111 connecting to 127.0.0.1:11001. Connection refused. retrying in 2 seconds...
+2026-08-11 05:55:17,704 Worker ad1204b8ea854ee0ba967c232221c77a: could not connect to Redis instance: Error 111 connecting to 127.0.0.1:11001. Connection refused. retrying in 2 seconds...
+2026-08-11 05:55:17,713 Worker e5bafb55aa874bcda90a907cfcbf8291: could not connect to Redis instance: Error 111 connecting to 127.0.0.1:11001. Connection refused. retrying in 2 seconds...
+2026-08-12 05:16:01,469 Worker 10d72d4153a04c82a0dfb868bdffaa6e: job site1.local||scheduled_job||37kpllsabp: exception raised while executing (frappe.utils.background_jobs.execute_job)
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/worker.py", line 1439, in perform_job
+    return_value = job.perform()
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1318, in perform
+    self._result = self._execute()
+                   ~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1376, in _execute
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/background_jobs.py", line 269, in execute_job
+    for before_job_task in frappe.get_hooks("before_job"):
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 970, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 837, in get_module
+    return importlib.import_module(modulename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/hooks.py", line 43, in <module>
+    event
+NameError: name 'event' is not defined
+
+2026-08-12 05:16:01,481 Worker 52be1f608dd04b08aa4cc37ec7cb07a4: job site1.local||scheduled_job||37kefk3911: exception raised while executing (frappe.utils.background_jobs.execute_job)
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/worker.py", line 1439, in perform_job
+    return_value = job.perform()
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1318, in perform
+    self._result = self._execute()
+                   ~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1376, in _execute
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/background_jobs.py", line 269, in execute_job
+    for before_job_task in frappe.get_hooks("before_job"):
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 970, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 837, in get_module
+    return importlib.import_module(modulename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/hooks.py", line 43, in <module>
+    event
+NameError: name 'event' is not defined
+
+2026-08-12 05:16:01,678 Worker 10d72d4153a04c82a0dfb868bdffaa6e: job site1.local||scheduled_job||37kegf52q2: exception raised while executing (frappe.utils.background_jobs.execute_job)
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/worker.py", line 1439, in perform_job
+    return_value = job.perform()
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1318, in perform
+    self._result = self._execute()
+                   ~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1376, in _execute
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/background_jobs.py", line 269, in execute_job
+    for before_job_task in frappe.get_hooks("before_job"):
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 970, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 837, in get_module
+    return importlib.import_module(modulename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/hooks.py", line 43, in <module>
+    event
+NameError: name 'event' is not defined
+
+2026-08-12 05:16:01,706 Worker 52be1f608dd04b08aa4cc37ec7cb07a4: job site1.local||scheduled_job||37kegksrs8: exception raised while executing (frappe.utils.background_jobs.execute_job)
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/worker.py", line 1439, in perform_job
+    return_value = job.perform()
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1318, in perform
+    self._result = self._execute()
+                   ~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1376, in _execute
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/background_jobs.py", line 269, in execute_job
+    for before_job_task in frappe.get_hooks("before_job"):
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 970, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 837, in get_module
+    return importlib.import_module(modulename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/hooks.py", line 43, in <module>
+    event
+NameError: name 'event' is not defined
+
+2026-08-12 05:16:01,844 Worker 52be1f608dd04b08aa4cc37ec7cb07a4: job site1.local||scheduled_job||37k7hisjvb: exception raised while executing (frappe.utils.background_jobs.execute_job)
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/worker.py", line 1439, in perform_job
+    return_value = job.perform()
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1318, in perform
+    self._result = self._execute()
+                   ~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1376, in _execute
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/background_jobs.py", line 269, in execute_job
+    for before_job_task in frappe.get_hooks("before_job"):
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 970, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 837, in get_module
+    return importlib.import_module(modulename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/hooks.py", line 43, in <module>
+    event
+NameError: name 'event' is not defined
+
+2026-08-12 05:16:01,844 Worker 10d72d4153a04c82a0dfb868bdffaa6e: job site1.local||scheduled_job||37k78p5hq6: exception raised while executing (frappe.utils.background_jobs.execute_job)
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/worker.py", line 1439, in perform_job
+    return_value = job.perform()
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1318, in perform
+    self._result = self._execute()
+                   ~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1376, in _execute
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/background_jobs.py", line 269, in execute_job
+    for before_job_task in frappe.get_hooks("before_job"):
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 970, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 837, in get_module
+    return importlib.import_module(modulename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/hooks.py", line 43, in <module>
+    event
+NameError: name 'event' is not defined
+
+2026-08-12 05:16:01,962 Worker 52be1f608dd04b08aa4cc37ec7cb07a4: job site1.local||scheduled_job||37knfg3l5c: exception raised while executing (frappe.utils.background_jobs.execute_job)
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/worker.py", line 1439, in perform_job
+    return_value = job.perform()
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1318, in perform
+    self._result = self._execute()
+                   ~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1376, in _execute
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/background_jobs.py", line 269, in execute_job
+    for before_job_task in frappe.get_hooks("before_job"):
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 970, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 837, in get_module
+    return importlib.import_module(modulename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/hooks.py", line 43, in <module>
+    event
+NameError: name 'event' is not defined
+
+2026-08-12 05:16:01,983 Worker 10d72d4153a04c82a0dfb868bdffaa6e: job site1.local||scheduled_job||37k1dd092m: exception raised while executing (frappe.utils.background_jobs.execute_job)
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/worker.py", line 1439, in perform_job
+    return_value = job.perform()
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1318, in perform
+    self._result = self._execute()
+                   ~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1376, in _execute
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/background_jobs.py", line 269, in execute_job
+    for before_job_task in frappe.get_hooks("before_job"):
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 970, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 837, in get_module
+    return importlib.import_module(modulename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/hooks.py", line 43, in <module>
+    event
+NameError: name 'event' is not defined
+
+2026-08-12 05:16:02,112 Worker 52be1f608dd04b08aa4cc37ec7cb07a4: job site1.local||scheduled_job||37kevjkvjn: exception raised while executing (frappe.utils.background_jobs.execute_job)
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/worker.py", line 1439, in perform_job
+    return_value = job.perform()
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1318, in perform
+    self._result = self._execute()
+                   ~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1376, in _execute
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/background_jobs.py", line 269, in execute_job
+    for before_job_task in frappe.get_hooks("before_job"):
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 970, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 837, in get_module
+    return importlib.import_module(modulename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/hooks.py", line 43, in <module>
+    event
+NameError: name 'event' is not defined
+
+2026-08-12 05:16:02,172 Worker 10d72d4153a04c82a0dfb868bdffaa6e: job site1.local||scheduled_job||37kd6865a2: exception raised while executing (frappe.utils.background_jobs.execute_job)
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/worker.py", line 1439, in perform_job
+    return_value = job.perform()
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1318, in perform
+    self._result = self._execute()
+                   ~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1376, in _execute
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/background_jobs.py", line 269, in execute_job
+    for before_job_task in frappe.get_hooks("before_job"):
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 970, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 837, in get_module
+    return importlib.import_module(modulename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/hooks.py", line 43, in <module>
+    event
+NameError: name 'event' is not defined
+
+2026-08-12 05:16:02,220 Worker 52be1f608dd04b08aa4cc37ec7cb07a4: job site1.local||scheduled_job||37k0cf00r4: exception raised while executing (frappe.utils.background_jobs.execute_job)
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/worker.py", line 1439, in perform_job
+    return_value = job.perform()
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1318, in perform
+    self._result = self._execute()
+                   ~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/rq/job.py", line 1376, in _execute
+    result = self.func(*self.args, **self.kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/background_jobs.py", line 269, in execute_job
+    for before_job_task in frappe.get_hooks("before_job"):
+                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1004, in get_hooks
+    hooks = _site_cached_load_app_hooks()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 157, in site_cache_wrapper
+    result = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 970, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 837, in get_module
+    return importlib.import_module(modulename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/hooks.py", line 43, in <module>
+    event
+NameError: name 'event' is not defined
+

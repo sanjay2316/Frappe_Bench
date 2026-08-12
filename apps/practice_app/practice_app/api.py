@@ -7,3 +7,6 @@ def create_task(task_subject):
     doc.save()
 
     return doc.name
+@frappe.whitelist()
+def custom_logic(doc, method):
+    frappe.msgprint("Hook executed!")

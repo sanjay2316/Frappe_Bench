@@ -851,3 +851,196 @@
 2026-08-07 05:56:46,205 INFO /home/sanjayh/.local/bin/bench --site site1.local console
 2026-08-07 05:57:39,134 INFO /home/sanjayh/.local/bin/bench --site site1.local console
 2026-08-07 06:00:02,439 INFO /home/sanjayh/.local/bin/bench --verbose --site all backup
+2026-08-07 10:18:45,416 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-07 10:18:50,695 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-07 10:18:57,744 INFO /usr/local/bin/bench socketio
+2026-08-07 10:18:58,537 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-07 10:19:00,414 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-07 10:19:00,462 INFO /usr/local/bin/bench schedule
+2026-08-07 10:19:01,052 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-07 10:23:44,231 INFO /home/sanjayh/.local/bin/bench start
+2026-08-07 10:24:20,682 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-07 10:24:21,036 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-07 10:24:23,077 INFO /usr/local/bin/bench socketio
+2026-08-07 10:24:23,962 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-07 10:24:24,624 INFO /usr/local/bin/bench schedule
+2026-08-07 10:24:24,629 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-07 10:24:24,648 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-07 12:00:02,051 INFO /home/sanjayh/.local/bin/bench --verbose --site all backup
+2026-08-10 05:23:54,101 INFO /usr/local/bin/bench schedule
+2026-08-10 05:23:54,103 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-10 05:23:54,091 INFO /usr/local/bin/bench socketio
+2026-08-10 05:23:54,104 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-10 05:24:28,278 INFO /home/sanjayh/.local/bin/bench start
+2026-08-10 06:00:02,024 INFO /home/sanjayh/.local/bin/bench --verbose --site all backup
+2026-08-10 06:22:54,786 INFO /home/sanjayh/.local/bin/bench build
+2026-08-10 06:23:22,396 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-10 06:23:29,899 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-10 06:23:32,368 INFO /usr/local/bin/bench socketio
+2026-08-10 06:23:33,319 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-10 06:23:34,006 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-10 06:23:34,018 INFO /usr/local/bin/bench schedule
+2026-08-10 06:23:34,096 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-10 06:25:30,131 INFO /home/sanjayh/.local/bin/bench build
+2026-08-10 06:26:08,340 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-10 06:26:08,837 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-10 06:26:12,090 INFO /usr/local/bin/bench socketio
+2026-08-10 06:26:13,008 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-10 06:26:14,837 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-10 06:26:14,863 INFO /usr/local/bin/bench schedule
+2026-08-10 06:26:14,869 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-10 06:29:57,761 INFO /home/sanjayh/.local/bin/bench build
+2026-08-10 06:30:52,341 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-10 06:30:52,737 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-10 06:30:55,492 INFO /usr/local/bin/bench socketio
+2026-08-10 06:30:56,402 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-10 06:30:57,025 INFO /usr/local/bin/bench schedule
+2026-08-10 06:30:57,057 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-10 06:30:57,119 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-10 06:32:22,792 INFO /home/sanjayh/.local/bin/bench migrate
+2026-08-10 06:32:40,625 INFO /home/sanjayh/.local/bin/bench build
+2026-08-10 06:33:30,015 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-10 06:33:30,571 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-10 06:33:32,311 INFO /usr/local/bin/bench socketio
+2026-08-10 06:33:33,422 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-10 06:33:34,959 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-10 06:33:34,972 INFO /usr/local/bin/bench schedule
+2026-08-10 06:33:34,990 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-10 06:35:15,861 INFO /home/sanjayh/.local/bin/bench migrate
+2026-08-10 06:35:29,080 INFO /home/sanjayh/.local/bin/bench build
+2026-08-10 06:36:18,017 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-10 06:36:18,437 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-10 06:36:19,954 INFO /usr/local/bin/bench socketio
+2026-08-10 06:36:21,354 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-10 06:36:23,163 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-10 06:36:23,186 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-10 06:36:23,190 INFO /usr/local/bin/bench schedule
+2026-08-10 07:08:34,211 INFO /home/sanjayh/.local/bin/bench build
+2026-08-10 07:08:56,352 INFO /home/sanjayh/.local/bin/bench --site site1.local clear-cache
+2026-08-10 07:08:57,815 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-10 07:09:33,232 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-10 07:09:35,264 INFO /usr/local/bin/bench socketio
+2026-08-10 07:09:36,209 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-10 07:09:37,930 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-10 07:09:37,944 INFO /usr/local/bin/bench schedule
+2026-08-10 07:09:37,953 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-10 07:15:32,900 INFO /home/sanjayh/.local/bin/bench build
+2026-08-10 07:15:55,155 INFO /home/sanjayh/.local/bin/bench --site site1.local clear-cache
+2026-08-10 07:15:56,758 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-10 07:15:57,118 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-10 07:16:00,445 INFO /usr/local/bin/bench socketio
+2026-08-10 07:16:01,793 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-10 07:16:03,258 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-10 07:16:03,304 INFO /usr/local/bin/bench schedule
+2026-08-10 07:16:03,316 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-10 12:00:01,966 INFO /home/sanjayh/.local/bin/bench --verbose --site all backup
+2026-08-10 12:53:44,635 INFO /home/sanjayh/.local/bin/bench build
+2026-08-10 12:54:33,191 INFO /home/sanjayh/.local/bin/bench --site site1.local clear-cache
+2026-08-11 05:04:00,325 INFO /usr/local/bin/bench socketio
+2026-08-11 05:04:00,337 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-11 05:04:00,381 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-11 05:04:00,486 INFO /usr/local/bin/bench schedule
+2026-08-11 05:12:33,925 INFO /home/sanjayh/.local/bin/bench start
+2026-08-11 05:13:56,984 INFO /usr/local/bin/bench setup production sanjayh
+2026-08-11 05:13:56,995 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2026-08-11 05:13:56,996 LOG Updated supervisord.conf: 'chown' changed from '' to 'sanjayh:sanjayh'
+2026-08-11 05:14:02,100 DEBUG /usr/bin/supervisorctl reread
+2026-08-11 05:14:02,335 DEBUG /usr/bin/supervisorctl update
+2026-08-11 05:14:02,451 DEBUG sudo /usr/sbin/nginx -t
+2026-08-11 05:14:02,512 DEBUG sudo systemctl reload nginx
+2026-08-11 05:14:05,679 INFO /usr/local/bin/bench socketio
+2026-08-11 05:14:05,705 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-11 05:14:05,741 INFO /usr/local/bin/bench schedule
+2026-08-11 05:14:05,788 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-11 05:54:49,340 INFO /home/sanjayh/.local/bin/bench --site site1.local migrate
+2026-08-11 05:55:22,143 INFO /usr/local/bin/bench schedule
+2026-08-11 05:55:22,143 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-11 05:55:22,208 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-11 05:55:22,222 INFO /usr/local/bin/bench socketio
+2026-08-11 06:00:01,588 INFO /home/sanjayh/.local/bin/bench --verbose --site all backup
+2026-08-11 06:36:03,082 INFO /home/sanjayh/.local/bin/bench migrate
+2026-08-11 06:36:25,136 INFO /home/sanjayh/.local/bin/bench build
+2026-08-11 06:37:15,100 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-11 06:37:27,347 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-11 06:37:30,570 INFO /usr/local/bin/bench socketio
+2026-08-11 06:37:31,599 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-11 06:37:32,223 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-11 06:37:32,227 INFO /usr/local/bin/bench schedule
+2026-08-11 06:37:32,283 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-11 08:41:59,811 INFO /home/sanjayh/.local/bin/bench config dns_multitenant
+2026-08-11 08:41:59,837 WARNING /home/sanjayh/.local/bin/bench config dns_multitenant executed with exit code 2
+2026-08-11 08:42:07,074 INFO /home/sanjayh/.local/bin/bench config dns_multitenant off
+2026-08-11 08:48:32,803 INFO /home/sanjayh/.local/bin/bench setup nginx
+2026-08-11 08:49:32,459 INFO /home/sanjayh/.local/bin/bench setup add-domain --help
+2026-08-11 08:52:35,265 INFO /home/sanjayh/.local/bin/bench setup add-domain internal.testsite.local --site testsite.local
+2026-08-11 08:53:27,210 INFO /home/sanjayh/.local/bin/bench setup nginx
+2026-08-11 08:55:29,023 INFO /home/sanjayh/.local/bin/bench --site testsite.local show-config
+2026-08-11 08:55:39,363 INFO /home/sanjayh/.local/bin/bench --version
+2026-08-11 09:03:33,386 INFO /home/sanjayh/.local/bin/bench --site testsite.local set-config domain internal.testsite.local
+2026-08-11 09:04:38,609 INFO /home/sanjayh/.local/bin/bench setup nginx
+2026-08-11 09:06:57,720 INFO /home/sanjayh/.local/bin/bench setup nginx
+2026-08-11 09:09:08,595 INFO /home/sanjayh/.local/bin/bench config dns_multitenant
+2026-08-11 09:09:08,602 WARNING /home/sanjayh/.local/bin/bench config dns_multitenant executed with exit code 2
+2026-08-11 10:04:37,540 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-11 10:04:42,278 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-11 10:04:46,823 INFO /usr/local/bin/bench socketio
+2026-08-11 10:04:48,141 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-11 10:04:50,181 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-11 10:04:50,187 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-11 10:04:50,207 INFO /usr/local/bin/bench schedule
+2026-08-11 10:05:17,747 INFO /home/sanjayh/.local/bin/bench --site site1.local
+2026-08-11 10:05:28,957 INFO /home/sanjayh/.local/bin/bench --site site1.local console
+2026-08-11 10:18:08,564 INFO /home/sanjayh/.local/bin/bench migrate
+2026-08-11 10:21:36,514 INFO /home/sanjayh/.local/bin/bench --site mysite.local clear-cache
+2026-08-11 10:21:36,985 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-11 10:21:42,981 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-11 10:21:45,743 INFO /usr/local/bin/bench socketio
+2026-08-11 10:21:46,673 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-11 10:21:47,285 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-11 10:21:47,304 INFO /usr/local/bin/bench schedule
+2026-08-11 10:21:47,309 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-11 10:22:03,081 INFO /home/sanjayh/.local/bin/bench --site site1.local clear-cache
+2026-08-11 10:22:12,888 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-11 10:22:13,124 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-11 10:22:14,803 INFO /usr/local/bin/bench socketio
+2026-08-11 10:22:15,726 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-11 10:22:17,165 INFO /usr/local/bin/bench schedule
+2026-08-11 10:22:17,180 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-11 10:22:17,186 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-11 10:24:52,611 INFO /home/sanjayh/.local/bin/bench console
+2026-08-11 10:27:56,786 INFO /home/sanjayh/.local/bin/bench --site site1.local clear-cachere
+2026-08-11 10:28:13,455 INFO /home/sanjayh/.local/bin/bench --site site1.local clear-cache
+2026-08-11 10:28:23,699 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-11 10:28:24,058 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-11 10:28:26,246 INFO /usr/local/bin/bench socketio
+2026-08-11 10:28:27,082 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-11 10:28:28,029 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-11 10:28:28,029 INFO /usr/local/bin/bench schedule
+2026-08-11 10:28:28,127 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-11 12:00:02,079 INFO /home/sanjayh/.local/bin/bench --verbose --site all backup
+2026-08-12 04:39:21,693 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-12 04:39:21,693 INFO /usr/local/bin/bench socketio
+2026-08-12 04:39:21,713 INFO /usr/local/bin/bench schedule
+2026-08-12 04:39:21,774 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-12 04:39:57,555 INFO /home/sanjayh/.local/bin/bench start
+2026-08-12 04:39:58,339 INFO /home/sanjayh/.local/bin/bench watch
+2026-08-12 04:39:58,412 INFO /home/sanjayh/.local/bin/bench worker
+2026-08-12 04:39:58,591 INFO /home/sanjayh/.local/bin/bench serve --port 8001
+2026-08-12 05:18:40,420 INFO /home/sanjayh/.local/bin/bench build
+2026-08-12 05:19:34,885 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-12 05:19:45,156 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-12 05:19:50,315 INFO /usr/local/bin/bench socketio
+2026-08-12 05:19:51,102 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-12 05:19:52,368 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-12 05:19:52,371 INFO /usr/local/bin/bench schedule
+2026-08-12 05:19:52,390 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-12 05:21:18,444 INFO /home/sanjayh/.local/bin/bench --site site1.local build
+2026-08-12 05:21:55,268 INFO /home/sanjayh/.local/bin/bench restart
+2026-08-12 05:21:56,042 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-08-12 05:22:03,991 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-08-12 05:22:08,723 INFO /usr/local/bin/bench socketio
+2026-08-12 05:22:09,454 INFO /usr/local/bin/bench schedule
+2026-08-12 05:22:09,499 INFO /usr/local/bin/bench worker --queue short,default
+2026-08-12 05:22:09,511 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-08-12 05:25:53,232 INFO /home/sanjayh/.local/bin/bench --site site1.local build
+2026-08-12 05:26:54,789 INFO /home/sanjayh/.local/bin/bench migrate

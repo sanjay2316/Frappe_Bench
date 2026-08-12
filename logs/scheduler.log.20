@@ -1,4 +1,4 @@
-2026-07-31 11:48:00,532 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-07-31 13:08:00,247 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -112,7 +112,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-07-31 11:52:00,664 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-07-31 13:12:00,414 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -226,7 +226,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-07-31 11:56:00,673 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-07-31 13:16:00,459 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -340,7 +340,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-07-31 12:00:00,845 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-07-31 13:20:00,772 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -454,12 +454,12 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-07-31 12:04:00,939 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-07-31 13:24:03,341 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
            ~~~~~~~~~~~~^^^^^^^^^^
-KeyError: ((), <object object at 0x76557a780ea0>, frozenset({('_ensure_on_bench', True)}))
+KeyError: ((), <object object at 0x7f38930bcea0>, frozenset({('_ensure_on_bench', True)}))
 
 During handling of the above exception, another exception occurred:
 
@@ -568,12 +568,12 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-07-31 12:36:12,657 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-07-31 13:28:00,439 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
            ~~~~~~~~~~~~^^^^^^^^^^
-KeyError: ((), <object object at 0x76557a780ea0>, frozenset({('_ensure_on_bench', True)}))
+KeyError: ((), <object object at 0x7f38930bcea0>, frozenset({('_ensure_on_bench', True)}))
 
 During handling of the above exception, another exception occurred:
 
@@ -682,12 +682,12 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-07-31 12:40:00,833 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-07-31 13:32:00,700 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
            ~~~~~~~~~~~~^^^^^^^^^^
-KeyError: ((), <object object at 0x76557a780ea0>, frozenset({('_ensure_on_bench', True)}))
+KeyError: ((), <object object at 0x7f38930bcea0>, frozenset({('_ensure_on_bench', True)}))
 
 During handling of the above exception, another exception occurred:
 
@@ -796,12 +796,12 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-07-31 12:44:01,194 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-07-31 13:36:00,806 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
            ~~~~~~~~~~~~^^^^^^^^^^
-KeyError: ((), <object object at 0x76557a780ea0>, frozenset({('_ensure_on_bench', True)}))
+KeyError: ((), <object object at 0x7f38930bcea0>, frozenset({('_ensure_on_bench', True)}))
 
 During handling of the above exception, another exception occurred:
 
@@ -910,12 +910,12 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-07-31 12:48:00,230 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-07-31 13:40:00,153 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
            ~~~~~~~~~~~~^^^^^^^^^^
-KeyError: ((), <object object at 0x76557a780ea0>, frozenset({('_ensure_on_bench', True)}))
+KeyError: ((), <object object at 0x7f38930bcea0>, frozenset({('_ensure_on_bench', True)}))
 
 During handling of the above exception, another exception occurred:
 
@@ -1024,12 +1024,12 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-07-31 12:52:00,274 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-07-31 13:44:00,271 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
            ~~~~~~~~~~~~^^^^^^^^^^
-KeyError: ((), <object object at 0x76557a780ea0>, frozenset({('_ensure_on_bench', True)}))
+KeyError: ((), <object object at 0x7f38930bcea0>, frozenset({('_ensure_on_bench', True)}))
 
 During handling of the above exception, another exception occurred:
 
@@ -1138,12 +1138,12 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-07-31 12:56:00,504 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-07-31 13:48:00,585 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
            ~~~~~~~~~~~~^^^^^^^^^^
-KeyError: ((), <object object at 0x76557a780ea0>, frozenset({('_ensure_on_bench', True)}))
+KeyError: ((), <object object at 0x7f38930bcea0>, frozenset({('_ensure_on_bench', True)}))
 
 During handling of the above exception, another exception occurred:
 
@@ -1252,12 +1252,12 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-07-31 13:00:00,774 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 04:56:02,083 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
            ~~~~~~~~~~~~^^^^^^^^^^
-KeyError: ((), <object object at 0x76557a780ea0>, frozenset({('_ensure_on_bench', True)}))
+KeyError: ((), <object object at 0x7ac713980ea0>, frozenset({('_ensure_on_bench', True)}))
 
 During handling of the above exception, another exception occurred:
 
@@ -1366,12 +1366,12 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-07-31 13:04:01,077 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 05:00:00,783 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
            ~~~~~~~~~~~~^^^^^^^^^^
-KeyError: ((), <object object at 0x76557a780ea0>, frozenset({('_ensure_on_bench', True)}))
+KeyError: ((), <object object at 0x7ac713980ea0>, frozenset({('_ensure_on_bench', True)}))
 
 During handling of the above exception, another exception occurred:
 
@@ -1480,3 +1480,13 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
+2026-08-01 08:12:00,528 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for doctypesite
+2026-08-01 08:12:00,534 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for doctypesite
+2026-08-01 08:12:00,536 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for doctypesite
+2026-08-01 08:12:00,537 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for doctypesite
+2026-08-01 08:12:00,541 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for doctypesite
+2026-08-01 08:12:00,542 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for doctypesite
+2026-08-01 08:12:00,545 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for doctypesite
+2026-08-01 08:12:00,565 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for project
+2026-08-01 08:12:00,591 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for site2.local
+2026-08-01 12:28:00,381 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for site1.local
