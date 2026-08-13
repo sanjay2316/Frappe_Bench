@@ -1,0 +1,22 @@
+{% set details_list = frappe.get_all(
+    "Details",
+    fields=["name", "name1", "email", "new_data", "check", "status"]
+) %}
+
+{% for details in details_list %}
+
+<h3>{{ details.name1 }}</h3>
+
+<p>Email: {{ details.email }}</p>
+<p>Phone: {{ details.new_data }}</p>
+<p>Status: {{ details.status }}</p>
+
+{% if details.check %}
+<p>Checked: Yes</p>
+{% else %}
+<p>Checked: No</p>
+{% endif %}
+
+<hr>
+
+{% endfor %}

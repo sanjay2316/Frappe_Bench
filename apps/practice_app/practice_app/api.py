@@ -126,7 +126,8 @@ def count_details():
     return frappe.db.count("Details")
 
 
-#assignment
+#assignment databaseapi
+
 #http://site1.local/api/method/practice_app.api.process_details
 
 @frappe.whitelist()
@@ -190,3 +191,33 @@ def process_details():
         row["status"] = "Approve"
 
     return results
+
+#assignment Frappe Utilities
+#http://site1.local/api/method/practice_app.api.get_recent_records
+
+@frappe.whitelist()
+def get_recent_records():
+    details = frappe.get_list(
+        "Details",
+        fields=["name","name1","email","status","owner"],
+        order_by="creation desc",
+        limit_page_length=5
+    )
+    res = []
+    for d in details:
+        owner_email = frappe.db.get_value(
+            "User",
+            d.owner,
+            "email"
+        )
+        res.append({
+            "name": d.name,
+            "name1": d.name1,
+            "email": d.email,
+            "status": d.status,
+            "owner_email": owner_email
+        })
+    return {
+        "Time" : frappe.utils.now(),
+        "Recent Result" : res
+    }
