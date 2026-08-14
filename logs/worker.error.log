@@ -66527,3 +66527,4 @@ Traceback (most recent call last):
     event
 NameError: name 'event' is not defined
 
+2026-08-13 05:27:28,546 Worker 6f7581480cb6437290a0389af5c947b4: could not connect to Redis instance: Error 111 connecting to 127.0.0.1:11001. Connection refused. retrying in 2 seconds...

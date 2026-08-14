@@ -4620,3 +4620,1470 @@ AttributeError: module 'practice_app.overrides' has no attribute 'send_email'
 [2026-08-12 13:21:01 +0000] [19243] [INFO] Booting worker with pid: 19243
 [2026-08-12 13:21:01 +0000] [19245] [INFO] Booting worker with pid: 19245
 [2026-08-12 13:21:01 +0000] [19247] [INFO] Booting worker with pid: 19247
+[2026-08-13 05:08:48 +0000] [472] [INFO] Starting gunicorn 23.0.0
+[2026-08-13 05:08:48 +0000] [472] [INFO] Listening at: http://127.0.0.1:8001 (472)
+[2026-08-13 05:08:48 +0000] [472] [INFO] Using worker: sync
+[2026-08-13 05:08:48 +0000] [1240] [INFO] Booting worker with pid: 1240
+[2026-08-13 05:08:48 +0000] [1241] [INFO] Booting worker with pid: 1241
+[2026-08-13 05:08:48 +0000] [1242] [INFO] Booting worker with pid: 1242
+[2026-08-13 05:08:48 +0000] [1243] [INFO] Booting worker with pid: 1243
+[2026-08-13 05:08:48 +0000] [1244] [INFO] Booting worker with pid: 1244
+[2026-08-13 05:08:48 +0000] [1245] [INFO] Booting worker with pid: 1245
+[2026-08-13 05:08:48 +0000] [1246] [INFO] Booting worker with pid: 1246
+[2026-08-13 05:08:48 +0000] [1247] [INFO] Booting worker with pid: 1247
+[2026-08-13 05:08:48 +0000] [1248] [INFO] Booting worker with pid: 1248
+[2026-08-13 05:09:07 +0000] [1248] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7cb2d8181440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:09:07 +0000] [1246] [ERROR] Error handling request /favicon.ico
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7cb2d8181440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:09:10 +0000] [1246] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7cb2d8181440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:09:10 +0000] [1246] [ERROR] Error handling request /favicon.ico
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7cb2d8181440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:09:45 +0000] [1247] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7cb2d8181440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:09:45 +0000] [1247] [ERROR] Error handling request /favicon.ico
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7cb2d8181440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:09:46 +0000] [1245] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7cb2d8181440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:09:46 +0000] [1246] [ERROR] Error handling request /favicon.ico
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x7cb2d8181440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:10:34 +0000] [472] [INFO] Handling signal: term
+[2026-08-13 05:10:34 +0000] [1242] [INFO] Worker exiting (pid: 1242)
+[2026-08-13 05:10:34 +0000] [1243] [INFO] Worker exiting (pid: 1243)
+[2026-08-13 05:10:34 +0000] [1245] [INFO] Worker exiting (pid: 1245)
+[2026-08-13 05:10:34 +0000] [1244] [INFO] Worker exiting (pid: 1244)
+[2026-08-13 05:10:34 +0000] [1246] [INFO] Worker exiting (pid: 1246)
+[2026-08-13 05:10:34 +0000] [1247] [INFO] Worker exiting (pid: 1247)
+[2026-08-13 05:10:34 +0000] [1248] [INFO] Worker exiting (pid: 1248)
+[2026-08-13 05:10:34 +0000] [1241] [INFO] Worker exiting (pid: 1241)
+[2026-08-13 05:10:34 +0000] [1240] [INFO] Worker exiting (pid: 1240)
+[2026-08-13 05:10:35 +0000] [472] [INFO] Shutting down: Master
+[2026-08-13 05:10:37 +0000] [1370] [INFO] Starting gunicorn 23.0.0
+[2026-08-13 05:10:37 +0000] [1370] [INFO] Listening at: http://127.0.0.1:8001 (1370)
+[2026-08-13 05:10:37 +0000] [1370] [INFO] Using worker: sync
+[2026-08-13 05:10:37 +0000] [1415] [INFO] Booting worker with pid: 1415
+[2026-08-13 05:10:37 +0000] [1416] [INFO] Booting worker with pid: 1416
+[2026-08-13 05:10:37 +0000] [1417] [INFO] Booting worker with pid: 1417
+[2026-08-13 05:10:37 +0000] [1418] [INFO] Booting worker with pid: 1418
+[2026-08-13 05:10:37 +0000] [1419] [INFO] Booting worker with pid: 1419
+[2026-08-13 05:10:37 +0000] [1420] [INFO] Booting worker with pid: 1420
+[2026-08-13 05:10:37 +0000] [1421] [INFO] Booting worker with pid: 1421
+[2026-08-13 05:10:37 +0000] [1422] [INFO] Booting worker with pid: 1422
+[2026-08-13 05:10:37 +0000] [1423] [INFO] Booting worker with pid: 1423
+[2026-08-13 05:10:58 +0000] [1423] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x73ee6db81440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:10:58 +0000] [1423] [ERROR] Error handling request /favicon.ico
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x73ee6db81440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:10:59 +0000] [1421] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x73ee6db81440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:10:59 +0000] [1420] [ERROR] Error handling request /favicon.ico
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x73ee6db81440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:10:59 +0000] [1420] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x73ee6db81440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:10:59 +0000] [1418] [ERROR] Error handling request /favicon.ico
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x73ee6db81440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:10:59 +0000] [1418] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x73ee6db81440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:10:59 +0000] [1418] [ERROR] Error handling request /favicon.ico
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+           ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: ((), <object object at 0x73ee6db81440>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 180, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True, is_request=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 225, in init
+    setup_module_map(include_all_apps=not (is_request or is_job or frappe.flags.in_migrate))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 1056, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/__init__.py", line 936, in get_installed_apps
+    installed = orjson.loads(db.get_global("installed_apps") or "[]")
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1142, in get_global
+    return self.get_default(key, user)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1146, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 1162, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/defaults.py", line 249, in get_defaults_for
+    .run(as_dict=True)
+     ~~~^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 113, in get_connection
+    conn = self._get_connection()
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 118, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 121, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'localhost' (using password: YES)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    self.handle_request(listener, req, client, addr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/gunicorn/workers/sync.py", line 177, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 84, in application
+    app(environ, start_response),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/env/lib/python3.14/site-packages/werkzeug/wrappers/request.py", line 193, in application
+    resp = f(*args[:-2] + (request,))
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 145, in application
+    response = e.get_response(request.environ) if isinstance(e, HTTPException) else handle_exception(e)
+                                                                                    ~~~~~~~~~~~~~~~~^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/permissions.py", line 930, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/app.py", line 354, in handle_exception
+    frappe.get_request_header("Accept") and (frappe.local.is_ajax or "application/json" in accept_header)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/local.py", line 28, in __getattribute__
+    raise AttributeError(name)
+AttributeError: is_ajax
+[2026-08-13 05:25:24 +0000] [1370] [INFO] Handling signal: term
+[2026-08-13 05:25:25 +0000] [1419] [INFO] Worker exiting (pid: 1419)
+[2026-08-13 05:25:25 +0000] [1422] [INFO] Worker exiting (pid: 1422)
+[2026-08-13 05:25:25 +0000] [1416] [INFO] Worker exiting (pid: 1416)
+[2026-08-13 05:25:25 +0000] [1417] [INFO] Worker exiting (pid: 1417)
+[2026-08-13 05:25:25 +0000] [1415] [INFO] Worker exiting (pid: 1415)
+[2026-08-13 05:25:25 +0000] [1423] [INFO] Worker exiting (pid: 1423)
+[2026-08-13 05:25:25 +0000] [1421] [INFO] Worker exiting (pid: 1421)
+[2026-08-13 05:25:25 +0000] [1418] [INFO] Worker exiting (pid: 1418)
+[2026-08-13 05:25:25 +0000] [1420] [INFO] Worker exiting (pid: 1420)
+[2026-08-13 05:25:26 +0000] [1370] [INFO] Shutting down: Master
+[2026-08-13 05:25:29 +0000] [2171] [INFO] Starting gunicorn 23.0.0
+[2026-08-13 05:25:29 +0000] [2171] [INFO] Listening at: http://127.0.0.1:8001 (2171)
+[2026-08-13 05:25:29 +0000] [2171] [INFO] Using worker: sync
+[2026-08-13 05:25:29 +0000] [2211] [INFO] Booting worker with pid: 2211
+[2026-08-13 05:25:29 +0000] [2212] [INFO] Booting worker with pid: 2212
+[2026-08-13 05:25:29 +0000] [2213] [INFO] Booting worker with pid: 2213
+[2026-08-13 05:25:29 +0000] [2214] [INFO] Booting worker with pid: 2214
+[2026-08-13 05:25:29 +0000] [2215] [INFO] Booting worker with pid: 2215
+[2026-08-13 05:25:29 +0000] [2216] [INFO] Booting worker with pid: 2216
+[2026-08-13 05:25:30 +0000] [2217] [INFO] Booting worker with pid: 2217
+[2026-08-13 05:25:30 +0000] [2218] [INFO] Booting worker with pid: 2218
+[2026-08-13 05:25:30 +0000] [2219] [INFO] Booting worker with pid: 2219
+[2026-08-13 05:27:28 +0000] [2171] [INFO] Handling signal: term
+[2026-08-13 05:27:28 +0000] [2211] [INFO] Worker exiting (pid: 2211)
+[2026-08-13 05:27:28 +0000] [2212] [INFO] Worker exiting (pid: 2212)
+[2026-08-13 05:27:28 +0000] [2218] [INFO] Worker exiting (pid: 2218)
+[2026-08-13 05:27:28 +0000] [2213] [INFO] Worker exiting (pid: 2213)
+[2026-08-13 05:27:28 +0000] [2214] [INFO] Worker exiting (pid: 2214)
+[2026-08-13 05:27:28 +0000] [2215] [INFO] Worker exiting (pid: 2215)
+[2026-08-13 05:27:28 +0000] [2216] [INFO] Worker exiting (pid: 2216)
+[2026-08-13 05:27:28 +0000] [2217] [INFO] Worker exiting (pid: 2217)
+[2026-08-13 05:27:28 +0000] [2219] [INFO] Worker exiting (pid: 2219)
+[2026-08-13 05:27:29 +0000] [2171] [INFO] Shutting down: Master
+[2026-08-13 05:27:33 +0000] [2446] [INFO] Starting gunicorn 23.0.0
+[2026-08-13 05:27:33 +0000] [2446] [INFO] Listening at: http://127.0.0.1:8001 (2446)
+[2026-08-13 05:27:33 +0000] [2446] [INFO] Using worker: sync
+[2026-08-13 05:27:33 +0000] [2484] [INFO] Booting worker with pid: 2484
+[2026-08-13 05:27:33 +0000] [2489] [INFO] Booting worker with pid: 2489
+[2026-08-13 05:27:33 +0000] [2490] [INFO] Booting worker with pid: 2490
+[2026-08-13 05:27:33 +0000] [2491] [INFO] Booting worker with pid: 2491
+[2026-08-13 05:27:33 +0000] [2492] [INFO] Booting worker with pid: 2492
+[2026-08-13 05:27:33 +0000] [2493] [INFO] Booting worker with pid: 2493
+[2026-08-13 05:27:33 +0000] [2495] [INFO] Booting worker with pid: 2495
+[2026-08-13 05:27:33 +0000] [2496] [INFO] Booting worker with pid: 2496
+[2026-08-13 05:27:33 +0000] [2497] [INFO] Booting worker with pid: 2497
+[2026-08-14 06:26:53 +0000] [8539] [INFO] Starting gunicorn 23.0.0
+[2026-08-14 06:26:53 +0000] [8539] [INFO] Listening at: http://127.0.0.1:8001 (8539)
+[2026-08-14 06:26:53 +0000] [8539] [INFO] Using worker: sync
+[2026-08-14 06:26:54 +0000] [9360] [INFO] Booting worker with pid: 9360
+[2026-08-14 06:26:54 +0000] [9411] [INFO] Booting worker with pid: 9411
+[2026-08-14 06:26:54 +0000] [9442] [INFO] Booting worker with pid: 9442
+[2026-08-14 06:26:54 +0000] [9519] [INFO] Booting worker with pid: 9519
+[2026-08-14 06:26:54 +0000] [9575] [INFO] Booting worker with pid: 9575
+[2026-08-14 06:26:54 +0000] [9585] [INFO] Booting worker with pid: 9585
+[2026-08-14 06:26:54 +0000] [9593] [INFO] Booting worker with pid: 9593
+[2026-08-14 06:26:54 +0000] [9629] [INFO] Booting worker with pid: 9629
+[2026-08-14 06:26:54 +0000] [9634] [INFO] Booting worker with pid: 9634
+[2026-08-14 06:33:21 +0000] [8539] [INFO] Handling signal: term
+[2026-08-14 06:33:21 +0000] [9442] [INFO] Worker exiting (pid: 9442)
+[2026-08-14 06:33:21 +0000] [9360] [INFO] Worker exiting (pid: 9360)
+[2026-08-14 06:33:21 +0000] [9575] [INFO] Worker exiting (pid: 9575)
+[2026-08-14 06:33:21 +0000] [9411] [INFO] Worker exiting (pid: 9411)
+[2026-08-14 06:33:21 +0000] [9519] [INFO] Worker exiting (pid: 9519)
+[2026-08-14 06:33:21 +0000] [9593] [INFO] Worker exiting (pid: 9593)
+[2026-08-14 06:33:21 +0000] [9585] [INFO] Worker exiting (pid: 9585)
+[2026-08-14 06:33:21 +0000] [9629] [INFO] Worker exiting (pid: 9629)
+[2026-08-14 06:33:21 +0000] [9634] [INFO] Worker exiting (pid: 9634)
+[2026-08-14 06:33:21 +0000] [8539] [INFO] Shutting down: Master
+[2026-08-14 06:33:23 +0000] [10072] [INFO] Starting gunicorn 23.0.0
+[2026-08-14 06:33:23 +0000] [10072] [INFO] Listening at: http://127.0.0.1:8001 (10072)
+[2026-08-14 06:33:23 +0000] [10072] [INFO] Using worker: sync
+[2026-08-14 06:33:23 +0000] [10088] [INFO] Booting worker with pid: 10088
+[2026-08-14 06:33:23 +0000] [10089] [INFO] Booting worker with pid: 10089
+[2026-08-14 06:33:23 +0000] [10090] [INFO] Booting worker with pid: 10090
+[2026-08-14 06:33:23 +0000] [10091] [INFO] Booting worker with pid: 10091
+[2026-08-14 06:33:23 +0000] [10095] [INFO] Booting worker with pid: 10095
+[2026-08-14 06:33:23 +0000] [10096] [INFO] Booting worker with pid: 10096
+[2026-08-14 06:33:23 +0000] [10097] [INFO] Booting worker with pid: 10097
+[2026-08-14 06:33:23 +0000] [10104] [INFO] Booting worker with pid: 10104
+[2026-08-14 06:33:23 +0000] [10105] [INFO] Booting worker with pid: 10105
+[2026-08-14 06:35:13 +0000] [10072] [INFO] Handling signal: term
+[2026-08-14 06:35:13 +0000] [10088] [INFO] Worker exiting (pid: 10088)
+[2026-08-14 06:35:13 +0000] [10089] [INFO] Worker exiting (pid: 10089)
+[2026-08-14 06:35:13 +0000] [10091] [INFO] Worker exiting (pid: 10091)
+[2026-08-14 06:35:13 +0000] [10090] [INFO] Worker exiting (pid: 10090)
+[2026-08-14 06:35:13 +0000] [10096] [INFO] Worker exiting (pid: 10096)
+[2026-08-14 06:35:13 +0000] [10095] [INFO] Worker exiting (pid: 10095)
+[2026-08-14 06:35:13 +0000] [10104] [INFO] Worker exiting (pid: 10104)
+[2026-08-14 06:35:13 +0000] [10097] [INFO] Worker exiting (pid: 10097)
+[2026-08-14 06:35:13 +0000] [10105] [INFO] Worker exiting (pid: 10105)
+[2026-08-14 06:35:14 +0000] [10072] [INFO] Shutting down: Master
+[2026-08-14 06:35:15 +0000] [10312] [INFO] Starting gunicorn 23.0.0
+[2026-08-14 06:35:15 +0000] [10312] [INFO] Listening at: http://127.0.0.1:8001 (10312)
+[2026-08-14 06:35:15 +0000] [10312] [INFO] Using worker: sync
+[2026-08-14 06:35:15 +0000] [10328] [INFO] Booting worker with pid: 10328
+[2026-08-14 06:35:15 +0000] [10329] [INFO] Booting worker with pid: 10329
+[2026-08-14 06:35:15 +0000] [10330] [INFO] Booting worker with pid: 10330
+[2026-08-14 06:35:15 +0000] [10331] [INFO] Booting worker with pid: 10331
+[2026-08-14 06:35:16 +0000] [10332] [INFO] Booting worker with pid: 10332
+[2026-08-14 06:35:16 +0000] [10336] [INFO] Booting worker with pid: 10336
+[2026-08-14 06:35:16 +0000] [10337] [INFO] Booting worker with pid: 10337
+[2026-08-14 06:35:16 +0000] [10338] [INFO] Booting worker with pid: 10338
+[2026-08-14 06:35:16 +0000] [10340] [INFO] Booting worker with pid: 10340

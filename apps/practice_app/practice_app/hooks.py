@@ -45,3 +45,10 @@ doc_events = {
         "validate": "practice_app.api.custom_logic"
     }
 }
+scheduler_events = {
+    "cron": {
+        "*/5 * * * *": [
+            "practice_app.tasks.daily_maintenance"
+        ]
+    }
+}

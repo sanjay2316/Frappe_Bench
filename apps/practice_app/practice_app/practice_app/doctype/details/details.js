@@ -2,54 +2,29 @@ frappe.ui.form.on("Details", {
     refresh(frm) {
 
         frm.add_custom_button("Create Document", function () {
-            frappe.call({
-                method: "practice_app.practice_app.doctype.details.details.create_document",
-                callback: function(r) {
-                    frappe.msgprint("Document Created");
-                    frappe.msgprint(r.message);
+            let dialog = new frappe.ui.Dialog({
+                title : "Enter Name",
+                fields : [
+                    {
+                        label : "Name",
+                        fieldname : "name2",
+                        fieldtype : "Data"
+                    }
+                ],
+                primary_action_label : "Create" ,
+                primary_action(values){
+                    let newname = values.name2;
+                    frappe.route_options = {
+                        name1: newname
+                    };
+                    console.log(values.name2);
+                    dialog.hide();
+                    frappe.new_doc("Details");
                 }
             });
+            dialog.show();
         });
-
-        frm.add_custom_button("Update Document", function () {
-            frappe.call({
-                method: "practice_app.practice_app.doctype.details.details.update_document",
-                args: {
-                    docname: frm.doc.name
-                },
-                callback: function(r) {
-                    frappe.msgprint("Document Updated");
-                    frm.reload_doc();
-                }
-            });
-        });
-
-        frm.add_custom_button("Reload Document", function () {
-            frappe.call({
-                method: "practice_app.practice_app.doctype.details.details.reload_document",
-                args: {
-                    docname: frm.doc.name
-                },
-                callback: function(r) {
-                    frappe.msgprint("Current Status: " + r.message);
-                    frm.reload_doc();
-                }
-            });
-        });
-
-        frm.add_custom_button("Send Emails", function () {
-
-            frappe.call({
-                method: "practice_app.practice_app.doctype.details.details.queue_emails",
-                args: {
-                    docname: frm.doc.name
-                },
-                callback: function(r) {
-                    frappe.msgprint(r.message);
-                }
-            });
-
-        });
-
+         
     }
+
 });
