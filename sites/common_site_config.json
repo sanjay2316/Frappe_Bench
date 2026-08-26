@@ -2,7 +2,7 @@
  "background_workers": 1,
  "default_site": "site1.local",
  "developer_mode": 1,
- "dns_multitenant": false,
+ "dns_multitenant": true,
  "file_watcher_port": 6788,
  "frappe_user": "sanjayh",
  "gunicorn_workers": 9,

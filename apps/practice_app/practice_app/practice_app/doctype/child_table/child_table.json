@@ -9,7 +9,7 @@
  "field_order": [
   "project_section",
   "project_id",
-  "project_name"
+  "project_date"
  ],
  "fields": [
   {
@@ -19,22 +19,22 @@
    "label": "project_id"
   },
   {
-   "fieldname": "project_name",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "project_date"
-  },
-  {
    "fieldname": "project_section",
    "fieldtype": "Section Break",
    "label": "Project"
+  },
+  {
+   "fieldname": "project_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "project_date"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-08-01 11:41:37.040115",
+ "modified": "2026-08-26 12:28:55.834071",
  "modified_by": "Administrator",
  "module": "Practice_App",
  "name": "Child_Table",

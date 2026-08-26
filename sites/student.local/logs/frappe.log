@@ -1,0 +1,279 @@
+2026-08-18 08:16:54,456 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'Details', 'name': '', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:17:05,364 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': '', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:17:12,042 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Student_Management', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:17:12,440 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Student_Management', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:17:23,288 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Student_Management', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:22:01,869 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Student', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:22:02,080 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Student', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:25:19,937 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Student', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:26:09,874 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Student', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:26:48,544 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Student', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:29:22,583 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Department', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:29:22,945 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Department', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:32:05,644 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Department', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:33:50,347 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:33:50,475 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:35:33,180 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:36:34,447 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:36:46,087 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:39:30,185 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:41:00,324 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:41:29,345 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:41:57,036 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Enrollment', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:41:57,365 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Enrollment', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:45:11,786 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Enrollment', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:48:30,936 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Teacher', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:48:31,034 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Teacher', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:51:35,629 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Teacher', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:53:12,215 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Teacher', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:53:21,434 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Teacher', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:54:32,982 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course Assignment', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:54:33,069 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course Assignment', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:56:28,891 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course Assignment', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:57:32,005 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course Assignment', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:58:02,056 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course Assignment', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:59:07,428 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Attendance', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 08:59:08,029 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Attendance', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:01:28,966 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Attendance', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:01:29,219 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Attendance', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:03:26,458 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Attendance', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:04:22,805 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': '', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:04:45,982 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Examination', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:04:46,173 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Examination', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:08:02,061 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Examination', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:09:06,750 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Marks', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:09:07,180 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Marks', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:13:00,548 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Marks', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:14:19,073 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Subject', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:14:19,413 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Subject', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:17:47,059 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Subject', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:19:44,244 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Student', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:19:44,340 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Student', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:22:02,782 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Student', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:22:09,245 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Department', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:22:09,844 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Department', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:22:44,345 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Department', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:22:48,976 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:22:49,207 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:23:23,001 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:23:26,950 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Enrollment', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:23:27,289 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Enrollment', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:24:08,425 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Enrollment', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:24:34,355 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Teacher', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:24:34,717 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Teacher', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:25:11,279 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Teacher', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:25:15,510 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course Assignment', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:25:15,735 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course Assignment', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:25:58,052 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Course Assignment', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:26:01,439 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Attendance', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:26:36,644 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Attendance', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:26:41,448 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Examination', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:27:05,661 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Examination', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:27:17,385 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Marks', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:27:34,804 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Marks', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:27:43,005 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Subject', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:28:18,041 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Subject', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:29:29,854 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Marks Detail', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:29:30,226 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Marks Detail', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:32:23,425 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Marks Detail', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:33:50,937 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Marks Detail', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:35:18,197 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Marks', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 09:37:26,965 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Marks', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 10:28:57,883 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Department', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 12:27:26,327 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': '', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 12:27:29,012 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Subject', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 12:27:29,264 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Subject', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 13:08:58,254 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Marks Detail', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 13:09:02,839 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'DocType', 'name': 'Student', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 13:10:57,114 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'Customize Form', 'name': 'Customize Form', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 13:10:57,547 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'Customize Form', 'name': 'Customize Form', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-18 13:11:00,038 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'Customize Form', 'name': 'Customize Form', 'cmd': 'frappe.realtime.has_permission'}
+2026-08-19 06:43:12,547 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'cmd': 'login', 'usr': 'Administrator'}
+2026-08-19 07:26:38,619 ERROR frappe New Exception collected in error log
+Site: student.local
+Form Dict: {'doctype': 'Module Def', 'name': 'Student_Management', 'cmd': 'frappe.client.delete'}
+2026-08-19 07:32:04,438 ERROR frappe Error while inserting deferred Error Log record: (1406, "Data too long for column 'method' at row 1")
+Site: student.local
+Form Dict: {}

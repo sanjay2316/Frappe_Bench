@@ -5,8 +5,8 @@ def create_task(task_subject):
     doc = frappe.new_doc("Task")
     doc.task_subject = task_subject
     doc.save()
-
     return doc.name
+
 @frappe.whitelist()
 def custom_logic(doc, method):
     frappe.msgprint("Hook executed!")
@@ -30,7 +30,7 @@ def get_all_details():
     return frappe.db.get_all(
         "Details",
         filters={
-            "status": "Approved"
+            "status": "Approve"
         },
         fields=["name", "name1", "email", "status"]
     )
@@ -221,3 +221,133 @@ def get_recent_records():
         "Time" : frappe.utils.now(),
         "Recent Result" : res
     }
+
+#qb.get_query practice
+#http://site1.local/api/method/practice_app.api.getusinggetquery?name=Details
+@frappe.whitelist()
+def getusinggetquery(name):
+    newquery = frappe.qb.get_query(name, fields=["name1 as emp_name","status as current_status",{"table": ["project_id","project_date"]}] , filters={"name":"1"})
+    result = newquery.run(as_dict=True)
+    return result
+
+#http://site1.local/api/method/practice_app.api.getusinggetquerywithfilter?name=Details&filters={"status":"Approved"}
+#http://site1.local/api/method/practice_app.api.getusinggetquerywithfilter?name=Details&filters=%7B%22status%22%3A%22Approved%22%7D
+# @frappe.whitelist()
+# def getusinggetquerywithfilter(name,filters=None):
+#     newquery = frappe.qb.get_query(name,filters=filters)
+#     result = newquery.run(as_dict=True)
+#     return result
+
+#http://site1.local/api/method/practice_app.api.getlinkfield
+@frappe.whitelist()
+def getlinkfield():
+    newquery = frappe.qb.get_query("Details_email",fields=["select_data.name1 as name","email"])
+    result = newquery.run(as_dict=True)
+    return result
+#http://site1.local/api/method/practice_app.api.countdetails
+@frappe.whitelist()
+def countdetails():
+    q = frappe.qb.get_query(
+        "Details",
+        fields=[{"COUNT": "*", "as": "total_emp"}]
+    )
+    res = q.run(as_dict=True)
+    return res
+#http://site1.local/api/method/practice_app.api.currenttime
+
+@frappe.whitelist()
+def currenttime():
+    query = frappe.qb.get_query(
+    "Details",
+    fields=[{"NOW": None, "as": "current_time"}])
+    return(query.run(as_dict=True))
+
+#http://site1.local/api/method/practice_app.api.listfilter
+@frappe.whitelist()
+def listfilter():
+    q = frappe.qb.get_query(
+        "Details",
+        fields=["*"],
+        filters=[["name","=","1"]]
+    )
+    return(q.run(as_dict=True))
+#http://site1.local/api/method/practice_app.api.nestedfilter
+@frappe.whitelist()
+def nestedfilter():
+    filters_nested = [
+        ["status", "=", "Approve"],
+        "and",
+        [
+            ["name1", "=", "Sanjay"],
+            "or",
+            ["name1", "=", "Monika"],
+        ]
+    ]
+
+    query = frappe.qb.get_query(
+        "Details",
+        filters=filters_nested
+    )
+
+    return(query.run(as_dict=True))
+
+@frappe.whitelist()
+def childtable():
+    q = frappe.qb.get_query(
+        "Details",
+        fields=[
+            "name",
+            "name1",
+            "status",
+            {"table": ["project_id", "project_date"]}
+        ],
+        filters={"name": "1"},
+        ignore_permissions=False 
+    )
+    
+    try:
+        sql_string = q.get_sql()
+        print(sql_string)
+        res = q.run(as_dict=True)
+        return(res)
+
+    except frappe.PermissionError:
+        print("User does not have permission to read DocType!")
+
+#doubt session
+
+# In [13]: q = frappe.qb.get_query(
+#     ...:     "Details",
+#     ...:     fields=[
+#     ...:         "name",
+#     ...:         "name1",
+#     ...:         "status",
+#     ...:         {"table": ["project_id", "project_date"]}
+#     ...:     ],
+#     ...:     filters={"name": "1"}
+#     ...: )
+#     ...:
+#     ...: q.run(as_dict=True)
+# Out[13]:
+# [{'name': 1,
+#   'name1': 'Sanjay',
+#   'status': 'Approve',
+#   'table': [{'project_id': 'PJ1',
+#     'project_date': datetime.date(2026, 8, 26)}]}]
+
+# In [14]: q = frappe.qb.get_query(
+#     ...:     "Details",
+#     ...:     fields=[
+#     ...:         "name1 as emp_name",
+#     ...:         "status as current_status",
+#     ...:         {"table": ["project_id", "project_date"]}
+#     ...:     ],
+#     ...:     filters={"name": "1"}
+#     ...: )
+#     ...:
+#     ...: q.run(as_dict=True)
+# Out[14]: [{'emp_name': 'Sanjay', 'current_status': 'Approve'}]
+
+
+# explanation
+# when use "as" alias you will not get the child table filter

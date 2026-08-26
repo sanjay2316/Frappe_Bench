@@ -202,3 +202,689 @@ In [2]: frappe.db.exists("DocType", "Task")
 2026-08-12 13:20:42,211 INFO ipython hasattr(practice_app.api, "process_details")
 2026-08-12 13:20:42,211 INFO ipython dir(practice_app.api)
 2026-08-12 13:20:42,211 INFO ipython === session end ===
+2026-08-18 07:09:36,807 INFO ipython === bench console session ===
+2026-08-18 07:09:36,808 INFO ipython frappe.get_hooks("base_template")
+2026-08-18 07:09:36,808 INFO ipython frappe.get_hooks("app_include_css")
+2026-08-18 07:09:36,808 INFO ipython === session end ===
+2026-08-18 07:11:09,363 INFO ipython === bench console session ===
+2026-08-18 07:11:09,363 INFO ipython frappe.get_conf().get("host_name")
+2026-08-18 07:11:09,363 INFO ipython frappe.get_conf().get("host_name")
+2026-08-18 07:11:09,363 INFO ipython frappe.get_single("Website Settings").as_dict()
+2026-08-18 07:11:09,363 INFO ipython === session end ===
+2026-08-18 07:12:04,304 INFO ipython === bench console session ===
+2026-08-18 07:12:04,304 INFO ipython frappe.db.get_single_value("Website Settings", "app_name")
+2026-08-18 07:12:04,304 INFO ipython frappe.db.get_single_value("System Settings", "app_name")
+2026-08-18 07:12:04,304 INFO ipython === session end ===
+2026-08-18 07:14:08,275 INFO ipython === bench console session ===
+2026-08-18 07:14:08,275 INFO ipython frappe.get_website_settings("app_name")
+2026-08-18 07:14:08,275 INFO ipython frappe.get_system_settings("app_name")
+2026-08-18 07:14:08,275 INFO ipython frappe.get_hooks("base_template")
+2026-08-18 07:14:08,275 INFO ipython frappe.get_hooks("app_include_css")
+2026-08-18 07:14:08,275 INFO ipython === session end ===
+2026-08-18 07:16:28,272 INFO ipython === bench console session ===
+2026-08-18 07:16:28,273 INFO ipython frappe.get_all("Translation", filters={"source_text": "Login"}, fields=["name", "source_text", "translated_text", "language"])
+2026-08-18 07:16:28,275 INFO ipython === session end ===
+2026-08-18 10:32:43,043 INFO ipython === bench console session ===
+2026-08-18 10:32:43,044 INFO ipython departments = [
+    {
+        "department_name": "Information Technology",
+        "department_code": "IT",
+        "description": "Information Technology Department",
+        "head_of_department": "Dr. Arun Kumar",
+        "status": "Active"
+    },
+    {
+        "department_name": "Computer Science",
+        "department_code": "CSE",
+        "description": "Computer Science Department",
+        "head_of_department": "Dr. Priya Sharma",
+        "status": "Active"
+    },
+    {
+        "department_name": "Electronics and Communication",
+        "department_code": "ECE",
+        "description": "Electronics and Communication Engineering Department",
+        "head_of_department": "Dr. Ravi Kumar",
+        "status": "Active"
+    },
+    {
+        "department_name": "Mechanical Engineering",
+        "department_code": "MECH",
+        "description": "Mechanical Engineering Department",
+        "head_of_department": "Dr. Suresh Babu",
+        "status": "Active"
+    },
+    {
+        "department_name": "Civil Engineering",
+        "department_code": "CIVIL",
+        "description": "Civil Engineering Department",
+        "head_of_department": "Dr. Meena Devi",
+        "status": "Active"
+    }
+]
+
+for data in departments:
+    if not frappe.db.exists(
+        "Department",
+        {"department_code": data["department_code"]}
+    ):
+        doc = frappe.get_doc({
+            "doctype": "Department",
+            **data
+        })
+
+        doc.insert(ignore_permissions=True)
+
+frappe.db.commit()
+
+print("Departments inserted successfully!")
+2026-08-18 10:32:43,044 INFO ipython === session end ===
+2026-08-18 10:36:08,778 INFO ipython === bench console session ===
+2026-08-18 10:36:08,778 INFO ipython frappe.get_meta("Department").module
+2026-08-18 10:36:08,779 INFO ipython frappe.get_all("DocType", fields=["name", "module", "custom"], order_by="name")
+2026-08-18 10:36:08,779 INFO ipython === session end ===
+2026-08-18 10:39:39,617 INFO ipython === bench console session ===
+2026-08-18 10:39:39,619 INFO ipython frappe.get_all(
+    "DocType",
+    filters={
+        "name": ["in", [
+            "Department",
+            "Course",
+            "Subject",
+            "Teacher",
+            "Student",
+            "Course Assignment",
+            "Enrollment",
+            "Attendance",
+            "Examination",
+            "Marks",
+            "Marks Detail"
+        ]]
+    },
+    fields=["name", "module", "custom"]
+)
+2026-08-18 10:39:39,620 INFO ipython === session end ===
+2026-08-18 10:47:09,197 INFO ipython === bench console session ===
+2026-08-18 10:47:09,202 INFO ipython frappe.get_doc("DocType", "Department").as_dict()
+2026-08-18 10:47:09,202 INFO ipython frappe.get_doc("DocType", "Department").as_dict()
+2026-08-18 10:47:09,202 INFO ipython === session end ===
+2026-08-18 10:54:38,241 INFO ipython === bench console session ===
+2026-08-18 10:54:38,242 INFO ipython frappe.get_doc("DocType", "Department").as_dict()
+2026-08-18 10:54:38,242 INFO ipython frappe.get_value("DocType", "Department", "module")
+2026-08-18 10:54:38,242 INFO ipython frappe.get_value("DocType", "Department", "custom")
+2026-08-18 10:54:38,242 INFO ipython frappe.get_value("DocType", "Department", "owner")
+2026-08-18 10:54:38,242 INFO ipython frappe.get_value("DocType", "Department", "creation")
+2026-08-18 10:54:38,242 INFO ipython frappe.get_value("DocType", "Department", "modified_by")
+2026-08-18 10:54:38,242 INFO ipython === session end ===
+2026-08-18 10:57:15,881 INFO ipython === bench console session ===
+2026-08-18 10:57:15,881 INFO ipython frappe.get_module("student_management.student_app.doctype.department")
+2026-08-18 10:57:15,881 INFO ipython frappe.get_doc("DocType", "Department").module
+2026-08-18 10:57:15,881 INFO ipython frappe.get_doc("DocType", "Department").custom
+2026-08-18 10:57:15,881 INFO ipython frappe.get_module_path("student_management")
+2026-08-18 10:57:15,881 INFO ipython frappe.get_module_path("student_management.student_app")
+2026-08-18 10:57:15,881 INFO ipython === session end ===
+2026-08-18 11:00:05,806 INFO ipython === bench console session ===
+2026-08-18 11:00:05,806 INFO ipython frappe.get_all(
+    "Module Def",
+    fields=["name", "app_name"],
+    order_by="name"
+)
+2026-08-18 11:00:05,806 INFO ipython frappe.get_all(
+    "Module Def",
+    filters={"app_name": "student_management"},
+    fields=["name", "app_name"]
+)
+2026-08-18 11:00:05,806 INFO ipython frappe.get_value(
+    "Module Def",
+    {"name": "Student Management"},
+    ["name", "app_name"],
+    as_dict=True
+)
+2026-08-18 11:00:05,806 INFO ipython frappe.get_doc("Module Def", "Student_Management").as_dict()
+2026-08-18 11:00:05,806 INFO ipython frappe.get_doc("Module Def", "Student_Management").app_name
+2026-08-18 11:00:05,806 INFO ipython frappe.get_doc("Module Def", "Student_Management").custom
+2026-08-18 11:00:05,807 INFO ipython === session end ===
+2026-08-18 11:01:27,994 INFO ipython === bench console session ===
+2026-08-18 11:01:27,997 INFO ipython frappe.get_all(
+    "Module Def",
+    filters={"app_name": "student_management"},
+    fields=["name", "app_name", "custom"]
+)
+2026-08-18 11:01:27,997 INFO ipython === session end ===
+2026-08-18 11:03:19,671 INFO ipython === bench console session ===
+2026-08-18 11:03:19,671 INFO ipython doctypes = [
+    "Department",
+    "Course",
+    "Subject",
+    "Teacher",
+    "Student",
+    "Course Assignment",
+    "Enrollment",
+    "Attendance",
+    "Examination",
+    "Marks",
+    "Marks Detail"
+]
+
+for dt in doctypes:
+    d = frappe.get_doc("DocType", dt)
+    print(dt, "=> module:", d.module, "| custom:", d.custom)
+    
+2026-08-18 11:03:19,671 INFO ipython === session end ===
+2026-08-18 11:03:42,508 INFO ipython === bench console session ===
+2026-08-18 11:03:42,509 INFO ipython import json
+
+doc = frappe.get_doc("DocType", "Department")
+
+with open("/tmp/student_management_export/Department.json", "w") as f:
+    json.dump(doc.as_dict(), f, indent=2, default=str)
+
+print("Department exported")
+2026-08-18 11:03:42,509 INFO ipython === session end ===
+2026-08-18 11:05:13,987 INFO ipython === bench console session ===
+2026-08-18 11:05:13,987 INFO ipython import json
+import os
+
+doctypes = [
+    "Department",
+    "Course",
+    "Subject",
+    "Teacher",
+    "Student",
+    "Course Assignment",
+    "Enrollment",
+    "Attendance",
+    "Examination",
+    "Marks",
+    "Marks Detail"
+]
+
+export_dir = "/tmp/student_management_export"
+os.makedirs(export_dir, exist_ok=True)
+
+for doctype in doctypes:
+    doc = frappe.get_doc("DocType", doctype)
+    
+    data = doc.as_dict()
+    data["module"] = "Student Management"
+
+    filename = doctype.lower().replace(" ", "_") + ".json"
+    filepath = os.path.join(export_dir, filename)
+
+    with open(filepath, "w") as f:
+        json.dump(data, f, indent=2, default=str)
+
+    print(f"Exported: {doctype} -> {filepath}")
+
+print("All 11 DocTypes exported successfully!")
+2026-08-18 11:05:13,987 INFO ipython === session end ===
+2026-08-18 11:10:16,366 INFO ipython === bench console session ===
+2026-08-18 11:10:16,368 INFO ipython frappe.get_doc("Module Def", "Student Management").as_dict()
+2026-08-18 11:10:16,369 INFO ipython frappe.get_module_path("Student Management")
+2026-08-18 11:10:16,369 INFO ipython === session end ===
+2026-08-18 11:23:05,879 INFO ipython === bench console session ===
+2026-08-18 11:23:05,881 INFO ipython frappe.get_value(
+    "Module Def",
+    "Student Management",
+    ["name", "app_name"],
+    as_dict=True
+)
+2026-08-18 11:23:05,881 INFO ipython module = frappe.get_doc({
+    "doctype": "Module Def",
+    "module_name": "Student Management",
+    "app_name": "student_management",
+    "custom": 0
+})
+
+module.insert(ignore_permissions=True)
+frappe.db.commit()
+
+print("Student Management module created")
+2026-08-18 11:23:05,881 INFO ipython frappe.get_value(
+    "Module Def",
+    "Student Management",
+    ["name", "app_name", "custom"],
+    as_dict=True
+)
+2026-08-18 11:23:05,881 INFO ipython === session end ===
+2026-08-18 11:27:10,012 INFO ipython === bench console session ===
+2026-08-18 11:27:10,014 INFO ipython doctypes = [
+    "Department",
+    "Course",
+    "Subject",
+    "Teacher",
+    "Student",
+    "Course Assignment",
+    "Enrollment",
+    "Attendance",
+    "Examination",
+    "Marks",
+    "Marks Detail"
+]
+
+for doctype in doctypes:
+    frappe.db.set_value(
+        "DocType",
+        doctype,
+        "module",
+        "Student Management"
+    )
+
+frappe.db.commit()
+
+print("All 11 DocTypes moved to Student Management module.")
+2026-08-18 11:27:10,014 INFO ipython for doctype in doctypes:
+    print(
+        doctype,
+        "=>",
+        frappe.get_value("DocType", doctype, "module")
+    )
+    
+2026-08-18 11:27:10,014 INFO ipython === session end ===
+2026-08-18 11:33:33,346 INFO ipython === bench console session ===
+2026-08-18 11:33:33,350 INFO ipython frappe.get_all(
+    "Module Def",
+    filters={"app_name": "student_management"},
+    fields=["name", "module_name", "app_name"]
+)
+2026-08-18 11:33:33,350 INFO ipython === session end ===
+2026-08-19 07:26:45,744 INFO ipython === bench console session ===
+2026-08-19 07:26:45,746 INFO ipython frappe.delete_doc("Module Def", "Student_Management", force=True)
+frappe.db.commit()
+2026-08-19 07:26:45,746 INFO ipython === session end ===
+2026-08-19 07:28:22,366 INFO ipython === bench console session ===
+2026-08-19 07:28:22,368 INFO ipython frappe.delete_doc("Module Def", "Student_Management", force=True)frappe.db.commit()
+2026-08-19 07:28:22,368 INFO ipython frappe.delete_doc("Module Def", "Student_Management", force=True)
+frappe.db.commit()
+2026-08-19 07:28:22,368 INFO ipython frappe.delete_doc("Module Def", "student_management", force=True)
+frappe.db.commit()
+2026-08-19 07:28:22,368 INFO ipython === session end ===
+2026-08-19 07:33:40,663 INFO ipython === bench console session ===
+2026-08-19 07:33:40,663 INFO ipython frappe.db.exists("Module Def", "Student_Management")
+2026-08-19 07:33:40,663 INFO ipython frappe.delete_doc("Module Def", "Student_Management", force=True)
+frappe.db.commit()
+2026-08-19 07:33:40,663 INFO ipython === session end ===
+2026-08-21 06:41:43,227 INFO ipython === bench console session ===
+2026-08-21 06:41:43,231 INFO ipython frappe.session.user
+2026-08-21 06:41:43,231 INFO ipython practice_app.permissions.details_query("sanjayk.sde27@gmail.com")
+2026-08-21 06:41:43,231 INFO ipython import practice_app.permissions
+2026-08-21 06:41:43,232 INFO ipython practice_app.permissions.details_query("sanjayk.sde27@gmail.com")
+2026-08-21 06:41:43,232 INFO ipython frappe.set_user("sanjayk.sde27@gmail.com")
+2026-08-21 06:41:43,232 INFO ipython frappe.session.user
+2026-08-21 06:41:43,232 INFO ipython frappe.db.get_list(
+    "Details",
+    fields=["name", "name1", "email", "status"]
+)
+2026-08-21 06:41:43,232 INFO ipython === session end ===
+2026-08-21 06:52:25,430 INFO ipython === bench console session ===
+2026-08-21 06:52:25,431 INFO ipython import frappe
+import practice_app.permissions
+2026-08-21 06:52:25,431 INFO ipython frappe.session.user
+2026-08-21 06:52:25,431 INFO ipython frappe.set_user("sanjayk.sde27@gmail.com")
+2026-08-21 06:52:25,431 INFO ipython frappe.db.get_list(
+    "Details",
+    filters={"email": "sanjayk.sde27@gmail.com"},
+    fields=["name", "name1", "email", "status"]
+)
+2026-08-21 06:52:25,431 INFO ipython doc = frappe.get_doc("Details", 1)
+2026-08-21 06:52:25,431 INFO ipython practice_app.permissions.details_has_permission(
+    doc,
+    "sanjayk.sde27@gmail.com",
+    "read"
+)
+2026-08-21 06:52:25,431 INFO ipython === session end ===
+2026-08-21 06:59:34,050 INFO ipython === bench console session ===
+2026-08-21 06:59:34,050 INFO ipython import frappe
+import practice_app.permissions
+2026-08-21 06:59:34,050 INFO ipython frappe.set_user("sanjayk.sde27@gmail.com")
+2026-08-21 06:59:34,050 INFO ipython frappe.db.get_list(
+    "Details",
+    filters={"email": "sanjayk.sde27@gmail.com"},
+    fields=["name", "name1", "email", "status"]
+)
+2026-08-21 06:59:34,050 INFO ipython doc = frappe.get_doc("Details", 1)
+2026-08-21 06:59:34,050 INFO ipython practice_app.permissions.details_has_permission(
+    doc,
+    "sanjayk.sde27@gmail.com",
+    "read"
+)
+2026-08-21 06:59:34,050 INFO ipython practice_app.permissions.details_has_permission(
+    doc,
+    "sanjayk.sde27@gmail.com",
+    "write"
+)
+2026-08-21 06:59:34,050 INFO ipython frappe.db.get_list(
+    "Details",
+    filters={"status": "Pending"},
+    fields=["name", "name1", "email", "status"],
+    limit=1
+)
+2026-08-21 06:59:34,050 INFO ipython pending_doc = frappe.get_doc("Details", 10)
+2026-08-21 06:59:34,050 INFO ipython practice_app.permissions.details_has_permission(
+    pending_doc,
+    "sanjayk.sde27@gmail.com",
+    "read"
+)
+2026-08-21 06:59:34,051 INFO ipython practice_app.permissions.details_has_permission(
+    pending_doc,
+    "sanjayk.sde27@gmail.com",
+    "write"
+)
+2026-08-21 06:59:34,051 INFO ipython doc.has_permission("read", user="sanjayk.sde27@gmail.com")
+2026-08-21 06:59:34,051 INFO ipython doc.has_permission("write", user="sanjayk.sde27@gmail.com")
+2026-08-21 06:59:34,051 INFO ipython pending_doc.has_permission(
+    "write",
+    user="sanjayk.sde27@gmail.com"
+)
+2026-08-21 06:59:34,051 INFO ipython doc.has_permission("read", user="sanjayk.sde27@gmail.com")
+2026-08-21 06:59:34,051 INFO ipython doc.has_permission("write", user="sanjayk.sde27@gmail.com")
+2026-08-21 06:59:34,051 INFO ipython pending_doc.has_permission("write", user="sanjayk.sde27@gmail.com")
+2026-08-21 06:59:34,051 INFO ipython frappe.get_hooks("has_permission")
+2026-08-21 06:59:34,051 INFO ipython frappe.has_permission(
+    "Details",
+    ptype="read",
+    doc=doc,
+    user="sanjayk.sde27@gmail.com"
+)
+2026-08-21 06:59:34,051 INFO ipython frappe.has_permission(
+    "Details",
+    ptype="write",
+    doc=doc,
+    user="sanjayk.sde27@gmail.com"
+)
+2026-08-21 06:59:34,051 INFO ipython frappe.get_roles("sanjayk.sde27@gmail.com")
+2026-08-21 06:59:34,051 INFO ipython hook = frappe.get_hooks("has_permission")["Details"][0]
+2026-08-21 06:59:34,051 INFO ipython frappe.get_attr(hook)(
+    doc,
+    "sanjayk.sde27@gmail.com",
+    "read"
+)
+2026-08-21 06:59:34,051 INFO ipython frappe.get_attr(hook)(
+    doc,
+    "sanjayk.sde27@gmail.com",
+    "write"
+)
+2026-08-21 06:59:34,051 INFO ipython 
+In [22]: frappe.get_attr(hook)(
+    ...:     doc,
+    ...:     "sanjayk.sde27@gmail.com",
+    ...:     "read"
+    ...: )
+Out[22]: True
+
+In [23]: frappe.get_attr(hook)(
+    ...:     doc,
+    ...:     "sanjayk.sde27@gmail.com",
+    ...:     "write"
+    ...: )
+Out[23]: True
+
+In [24]:exit
+2026-08-21 06:59:34,051 INFO ipython === session end ===
+2026-08-21 07:13:08,537 INFO ipython === bench console session ===
+2026-08-21 07:13:08,538 INFO ipython doc = frappe.get_doc("Details", 1)
+2026-08-21 07:13:08,538 INFO ipython frappe.get_meta("Details").module
+2026-08-21 07:13:08,538 INFO ipython frappe.local.site
+2026-08-21 07:13:08,538 INFO ipython frappe.db.exists("DocType", "Details")
+2026-08-21 07:13:08,539 INFO ipython frappe.get_all(
+    "DocType",
+    filters={"name": ["like", "%Details%"]},
+    fields=["name", "module", "custom"]
+)
+2026-08-21 07:13:08,539 INFO ipython frappe.get_all(
+    "DocType",
+    fields=["name", "module"],
+    order_by="name"
+)
+2026-08-21 07:13:08,539 INFO ipython === session end ===
+2026-08-21 07:14:42,591 INFO ipython === bench console session ===
+2026-08-21 07:14:42,592 INFO ipython frappe.get_doc("Details", 1)
+2026-08-21 07:14:42,592 INFO ipython === session end ===
+2026-08-21 07:25:39,484 INFO ipython === bench console session ===
+2026-08-21 07:25:39,485 INFO ipython frappe.get_hooks("override_whitelisted_methods")
+2026-08-21 07:25:39,485 INFO ipython frappe.call("frappe.client.get_count", doctype="Test_Document")
+2026-08-21 07:25:39,485 INFO ipython === session end ===
+2026-08-21 08:58:37,297 INFO ipython === bench console session ===
+2026-08-21 08:58:37,302 INFO ipython frappe.get_hooks("additional_timeline_content")
+2026-08-21 08:58:37,302 INFO ipython import practice_app.timeline
+2026-08-21 08:58:37,303 INFO ipython frappe.db.get_list(
+    "Details",
+    fields=["name", "name1", "email", "status"],
+    limit=5
+)
+2026-08-21 08:58:37,303 INFO ipython practice_app.timeline.details_timeline("Details", "1")
+2026-08-21 08:58:37,303 INFO ipython === session end ===
+2026-08-21 11:00:52,898 INFO ipython === bench console session ===
+2026-08-21 11:00:52,902 INFO ipython frappe.get_template("custom_timeline_template")
+2026-08-21 11:00:52,902 INFO ipython frappe.get_template("includes/custom_timeline_template.html")
+2026-08-21 11:00:52,902 INFO ipython === session end ===
+2026-08-21 11:11:47,276 INFO ipython === bench console session ===
+2026-08-21 11:11:47,278 INFO ipython frappe.get_app_path("practice_app", "templates")
+2026-08-21 11:11:47,278 INFO ipython frappe.get_app_path(
+    "practice_app",
+    "templates",
+    "includes",
+    "custom_timeline_template.html"
+)
+2026-08-21 11:11:47,278 INFO ipython import os
+
+path = frappe.get_app_path(
+    "practice_app",
+    "templates",
+    "includes",
+    "custom_timeline_template.html"
+)
+
+os.path.exists(path)
+2026-08-21 11:11:47,279 INFO ipython frappe.get_template("includes/custom_timeline_template.html")
+2026-08-21 11:11:47,279 INFO ipython env = frappe.get_jenv()
+2026-08-21 11:11:47,279 INFO ipython env.list_templates()
+2026-08-21 11:11:47,279 INFO ipython grep -R "additional_timeline_content" -n apps/frappe/frappe | head -20
+2026-08-21 11:11:47,279 INFO ipython === session end ===
+2026-08-21 11:20:06,026 INFO ipython === bench console session ===
+2026-08-21 11:20:06,027 INFO ipython frappe.get_template("includes/custom_timeline_template.html")
+2026-08-21 11:20:06,027 INFO ipython === session end ===
+2026-08-21 11:27:56,891 INFO ipython === bench console session ===
+2026-08-21 11:27:56,894 INFO ipython frappe.get_hooks("doctype_js")
+2026-08-21 11:27:56,894 INFO ipython === session end ===
+2026-08-21 11:31:00,886 INFO ipython === bench console session ===
+2026-08-21 11:31:00,886 INFO ipython frappe.get_hooks("doctype_js")
+2026-08-21 11:31:00,886 INFO ipython === session end ===
+2026-08-21 11:43:16,672 INFO ipython === bench console session ===
+2026-08-21 11:43:16,676 INFO ipython frappe.templates["custom_timeline_template"]
+2026-08-21 11:43:16,676 INFO ipython import frappe
+2026-08-21 11:43:16,676 INFO ipython frappe.templates["custom_timeline_template"]
+2026-08-21 11:43:16,676 INFO ipython bench clear-cache
+2026-08-21 11:43:16,676 INFO ipython === session end ===
+2026-08-21 13:48:48,810 INFO ipython === bench console session ===
+2026-08-21 13:48:48,814 INFO ipython frappe.get_hooks("override_whitelisted_methods")
+2026-08-21 13:48:48,814 INFO ipython frappe.get_attr("practice_app.whitelisted.custom_get_count")
+2026-08-21 13:48:48,814 INFO ipython frappe.get_attr("practice_app.whitelisted.custom_get_count")(
+    "Details"
+)
+2026-08-21 13:48:48,814 INFO ipython === session end ===
+2026-08-25 05:11:54,788 INFO ipython === bench console session ===
+2026-08-25 05:11:54,790 INFO ipython import frappe
+import inspect
+
+for module_name in [
+    "frappe.website.search",
+    "frappe.search",
+    "frappe",
+]:
+    try:
+        module = __import__(module_name, fromlist=["*"])
+        print(module_name)
+        print([x for x in dir(module) if "FullText" in x])
+    except Exception as e:
+        print(module_name, "->", e)
+        
+2026-08-25 05:11:54,790 INFO ipython import frappe
+import os
+
+print(frappe.get_app_path("frappe"))
+2026-08-25 05:11:54,790 INFO ipython === session end ===
+2026-08-25 05:24:47,627 INFO ipython === bench console session ===
+2026-08-25 05:24:47,635 INFO ipython from frappe.search.full_text_search import FullTextSearch
+2026-08-25 05:24:47,635 INFO ipython fts = FullTextSearch()
+2026-08-25 05:24:47,635 INFO ipython import inspect
+print(inspect.signature(FullTextSearch))
+2026-08-25 05:24:47,635 INFO ipython print(inspect.getsource(FullTextSearch.__init__))
+2026-08-25 05:24:47,635 INFO ipython import inspect
+print(inspect.getsource(FullTextSearch.get_id))
+2026-08-25 05:24:47,635 INFO ipython print(inspect.getsource(FullTextSearch.get_schema))
+2026-08-25 05:24:47,635 INFO ipython from frappe.search.full_text_search import get_index_path
+print(inspect.getsource(get_index_path))
+2026-08-25 05:24:47,635 INFO ipython === session end ===
+2026-08-25 05:35:12,473 INFO ipython === bench console session ===
+2026-08-25 05:35:12,476 INFO ipython from frappe.search.full_text_search import FullTextSearch
+2026-08-25 05:35:12,477 INFO ipython fts = FullTextSearch("web_routes")
+2026-08-25 05:35:12,477 INFO ipython type(fts)
+2026-08-25 05:35:12,477 INFO ipython fts.search("frappe")
+2026-08-25 05:35:12,477 INFO ipython fts.search("home")
+2026-08-25 05:35:12,477 INFO ipython fts.search("test")
+2026-08-25 05:35:12,477 INFO ipython fts = FullTextSearch("details_practice")
+2026-08-25 05:35:12,477 INFO ipython fts.index_path
+2026-08-25 05:35:12,477 INFO ipython === session end ===
+2026-08-25 09:34:07,069 INFO ipython === bench console session ===
+2026-08-25 09:34:07,073 INFO ipython frappe.get_hooks("add_to_apps_screen", app_name="student_management")
+2026-08-25 09:34:07,073 INFO ipython frappe.get_hooks("add_to_apps_screen", app_name=app)
+2026-08-25 09:34:07,073 INFO ipython frappe.get_hooks("add_to_apps_screen")
+2026-08-25 09:34:07,073 INFO ipython import inspect
+import frappe.apps
+
+print(inspect.getsource(frappe.apps.get_apps))
+2026-08-25 09:34:07,073 INFO ipython frappe.get_setup_wizard_completed_apps()
+2026-08-25 09:34:07,073 INFO ipython frappe.get_setup_wizard_not_required_apps()
+2026-08-25 09:34:07,073 INFO ipython frappe.get_roles()
+2026-08-25 09:34:07,073 INFO ipython import frappe.apps
+
+frappe.apps.get_setup_wizard_completed_apps()
+2026-08-25 09:34:07,073 INFO ipython frappe.apps.get_setup_wizard_not_required_apps()
+2026-08-25 09:34:07,073 INFO ipython frappe.apps.get_apps()
+2026-08-25 09:34:07,073 INFO ipython ls -l apps/student_management/student_management/public/logo.png
+2026-08-25 09:34:07,073 INFO ipython === session end ===
+2026-08-25 09:51:54,253 INFO ipython === bench console session ===
+2026-08-25 09:51:54,256 INFO ipython frappe.get_hooks("add_to_apps_screen", app_name="practice_app")
+2026-08-25 09:51:54,256 INFO ipython frappe.apps.get_apps()
+2026-08-25 09:51:54,256 INFO ipython import frappe.apps
+frappe.apps.get_apps()
+2026-08-25 09:51:54,256 INFO ipython === session end ===
+2026-08-25 09:54:14,446 INFO ipython === bench console session ===
+2026-08-25 09:54:14,446 INFO ipython import frappe.apps
+frappe.apps.get_apps()
+2026-08-25 09:54:14,446 INFO ipython import frappe.apps
+frappe.apps.get_apps()
+2026-08-25 09:54:14,446 INFO ipython === session end ===
+2026-08-25 09:55:30,426 INFO ipython === bench console session ===
+2026-08-25 09:55:30,426 INFO ipython frappe.get_hooks("add_to_apps_screen", app_name="practice_app")
+2026-08-25 09:55:30,427 INFO ipython === session end ===
+2026-08-25 09:58:54,605 INFO ipython === bench console session ===
+2026-08-25 09:58:54,607 INFO ipython frappe.get_hooks("add_to_apps_screen", app_name="practice_app")
+2026-08-25 09:58:54,607 INFO ipython frappe.apps.get_apps()
+2026-08-25 09:58:54,607 INFO ipython === session end ===
+2026-08-26 07:17:30,207 INFO ipython === bench console session ===
+2026-08-26 07:17:30,212 INFO ipython frappe.db.get_all(
+    "Child_Table",
+    fields=["name", "parent", "parenttype", "parentfield", "idx", "project_id", "project_date"]
+)
+2026-08-26 07:17:30,213 INFO ipython frappe.db.get_value(
+    "Details",
+    "1",
+    ["name", "name1", "status"],
+    as_dict=True
+)
+2026-08-26 07:17:30,213 INFO ipython frappe.db.get_all(
+    "Child_Table",
+    filters={
+        "parent": "1",
+        "parenttype": "Details",
+        "parentfield": "table"
+    },
+    fields=["project_id", "project_date"]
+)
+2026-08-26 07:17:30,213 INFO ipython q = frappe.qb.get_query(
+    "Details",
+    fields=[
+        "name",
+        "name1",
+        "status",
+        {"table": ["project_id", "project_date"]}
+    ],
+    filters={"name": "1"}
+)
+2026-08-26 07:17:30,213 INFO ipython q.run(as_dict=True)
+2026-08-26 07:17:30,213 INFO ipython === session end ===
+2026-08-26 07:27:35,769 INFO ipython === bench console session ===
+2026-08-26 07:27:35,769 INFO ipython frappe.qb.get_query(name, fields=["name1 as emp_name","status as current_status",{"table": ["project_id","project_date"]}] , filters={"name":"1"})
+2026-08-26 07:27:35,770 INFO ipython frappe.qb.get_query("Details", fields=["name1 as emp_name","status as current_status",{"table": ["project_id","project_date"]}] , filters={"name":"1"})
+2026-08-26 07:27:35,770 INFO ipython q = frappe.qb.get_query("Details",fields=["name1 as emp_name","status as current_status",{"table": ["project_id","project_date"]}] , filters={"name":"1"})
+2026-08-26 07:27:35,770 INFO ipython q.run(as_dict=True)
+2026-08-26 07:27:35,770 INFO ipython === session end ===
+2026-08-26 13:34:44,055 INFO ipython === bench console session ===
+2026-08-26 13:34:44,068 INFO ipython q = frappe.qb.get_query("Details",fields=["name1 as emp_name","status as current_status",{"table": ["project_id","project_date"]}] , filters={"name":"1"})
+2026-08-26 13:34:44,069 INFO ipython q.run(as_dict=True)
+2026-08-26 13:34:44,069 INFO ipython q = frappe.qb.get_query("Details",fields=["*"] , filters={"name":"1"})
+2026-08-26 13:34:44,069 INFO ipython q.run(as_dict=True)
+2026-08-26 13:34:44,069 INFO ipython q = frappe.qb.get_query(
+    "Details",
+    fields=[
+        "name",
+        "name1",
+        "status",
+        {"table": ["project_id", "project_date"]}
+    ],
+    filters={"name": "1"}
+)
+2026-08-26 13:34:44,069 INFO ipython q.run(as_dict=True)
+2026-08-26 13:34:44,070 INFO ipython frappe.get_attr("practice_app.api.getusinggetquery")("Details")
+2026-08-26 13:34:44,070 INFO ipython q = frappe.qb.get_query(
+    "Details",
+    fields=[
+        "name1 as emp_name",
+        "status as current_status",
+        {"table": ["project_id", "project_date"]}
+    ],
+    filters={"name": "1"}
+)
+
+q.run(as_dict=True)
+2026-08-26 13:34:44,070 INFO ipython frappe.get_attr("practice_app.api.getusinggetquery")("Details")
+2026-08-26 13:34:44,070 INFO ipython q = frappe.qb.get_query(
+    "Details",
+    fields=[
+        "name",
+        "name1",
+        "status",
+        {"table": ["project_id", "project_date"]}
+    ],
+    filters={"name": "1"}
+)
+
+q.run(as_dict=True)
+2026-08-26 13:34:44,070 INFO ipython q.get_sql()
+2026-08-26 13:34:44,070 INFO ipython frappe.get_attr("practice_app.api.getusinggetquery").__code__.co_varnames
+2026-08-26 13:34:44,070 INFO ipython q = frappe.qb.get_query(
+    "Details",
+    fields=[
+        "name",
+        "name1",
+        "status",
+        {"table": ["project_id", "project_date"]}
+    ],
+    filters={"name": "1"}
+)
+
+q.run(as_dict=True)
+2026-08-26 13:34:44,070 INFO ipython q = frappe.qb.get_query(
+    "Details",
+    fields=[
+        "name1 as emp_name",
+        "status as current_status",
+        {"table": ["project_id", "project_date"]}
+    ],
+    filters={"name": "1"}
+)
+
+q.run(as_dict=True)
+2026-08-26 13:34:44,070 INFO ipython === session end ===

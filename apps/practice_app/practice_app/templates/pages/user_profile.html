@@ -1,0 +1,16 @@
+{% if doc %}
+    <h1>Profile</h1>
+    <h2>{{ doc.name1 }}</h2>
+    <p>Email: {{ doc.email }}</p>
+    <p>Check: {{ doc.check }}</p>
+    <p>Phone: {{ doc.new_data }}</p>
+    <p>Status: {{ doc.status }}</p>
+
+    {% if doc.attachment %}
+        <a href="{{ doc.attachment }}" target="_blank">
+            View Attachment
+        </a>
+    {% endif %}
+{% else %}
+    <h1>Profile Not Found</h1>
+{% endif %}

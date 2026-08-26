@@ -17,8 +17,8 @@ class Child_Table(Document):
 		parent: DF.Data
 		parentfield: DF.Data
 		parenttype: DF.Data
+		project_date: DF.Date | None
 		project_id: DF.Data | None
-		project_name: DF.Date | None
 	# end: auto-generated types
 
 	pass

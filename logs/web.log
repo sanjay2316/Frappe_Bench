@@ -1603,3 +1603,2374 @@ Wrote document file for DocType Details_email at /home/sanjayh/frappe16-bench/ap
 /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details_email/test_details_email.py already exists, skipping...
 /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details_email/details_email.js already exists, skipping...
 Hook called for: Administrator
+Hook called for: Administrator
+Status Changed
+Status Changed
+Status Changed
+Status Changed
+Hook called for: Administrator
+Status Changed
+Status Changed
+Status Changed
+Status Changed
+Hook called for: Administrator
+Hook called for: Administrator
+Hook called for: Administrator
+Hook called for: Guest
+Hook called for: Guest
+Hook called for: Guest
+Wrote document file for DocType Course at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/test_course.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.js already exists, skipping...
+Wrote document file for DocType Examination at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/examination/examination.json
+Wrote document file for DocType Teacher at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/teacher.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/teacher.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/test_teacher.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/teacher.js already exists, skipping...
+Wrote document file for DocType Examination at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/examination/examination.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/examination/examination.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/examination/test_examination.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/examination/examination.js already exists, skipping...
+Wrote document file for DocType Marks Detail at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks_detail/marks_detail.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks_detail/marks_detail.py already exists, skipping...
+Wrote document file for DocType Student at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/student.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/student.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/test_student.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/student.js already exists, skipping...
+Wrote document file for DocType Department at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/department/department.json
+Wrote document file for DocType Course Assignment at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/course_assignment.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/course_assignment.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/test_course_assignment.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/course_assignment.js already exists, skipping...
+Wrote document file for DocType Course at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/test_course.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.js already exists, skipping...
+Wrote document file for DocType Course Assignment at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/course_assignment.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/course_assignment.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/test_course_assignment.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/course_assignment.js already exists, skipping...
+Wrote document file for DocType Marks at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks/marks.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks/marks.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks/test_marks.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks/marks.js already exists, skipping...
+Wrote document file for DocType Marks Detail at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks_detail/marks_detail.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks_detail/marks_detail.py already exists, skipping...
+Wrote document file for DocType Student at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/student.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/student.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/test_student.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/student.js already exists, skipping...
+Wrote document file for DocType Course at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/test_course.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.js already exists, skipping...
+Wrote document file for DocType Course at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/test_course.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.js already exists, skipping...
+Wrote document file for DocType Course at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/test_course.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.js already exists, skipping...
+Wrote document file for DocType Enrollment at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/enrollment/enrollment.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/enrollment/enrollment.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/enrollment/test_enrollment.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/enrollment/enrollment.js already exists, skipping...
+Wrote document file for DocType Attendance at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/attendance/attendance.json
+Wrote document file for DocType Enrollment at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/enrollment/enrollment.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/enrollment/enrollment.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/enrollment/test_enrollment.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/enrollment/enrollment.js already exists, skipping...
+Wrote document file for DocType Student at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/student.json
+Wrote document file for DocType Course at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.json
+Wrote document file for DocType Enrollment at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/enrollment/enrollment.json
+Wrote document file for DocType Subject at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/subject/subject.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/subject/subject.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/subject/test_subject.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/subject/subject.js already exists, skipping...
+Wrote document file for DocType Marks at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks/marks.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks/marks.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks/test_marks.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks/marks.js already exists, skipping...
+Wrote document file for DocType Student at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/student.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/student.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/test_student.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/student.js already exists, skipping...
+Wrote document file for DocType Teacher at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/teacher.json
+Wrote document file for DocType Course Assignment at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/course_assignment.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/course_assignment.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/test_course_assignment.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/course_assignment.js already exists, skipping...
+Wrote document file for DocType Course Assignment at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/course_assignment.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/course_assignment.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/test_course_assignment.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/course_assignment.js already exists, skipping...
+Wrote document file for DocType Attendance at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/attendance/attendance.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/attendance/attendance.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/attendance/test_attendance.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/attendance/attendance.js already exists, skipping...
+Wrote document file for DocType Examination at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/examination/examination.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/examination/examination.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/examination/test_examination.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/examination/examination.js already exists, skipping...
+Wrote document file for DocType Marks at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks/marks.json
+Wrote document file for DocType Course at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/test_course.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course/course.js already exists, skipping...
+Wrote document file for DocType Attendance at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/attendance/attendance.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/attendance/attendance.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/attendance/test_attendance.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/attendance/attendance.js already exists, skipping...
+Wrote document file for DocType Marks Detail at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks_detail/marks_detail.json
+Wrote document file for DocType Department at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/department/department.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/department/department.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/department/test_department.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/department/department.js already exists, skipping...
+Wrote document file for DocType Teacher at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/teacher.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/teacher.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/test_teacher.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/teacher.js already exists, skipping...
+Wrote document file for DocType Teacher at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/teacher.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/teacher.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/test_teacher.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/teacher.js already exists, skipping...
+Wrote document file for DocType Course Assignment at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/course_assignment/course_assignment.json
+Wrote document file for DocType Subject at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/subject/subject.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/subject/subject.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/subject/test_subject.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/subject/subject.js already exists, skipping...
+Wrote document file for DocType Student at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/student.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/student.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/test_student.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/student/student.js already exists, skipping...
+Wrote document file for DocType Department at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/department/department.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/department/department.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/department/test_department.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/department/department.js already exists, skipping...
+Hook called for: Guest
+Wrote document file for DocType Subject at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/subject/subject.json
+Hook called for: Administrator
+Wrote document file for DocType Teacher at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/teacher.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/teacher.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/test_teacher.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/teacher/teacher.js already exists, skipping...
+Wrote document file for DocType Marks at /home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks/marks.json
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks/marks.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks/test_marks.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/frappe/frappe/student_management/doctype/marks/marks.js already exists, skipping...
+Hook called for: Administrator
+Hook called for: Administrator
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/client.py", line 285, in delete
+    delete_doc(doctype, name)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/client.py", line 552, in delete_doc
+    frappe.delete_doc(doctype, name, ignore_missing=False)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 758, in delete_doc
+    return frappe.model.delete_doc.delete_doc(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+    	doctype,
+     ^^^^^^^^
+    ...<8 lines>...
+    	delete_permanently,
+     ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/model/delete_doc.py", line 181, in delete_doc
+    raise e
+  File "apps/frappe/frappe/model/delete_doc.py", line 172, in delete_doc
+    check_if_doc_is_linked(doc)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 383, in check_if_doc_is_linked
+    raise_link_exists_exception(doc, link["reference_doctype"], link["reference_docname"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 482, in raise_link_exists_exception
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_("Cannot delete or cancel because {0} {1} is linked with {2} {3} {4}").format(
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    	frappe.LinkExistsError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.LinkExistsError: Cannot delete or cancel because Module Def <a href="http://site1.local/desk/module-def/Student_Management">Student_Management</a> is linked with Dashboard Chart <a href="http://site1.local/desk/dashboard-chart/Admission_Chart">Admission_Chart</a> 
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/client.py", line 285, in delete
+    delete_doc(doctype, name)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/client.py", line 552, in delete_doc
+    frappe.delete_doc(doctype, name, ignore_missing=False)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 758, in delete_doc
+    return frappe.model.delete_doc.delete_doc(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+    	doctype,
+     ^^^^^^^^
+    ...<8 lines>...
+    	delete_permanently,
+     ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/model/delete_doc.py", line 181, in delete_doc
+    raise e
+  File "apps/frappe/frappe/model/delete_doc.py", line 172, in delete_doc
+    check_if_doc_is_linked(doc)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 383, in check_if_doc_is_linked
+    raise_link_exists_exception(doc, link["reference_doctype"], link["reference_docname"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 482, in raise_link_exists_exception
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_("Cannot delete or cancel because {0} {1} is linked with {2} {3} {4}").format(
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    	frappe.LinkExistsError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.LinkExistsError: Cannot delete or cancel because Module Def <a href="http://site1.local/desk/module-def/Student_Management">Student_Management</a> is linked with Dashboard Chart <a href="http://site1.local/desk/dashboard-chart/Department_Chart">Department_Chart</a> 
+
+Hook called for: Administrator
+Hook called for: Administrator
+Hook called for: Administrator
+Hook called for: Administrator
+Hook called for: Administrator
+Updating Dashboard for frappe
+Updating Dashboard for student_management
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/client.py", line 285, in delete
+    delete_doc(doctype, name)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/client.py", line 552, in delete_doc
+    frappe.delete_doc(doctype, name, ignore_missing=False)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 758, in delete_doc
+    return frappe.model.delete_doc.delete_doc(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+    	doctype,
+     ^^^^^^^^
+    ...<8 lines>...
+    	delete_permanently,
+     ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/model/delete_doc.py", line 181, in delete_doc
+    raise e
+  File "apps/frappe/frappe/model/delete_doc.py", line 172, in delete_doc
+    check_if_doc_is_linked(doc)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 383, in check_if_doc_is_linked
+    raise_link_exists_exception(doc, link["reference_doctype"], link["reference_docname"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 482, in raise_link_exists_exception
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_("Cannot delete or cancel because {0} {1} is linked with {2} {3} {4}").format(
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    	frappe.LinkExistsError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.LinkExistsError: Cannot delete or cancel because Module Def <a href="http://site1.local/desk/module-def/Student_Management">Student_Management</a> is linked with Report <a href="http://site1.local/desk/report/Student_Report">Student_Report</a> 
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/client.py", line 285, in delete
+    delete_doc(doctype, name)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/client.py", line 552, in delete_doc
+    frappe.delete_doc(doctype, name, ignore_missing=False)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 758, in delete_doc
+    return frappe.model.delete_doc.delete_doc(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+    	doctype,
+     ^^^^^^^^
+    ...<8 lines>...
+    	delete_permanently,
+     ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/model/delete_doc.py", line 181, in delete_doc
+    raise e
+  File "apps/frappe/frappe/model/delete_doc.py", line 172, in delete_doc
+    check_if_doc_is_linked(doc)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 383, in check_if_doc_is_linked
+    raise_link_exists_exception(doc, link["reference_doctype"], link["reference_docname"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 482, in raise_link_exists_exception
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_("Cannot delete or cancel because {0} {1} is linked with {2} {3} {4}").format(
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    	frappe.LinkExistsError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.LinkExistsError: Cannot delete or cancel because Module Def <a href="http://student.local/desk/module-def/Student_Management">Student_Management</a> is linked with Number Card <a href="http://student.local/desk/number-card/Student_NumberCards">Student_NumberCards</a> 
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "env/lib/python3.14/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "env/lib/python3.14/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+    ~~~~~~~~^^^
+  File "env/lib/python3.14/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1020, "Record has changed since last read in table 'tabUser'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/database/database.py", line 1594, in savepoint
+    yield  # control back to calling function
+    ^^^^^
+  File "apps/frappe/frappe/sessions.py", line 486, in update_user_metadata
+    query.run()
+    ~~~~~~~~~^^
+  File "apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "apps/frappe/frappe/database/database.py", line 278, in sql
+    raise frappe.QueryDeadlockError(e) from e
+frappe.exceptions.QueryDeadlockError: (1020, "Record has changed since last read in table 'tabUser'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "apps/frappe/frappe/app.py", line 205, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/auth.py", line 228, in make_session
+    frappe.local.session_obj = Session(
+                               ~~~~~~~^
+    	user=self.user,
+     ^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    	audit_user=audit_user,
+     ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/sessions.py", line 241, in __init__
+    self.start(session_end, audit_user)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/sessions.py", line 289, in start
+    update_user_metadata(
+    ~~~~~~~~~~~~~~~~~~~~^
+    	self.data["user"],
+     ^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    	last_active=now,
+     ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/sessions.py", line 481, in update_user_metadata
+    with savepoint(frappe.QueryDeadlockError):
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 1596, in savepoint
+    frappe.db.rollback(save_point=savepoint)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 1199, in rollback
+    self.sql(f"rollback to savepoint {save_point}")
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 272, in sql
+    self.execute_query(query, values)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 372, in execute_query
+    return self._cursor.execute(query, values)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "env/lib/python3.14/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "env/lib/python3.14/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+    ~~~~~~~~^^^
+  File "env/lib/python3.14/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+MySQLdb.OperationalError: (1305, 'SAVEPOINT ljmvsphgae does not exist')
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/client.py", line 285, in delete
+    delete_doc(doctype, name)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/client.py", line 552, in delete_doc
+    frappe.delete_doc(doctype, name, ignore_missing=False)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 758, in delete_doc
+    return frappe.model.delete_doc.delete_doc(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+    	doctype,
+     ^^^^^^^^
+    ...<8 lines>...
+    	delete_permanently,
+     ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/model/delete_doc.py", line 181, in delete_doc
+    raise e
+  File "apps/frappe/frappe/model/delete_doc.py", line 172, in delete_doc
+    check_if_doc_is_linked(doc)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 383, in check_if_doc_is_linked
+    raise_link_exists_exception(doc, link["reference_doctype"], link["reference_docname"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 482, in raise_link_exists_exception
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_("Cannot delete or cancel because {0} {1} is linked with {2} {3} {4}").format(
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    	frappe.LinkExistsError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.LinkExistsError: Cannot delete or cancel because Module Def <a href="http://site1.local/desk/module-def/Student_Management">Student_Management</a> is linked with Dashboard Chart <a href="http://site1.local/desk/dashboard-chart/Admission_Chart">Admission_Chart</a> 
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/client.py", line 285, in delete
+    delete_doc(doctype, name)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/client.py", line 552, in delete_doc
+    frappe.delete_doc(doctype, name, ignore_missing=False)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 758, in delete_doc
+    return frappe.model.delete_doc.delete_doc(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+    	doctype,
+     ^^^^^^^^
+    ...<8 lines>...
+    	delete_permanently,
+     ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/model/delete_doc.py", line 181, in delete_doc
+    raise e
+  File "apps/frappe/frappe/model/delete_doc.py", line 172, in delete_doc
+    check_if_doc_is_linked(doc)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 383, in check_if_doc_is_linked
+    raise_link_exists_exception(doc, link["reference_doctype"], link["reference_docname"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 482, in raise_link_exists_exception
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_("Cannot delete or cancel because {0} {1} is linked with {2} {3} {4}").format(
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    	frappe.LinkExistsError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.LinkExistsError: Cannot delete or cancel because Module Def <a href="http://site1.local/desk/module-def/Student_Management">Student_Management</a> is linked with Dashboard Chart <a href="http://site1.local/desk/dashboard-chart/Admission_Chart">Admission_Chart</a> 
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/client.py", line 285, in delete
+    delete_doc(doctype, name)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/client.py", line 552, in delete_doc
+    frappe.delete_doc(doctype, name, ignore_missing=False)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 758, in delete_doc
+    return frappe.model.delete_doc.delete_doc(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+    	doctype,
+     ^^^^^^^^
+    ...<8 lines>...
+    	delete_permanently,
+     ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/model/delete_doc.py", line 181, in delete_doc
+    raise e
+  File "apps/frappe/frappe/model/delete_doc.py", line 172, in delete_doc
+    check_if_doc_is_linked(doc)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 383, in check_if_doc_is_linked
+    raise_link_exists_exception(doc, link["reference_doctype"], link["reference_docname"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 482, in raise_link_exists_exception
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_("Cannot delete or cancel because {0} {1} is linked with {2} {3} {4}").format(
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    	frappe.LinkExistsError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.LinkExistsError: Cannot delete or cancel because Module Def <a href="http://site1.local/desk/module-def/Student_Management">Student_Management</a> is linked with Dashboard Chart <a href="http://site1.local/desk/dashboard-chart/Admission_Chart">Admission_Chart</a> 
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/client.py", line 285, in delete
+    delete_doc(doctype, name)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/client.py", line 552, in delete_doc
+    frappe.delete_doc(doctype, name, ignore_missing=False)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 758, in delete_doc
+    return frappe.model.delete_doc.delete_doc(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+    	doctype,
+     ^^^^^^^^
+    ...<8 lines>...
+    	delete_permanently,
+     ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/model/delete_doc.py", line 181, in delete_doc
+    raise e
+  File "apps/frappe/frappe/model/delete_doc.py", line 172, in delete_doc
+    check_if_doc_is_linked(doc)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 383, in check_if_doc_is_linked
+    raise_link_exists_exception(doc, link["reference_doctype"], link["reference_docname"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 482, in raise_link_exists_exception
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_("Cannot delete or cancel because {0} {1} is linked with {2} {3} {4}").format(
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    	frappe.LinkExistsError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.LinkExistsError: Cannot delete or cancel because Module Def <a href="http://site1.local/desk/module-def/Student_Management">Student_Management</a> is linked with Dashboard Chart <a href="http://site1.local/desk/dashboard-chart/Gender_Charts">Gender_Charts</a> 
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/client.py", line 285, in delete
+    delete_doc(doctype, name)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/client.py", line 552, in delete_doc
+    frappe.delete_doc(doctype, name, ignore_missing=False)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 758, in delete_doc
+    return frappe.model.delete_doc.delete_doc(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+    	doctype,
+     ^^^^^^^^
+    ...<8 lines>...
+    	delete_permanently,
+     ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/model/delete_doc.py", line 181, in delete_doc
+    raise e
+  File "apps/frappe/frappe/model/delete_doc.py", line 172, in delete_doc
+    check_if_doc_is_linked(doc)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 383, in check_if_doc_is_linked
+    raise_link_exists_exception(doc, link["reference_doctype"], link["reference_docname"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/delete_doc.py", line 482, in raise_link_exists_exception
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_("Cannot delete or cancel because {0} {1} is linked with {2} {3} {4}").format(
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    	frappe.LinkExistsError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.LinkExistsError: Cannot delete or cancel because Module Def <a href="http://site1.local/desk/module-def/Student_Management">Student_Management</a> is linked with Dashboard Chart <a href="http://site1.local/desk/dashboard-chart/Year_Chart">Year_Chart</a> 
+
+Wrote document file for DocType Check_Calendar at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/check_calendar/check_calendar.json
+Wrote document file for DocType Check_Calendar at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/check_calendar/check_calendar.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/check_calendar/check_calendar.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/check_calendar/test_check_calendar.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/check_calendar/check_calendar.js already exists, skipping...
+Wrote document file for DocType Check_Calendar at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/check_calendar/check_calendar.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/check_calendar/check_calendar.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/check_calendar/test_check_calendar.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/check_calendar/check_calendar.js already exists, skipping...
+Wrote document file for DocType Check_Calendar at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/check_calendar/check_calendar.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/check_calendar/check_calendar.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/check_calendar/test_check_calendar.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/check_calendar/check_calendar.js already exists, skipping...
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "apps/frappe/frappe/app.py", line 205, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/auth.py", line 242, in make_session
+    self.run_trigger("on_session_creation")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/auth.py", line 332, in run_trigger
+    frappe.call(frappe.get_attr(method), login_manager=self)
+                ~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1133, in get_attr
+    throw(_("App {0} is not installed").format(app_name), AppNotInstalledError)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.AppNotInstalledError: App app is not installed
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "apps/frappe/frappe/app.py", line 205, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/auth.py", line 242, in make_session
+    self.run_trigger("on_session_creation")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/auth.py", line 332, in run_trigger
+    frappe.call(frappe.get_attr(method), login_manager=self)
+                ~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1133, in get_attr
+    throw(_("App {0} is not installed").format(app_name), AppNotInstalledError)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.AppNotInstalledError: App app is not installed
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "apps/frappe/frappe/app.py", line 205, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/auth.py", line 242, in make_session
+    self.run_trigger("on_session_creation")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/auth.py", line 332, in run_trigger
+    frappe.call(frappe.get_attr(method), login_manager=self)
+                ~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.overrides' has no attribute 'allocate_free_credits'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "apps/frappe/frappe/app.py", line 205, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/auth.py", line 242, in make_session
+    self.run_trigger("on_session_creation")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/auth.py", line 332, in run_trigger
+    frappe.call(frappe.get_attr(method), login_manager=self)
+                ~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.overrides' has no attribute 'allocate_free_credits'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "apps/frappe/frappe/app.py", line 205, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/auth.py", line 242, in make_session
+    self.run_trigger("on_session_creation")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/auth.py", line 332, in run_trigger
+    frappe.call(frappe.get_attr(method), login_manager=self)
+                ~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.overrides' has no attribute 'allocate_free_credits'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 102, in application
+    init_request(request)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "apps/frappe/frappe/app.py", line 205, in init_request
+    frappe.local.http_request = HTTPRequest()
+                                ~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_session()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 79, in set_session
+    frappe.local.login_manager = LoginManager()
+                                 ~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 131, in __init__
+    if self.login() is False:
+       ~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 169, in login
+    self.post_login()
+    ~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/auth.py", line 176, in post_login
+    self.make_session(session_end=session_end, audit_user=audit_user)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/auth.py", line 242, in make_session
+    self.run_trigger("on_session_creation")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/auth.py", line 332, in run_trigger
+    frappe.call(frappe.get_attr(method), login_manager=self)
+                ~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.overrides' has no attribute 'allocate_free_credits'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'getusinggetquerywithfilter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.getusinggetquerywithfilter with module 'practice_app.api' has no attribute 'getusinggetquerywithfilter'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'getusinggetquery'. Did you mean: 'getusinggetqury'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.getusinggetquery with module 'practice_app.api' has no attribute 'getusinggetquery'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'getusinggetquery'. Did you mean: 'getusinggetqury'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.getusinggetquery with module 'practice_app.api' has no attribute 'getusinggetquery'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'getusinggetquery'. Did you mean: 'getusinggetqury'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.getusinggetquery with module 'practice_app.api' has no attribute 'getusinggetquery'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'getlinkfield'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.getlinkfield with module 'practice_app.api' has no attribute 'getlinkfield'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/practice_app/practice_app/api.py", line 244, in getlinkfield
+    newquery = frappe.qb.get_query("Details_email",fields=["selected_data.name1 as name","email"])
+  File "apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 290, in get_query
+    self.apply_fields(fields)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 345, in apply_fields
+    self.fields = self.parse_fields(fields)
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 1132, in parse_fields
+    parsed = self._parse_single_field_item(sanitized_item)
+  File "apps/frappe/frappe/database/query.py", line 1191, in _parse_single_field_item
+    return self.parse_string_field(field)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 1078, in parse_string_field
+    frappe.throw(_("Could not parse field: {0}").format(field))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Could not parse field: selected_data.name1 as name
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+                   ~~~~~~~~~~^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 837, in get_module
+    return importlib.import_module(modulename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 755, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 893, in get_code
+  File "<frozen importlib._bootstrap_external>", line 823, in source_to_code
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "apps/practice_app/practice_app/api.py", line 229
+    newquery = frappe.qb.get_query(name,fields=["name1","status"],filters=["status":"Approve"])
+                                                                                   ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.getusinggetquery with invalid syntax (api.py, line 229)
+
+Wrote document file for DocType Child_Table at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/child_table/child_table.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/child_table/child_table.py already exists, skipping...
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/practice_app/practice_app/api.py", line 244, in getlinkfield
+    newquery = frappe.qb.get_query("Details_email",fields=["selecte_data.name1 as name","email"])
+  File "apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 290, in get_query
+    self.apply_fields(fields)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 345, in apply_fields
+    self.fields = self.parse_fields(fields)
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 1132, in parse_fields
+    parsed = self._parse_single_field_item(sanitized_item)
+  File "apps/frappe/frappe/database/query.py", line 1191, in _parse_single_field_item
+    return self.parse_string_field(field)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 1078, in parse_string_field
+    frappe.throw(_("Could not parse field: {0}").format(field))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Could not parse field: selecte_data.name1 as name
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/practice_app/practice_app/api.py", line 244, in getlinkfield
+    newquery = frappe.qb.get_query("Details_email",fields=["select_data.name1 as name","email"])
+  File "apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 290, in get_query
+    self.apply_fields(fields)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 345, in apply_fields
+    self.fields = self.parse_fields(fields)
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 1132, in parse_fields
+    parsed = self._parse_single_field_item(sanitized_item)
+  File "apps/frappe/frappe/database/query.py", line 1191, in _parse_single_field_item
+    return self.parse_string_field(field)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 1078, in parse_string_field
+    frappe.throw(_("Could not parse field: {0}").format(field))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Could not parse field: selecte_data.name1 as name
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/practice_app/practice_app/api.py", line 250, in countdetails
+    q = frappe.qb.get_query("Details",fields=["COUNT(*) as total_emp"])
+  File "apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 290, in get_query
+    self.apply_fields(fields)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 345, in apply_fields
+    self.fields = self.parse_fields(fields)
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 1131, in parse_fields
+    if sanitized_item := _validate_select_field(item.strip()):
+                         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 2138, in _validate_select_field
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_(
+     ^^
+    ...<2 lines>...
+    	frappe.ValidationError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: SQL functions are not allowed as strings in SELECT: COUNT(*) as total_emp. Use dict syntax like {'COUNT': '*'} instead.
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/practice_app/practice_app/api.py", line 250, in countdetails
+    q = frappe.qb.get_query("Details",fields=["COUNT(*) as total_emp"])
+  File "apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 290, in get_query
+    self.apply_fields(fields)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 345, in apply_fields
+    self.fields = self.parse_fields(fields)
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 1131, in parse_fields
+    if sanitized_item := _validate_select_field(item.strip()):
+                         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 2138, in _validate_select_field
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_(
+     ^^
+    ...<2 lines>...
+    	frappe.ValidationError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: SQL functions are not allowed as strings in SELECT: COUNT(*) as total_emp. Use dict syntax like {'COUNT': '*'} instead.
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/practice_app/practice_app/api.py", line 250, in countdetails
+    q = frappe.qb.get_query("Details",fields=["COUNT(*) as total_emp"])
+  File "apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 290, in get_query
+    self.apply_fields(fields)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 345, in apply_fields
+    self.fields = self.parse_fields(fields)
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 1131, in parse_fields
+    if sanitized_item := _validate_select_field(item.strip()):
+                         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 2138, in _validate_select_field
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_(
+     ^^
+    ...<2 lines>...
+    	frappe.ValidationError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: SQL functions are not allowed as strings in SELECT: COUNT(*) as total_emp. Use dict syntax like {'COUNT': '*'} instead.
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'countdetails'. Did you mean: 'count_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.countdetails with module 'practice_app.api' has no attribute 'countdetails'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'countdetails'. Did you mean: 'count_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.countdetails with module 'practice_app.api' has no attribute 'countdetails'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'countdetails'. Did you mean: 'count_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.countdetails with module 'practice_app.api' has no attribute 'countdetails'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/practice_app/practice_app/api.py", line 250, in countdetails
+    q = frappe.qb.get_qury("Details",fields=[{"COUNT":"*","as":"total_emp"}])
+        ^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/local.py", line 66, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: type object 'MariaDB' has no attribute 'get_qury'. Did you mean: 'get_query'?
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'countdetails'. Did you mean: 'count_details'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.countdetails with module 'practice_app.api' has no attribute 'countdetails'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/practice_app/practice_app/api.py", line 250, in countdetails
+    q = frappe.qb.get_query("Details",fields=["COUNT(*) as total_emp"])
+  File "apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 290, in get_query
+    self.apply_fields(fields)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 345, in apply_fields
+    self.fields = self.parse_fields(fields)
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 1131, in parse_fields
+    if sanitized_item := _validate_select_field(item.strip()):
+                         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 2138, in _validate_select_field
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_(
+     ^^
+    ...<2 lines>...
+    	frappe.ValidationError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: SQL functions are not allowed as strings in SELECT: COUNT(*) as total_emp. Use dict syntax like {'COUNT': '*'} instead.
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/practice_app/practice_app/api.py", line 250, in countdetails
+    q = frappe.qb.get_query("Details",fields=["COUNT(*) as total_emp"])
+  File "apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 290, in get_query
+    self.apply_fields(fields)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 345, in apply_fields
+    self.fields = self.parse_fields(fields)
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 1131, in parse_fields
+    if sanitized_item := _validate_select_field(item.strip()):
+                         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 2138, in _validate_select_field
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_(
+     ^^
+    ...<2 lines>...
+    	frappe.ValidationError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: SQL functions are not allowed as strings in SELECT: COUNT(*) as total_emp. Use dict syntax like {'COUNT': '*'} instead.
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/practice_app/practice_app/api.py", line 250, in countdetails
+    q = frappe.qb.get_query(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 290, in get_query
+    self.apply_fields(fields)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 345, in apply_fields
+    self.fields = self.parse_fields(fields)
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 1131, in parse_fields
+    if sanitized_item := _validate_select_field(item.strip()):
+                         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 2138, in _validate_select_field
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_(
+     ^^
+    ...<2 lines>...
+    	frappe.ValidationError,
+     ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: SQL functions are not allowed as strings in SELECT: COUNT(*) as total_emp. Use dict syntax like {'COUNT': '*'} instead.
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'nestedfilter'. Did you mean: 'listfilter'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.nestedfilter with module 'practice_app.api' has no attribute 'nestedfilter'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'nestedfilter'. Did you mean: 'listfilter'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.nestedfilter with module 'practice_app.api' has no attribute 'nestedfilter'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'nestedfilter'. Did you mean: 'listfilter'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.nestedfilter with module 'practice_app.api' has no attribute 'nestedfilter'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'nestedfilter'. Did you mean: 'listfilter'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.nestedfilter with module 'practice_app.api' has no attribute 'nestedfilter'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'listfilter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.listfilter with module 'practice_app.api' has no attribute 'listfilter'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'currenttime'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.currenttime with module 'practice_app.api' has no attribute 'currenttime'
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+AttributeError: module 'practice_app.api' has no attribute 'listfilter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.listfilter with module 'practice_app.api' has no attribute 'listfilter'
+

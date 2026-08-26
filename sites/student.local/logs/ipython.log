@@ -1,0 +1,139 @@
+2026-08-18 07:09:36,807 INFO ipython === bench console session ===
+2026-08-18 07:09:36,808 INFO ipython frappe.get_hooks("base_template")
+2026-08-18 07:09:36,808 INFO ipython frappe.get_hooks("app_include_css")
+2026-08-18 07:09:36,808 INFO ipython === session end ===
+2026-08-18 07:11:09,363 INFO ipython === bench console session ===
+2026-08-18 07:11:09,363 INFO ipython frappe.get_conf().get("host_name")
+2026-08-18 07:11:09,363 INFO ipython frappe.get_conf().get("host_name")
+2026-08-18 07:11:09,363 INFO ipython frappe.get_single("Website Settings").as_dict()
+2026-08-18 07:11:09,363 INFO ipython === session end ===
+2026-08-18 07:12:04,304 INFO ipython === bench console session ===
+2026-08-18 07:12:04,304 INFO ipython frappe.db.get_single_value("Website Settings", "app_name")
+2026-08-18 07:12:04,304 INFO ipython frappe.db.get_single_value("System Settings", "app_name")
+2026-08-18 07:12:04,304 INFO ipython === session end ===
+2026-08-18 07:14:08,275 INFO ipython === bench console session ===
+2026-08-18 07:14:08,275 INFO ipython frappe.get_website_settings("app_name")
+2026-08-18 07:14:08,275 INFO ipython frappe.get_system_settings("app_name")
+2026-08-18 07:14:08,275 INFO ipython frappe.get_hooks("base_template")
+2026-08-18 07:14:08,275 INFO ipython frappe.get_hooks("app_include_css")
+2026-08-18 07:14:08,275 INFO ipython === session end ===
+2026-08-18 07:16:28,272 INFO ipython === bench console session ===
+2026-08-18 07:16:28,273 INFO ipython frappe.get_all("Translation", filters={"source_text": "Login"}, fields=["name", "source_text", "translated_text", "language"])
+2026-08-18 07:16:28,275 INFO ipython === session end ===
+2026-08-18 10:32:43,043 INFO ipython === bench console session ===
+2026-08-18 10:32:43,044 INFO ipython departments = [
+    {
+        "department_name": "Information Technology",
+        "department_code": "IT",
+        "description": "Information Technology Department",
+        "head_of_department": "Dr. Arun Kumar",
+        "status": "Active"
+    },
+    {
+        "department_name": "Computer Science",
+        "department_code": "CSE",
+        "description": "Computer Science Department",
+        "head_of_department": "Dr. Priya Sharma",
+        "status": "Active"
+    },
+    {
+        "department_name": "Electronics and Communication",
+        "department_code": "ECE",
+        "description": "Electronics and Communication Engineering Department",
+        "head_of_department": "Dr. Ravi Kumar",
+        "status": "Active"
+    },
+    {
+        "department_name": "Mechanical Engineering",
+        "department_code": "MECH",
+        "description": "Mechanical Engineering Department",
+        "head_of_department": "Dr. Suresh Babu",
+        "status": "Active"
+    },
+    {
+        "department_name": "Civil Engineering",
+        "department_code": "CIVIL",
+        "description": "Civil Engineering Department",
+        "head_of_department": "Dr. Meena Devi",
+        "status": "Active"
+    }
+]
+
+for data in departments:
+    if not frappe.db.exists(
+        "Department",
+        {"department_code": data["department_code"]}
+    ):
+        doc = frappe.get_doc({
+            "doctype": "Department",
+            **data
+        })
+
+        doc.insert(ignore_permissions=True)
+
+frappe.db.commit()
+
+print("Departments inserted successfully!")
+2026-08-18 10:32:43,044 INFO ipython === session end ===
+2026-08-18 10:36:08,778 INFO ipython === bench console session ===
+2026-08-18 10:36:08,778 INFO ipython frappe.get_meta("Department").module
+2026-08-18 10:36:08,779 INFO ipython frappe.get_all("DocType", fields=["name", "module", "custom"], order_by="name")
+2026-08-18 10:36:08,779 INFO ipython === session end ===
+2026-08-18 11:01:27,994 INFO ipython === bench console session ===
+2026-08-18 11:01:27,997 INFO ipython frappe.get_all(
+    "Module Def",
+    filters={"app_name": "student_management"},
+    fields=["name", "app_name", "custom"]
+)
+2026-08-18 11:01:27,997 INFO ipython === session end ===
+2026-08-18 11:10:16,366 INFO ipython === bench console session ===
+2026-08-18 11:10:16,368 INFO ipython frappe.get_doc("Module Def", "Student Management").as_dict()
+2026-08-18 11:10:16,369 INFO ipython frappe.get_module_path("Student Management")
+2026-08-18 11:10:16,369 INFO ipython === session end ===
+2026-08-18 11:33:33,346 INFO ipython === bench console session ===
+2026-08-18 11:33:33,350 INFO ipython frappe.get_all(
+    "Module Def",
+    filters={"app_name": "student_management"},
+    fields=["name", "module_name", "app_name"]
+)
+2026-08-18 11:33:33,350 INFO ipython === session end ===
+2026-08-19 07:28:22,366 INFO ipython === bench console session ===
+2026-08-19 07:28:22,368 INFO ipython frappe.delete_doc("Module Def", "Student_Management", force=True)frappe.db.commit()
+2026-08-19 07:28:22,368 INFO ipython frappe.delete_doc("Module Def", "Student_Management", force=True)
+frappe.db.commit()
+2026-08-19 07:28:22,368 INFO ipython frappe.delete_doc("Module Def", "student_management", force=True)
+frappe.db.commit()
+2026-08-19 07:28:22,368 INFO ipython === session end ===
+2026-08-25 09:34:07,069 INFO ipython === bench console session ===
+2026-08-25 09:34:07,073 INFO ipython frappe.get_hooks("add_to_apps_screen", app_name="student_management")
+2026-08-25 09:34:07,073 INFO ipython frappe.get_hooks("add_to_apps_screen", app_name=app)
+2026-08-25 09:34:07,073 INFO ipython frappe.get_hooks("add_to_apps_screen")
+2026-08-25 09:34:07,073 INFO ipython import inspect
+import frappe.apps
+
+print(inspect.getsource(frappe.apps.get_apps))
+2026-08-25 09:34:07,073 INFO ipython frappe.get_setup_wizard_completed_apps()
+2026-08-25 09:34:07,073 INFO ipython frappe.get_setup_wizard_not_required_apps()
+2026-08-25 09:34:07,073 INFO ipython frappe.get_roles()
+2026-08-25 09:34:07,073 INFO ipython import frappe.apps
+
+frappe.apps.get_setup_wizard_completed_apps()
+2026-08-25 09:34:07,073 INFO ipython frappe.apps.get_setup_wizard_not_required_apps()
+2026-08-25 09:34:07,073 INFO ipython frappe.apps.get_apps()
+2026-08-25 09:34:07,073 INFO ipython ls -l apps/student_management/student_management/public/logo.png
+2026-08-25 09:34:07,073 INFO ipython === session end ===
+2026-08-25 09:51:54,253 INFO ipython === bench console session ===
+2026-08-25 09:51:54,256 INFO ipython frappe.get_hooks("add_to_apps_screen", app_name="practice_app")
+2026-08-25 09:51:54,256 INFO ipython frappe.apps.get_apps()
+2026-08-25 09:51:54,256 INFO ipython import frappe.apps
+frappe.apps.get_apps()
+2026-08-25 09:51:54,256 INFO ipython === session end ===
+2026-08-25 09:54:14,446 INFO ipython === bench console session ===
+2026-08-25 09:54:14,446 INFO ipython import frappe.apps
+frappe.apps.get_apps()
+2026-08-25 09:54:14,446 INFO ipython import frappe.apps
+frappe.apps.get_apps()
+2026-08-25 09:54:14,446 INFO ipython === session end ===
+2026-08-25 09:55:30,426 INFO ipython === bench console session ===
+2026-08-25 09:55:30,426 INFO ipython frappe.get_hooks("add_to_apps_screen", app_name="practice_app")
+2026-08-25 09:55:30,427 INFO ipython === session end ===

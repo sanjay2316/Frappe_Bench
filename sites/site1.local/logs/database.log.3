@@ -1,0 +1,41 @@
+2026-08-18 08:57:31,041 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCourse Assignment` ADD COLUMN `start_date` date, ADD COLUMN `end_date` date, ADD COLUMN `status` varchar(140)
+2026-08-18 09:03:25,897 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAttendance` ADD COLUMN `student` varchar(140), ADD COLUMN `course` varchar(140), ADD COLUMN `attendance_date` date, ADD COLUMN `status` varchar(140), ADD COLUMN `remarks` text
+2026-08-18 09:08:01,118 WARNING database DDL Query made to DB:
+ALTER TABLE `tabExamination` ADD COLUMN `exam_name` varchar(140), ADD COLUMN `course` varchar(140), ADD COLUMN `academic_year` varchar(140), ADD COLUMN `semester` varchar(140), ADD COLUMN `exam_date` date, ADD COLUMN `exam_type` varchar(140), ADD COLUMN `status` varchar(140)
+2026-08-18 09:09:06,332 WARNING database DDL Query made to DB:
+create table `tabMarks` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-08-18 09:29:29,482 WARNING database DDL Query made to DB:
+create table `tabMarks Detail` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
