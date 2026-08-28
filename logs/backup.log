@@ -6012,3 +6012,29 @@ Backup Summary for testsite.local at 2026-08-26 17:30:18.265834
 Config  : /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260826_173015-testsite_local-site_config_backup.json 266.0B
 Database: /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260826_173015-testsite_local-database.sql.gz 235.9KiB
 Backup for Site testsite.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_822c72c2e1855b78 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _822c72c2e1855b78 | /usr/bin/gzip >> ./site1.local/private/backups/20260827_173002-site1_local-database.sql.gz
+
+Backup Summary for site1.local at 2026-08-27 17:30:05.606608
+Config  : /home/sanjayh/frappe16-bench/sites/site1.local/private/backups/20260827_173002-site1_local-site_config_backup.json 283.0B
+Database: /home/sanjayh/frappe16-bench/sites/site1.local/private/backups/20260827_173002-site1_local-database.sql.gz 386.0KiB
+Backup for Site site1.local has been successfully completed
+File ./student.local/private/backups/20260826_113007-student_local-site_config_backup.json is older than 23 hours
+File ./student.local/private/backups/20260826_173011-student_local-site_config_backup.json is older than 23 hours
+File ./student.local/private/backups/20260826_113007-student_local-database.sql.gz is older than 23 hours
+File ./student.local/private/backups/20260826_173011-student_local-database.sql.gz is older than 23 hours
+set -o pipefail; /usr/bin/mariadb-dump --user=_b00ecb73f360f17d --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _b00ecb73f360f17d | /usr/bin/gzip >> ./student.local/private/backups/20260827_173005-student_local-database.sql.gz
+
+Backup Summary for student.local at 2026-08-27 17:30:07.857726
+Config  : /home/sanjayh/frappe16-bench/sites/student.local/private/backups/20260827_173005-student_local-site_config_backup.json 187.0B
+Database: /home/sanjayh/frappe16-bench/sites/student.local/private/backups/20260827_173005-student_local-database.sql.gz 289.9KiB
+Backup for Site student.local has been successfully completed
+File ./testsite.local/private/backups/20260826_113009-testsite_local-site_config_backup.json is older than 23 hours
+File ./testsite.local/private/backups/20260826_113009-testsite_local-database.sql.gz is older than 23 hours
+File ./testsite.local/private/backups/20260826_173015-testsite_local-database.sql.gz is older than 23 hours
+File ./testsite.local/private/backups/20260826_173015-testsite_local-site_config_backup.json is older than 23 hours
+set -o pipefail; /usr/bin/mariadb-dump --user=_69fa8765336c1e39 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _69fa8765336c1e39 | /usr/bin/gzip >> ./testsite.local/private/backups/20260827_173007-testsite_local-database.sql.gz
+
+Backup Summary for testsite.local at 2026-08-27 17:30:09.241732
+Config  : /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260827_173007-testsite_local-site_config_backup.json 266.0B
+Database: /home/sanjayh/frappe16-bench/sites/testsite.local/private/backups/20260827_173007-testsite_local-database.sql.gz 235.9KiB
+Backup for Site testsite.local has been successfully completed

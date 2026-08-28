@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-08-27 15:01:58.152115",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "history_section",
+  "invoice",
+  "used_amount",
+  "used_reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "history_section",
+   "fieldtype": "Section Break",
+   "label": "History"
+  },
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Invoice",
+   "options": "Name",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "invoice.using_amount",
+   "fieldname": "used_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Used Amount",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "invoice.using_reason",
+   "fieldname": "used_reason",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Used Reason",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-27 16:12:22.268228",
+ "modified_by": "Administrator",
+ "module": "Practice_App",
+ "name": "Amount_Usage",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,23 @@
+<h3>Details Report</h3>
+
+<p>Selected Status: <%= filters.status %></p>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Name 1</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% data.forEach(function(row) { %>
+            <tr>
+                <td><%= row.name %></td>
+                <td><%= row.name1 %></td>
+                <td><%= row.status %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>

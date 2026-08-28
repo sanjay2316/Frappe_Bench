@@ -166,3 +166,15 @@ MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'lo
 2026-08-19 05:40:00,870 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for site1.local
 2026-08-19 05:40:00,871 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for site1.local
 2026-08-19 05:40:00,873 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for site1.local
+2026-08-27 07:32:00,239 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for site1.local
+2026-08-27 07:32:00,245 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for site1.local
+2026-08-27 07:32:00,246 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for site1.local
+2026-08-27 07:32:00,250 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for site1.local
+2026-08-27 07:32:00,252 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for site1.local
+2026-08-27 07:32:00,253 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for site1.local
+2026-08-27 07:32:00,257 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for site1.local
+2026-08-27 07:32:00,260 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for site1.local
+2026-08-27 07:32:00,262 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for site1.local
+2026-08-27 07:32:00,264 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for site1.local
+2026-08-27 07:32:00,266 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for site1.local
+2026-08-27 07:32:00,268 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for site1.local

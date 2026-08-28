@@ -3974,3 +3974,83 @@ Traceback (most recent call last):
     raise exc
 frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.listfilter with module 'practice_app.api' has no attribute 'listfilter'
 
+Wrote document file for DocType Details at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details/details.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details/details.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details/test_details.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/details/details.js already exists, skipping...
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/desk/form/save.py", line 43, in savedocs
+    doc.save()
+    ~~~~~~~~^^
+  File "apps/frappe/frappe/model/document.py", line 550, in save
+    return self._save(*args, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 572, in _save
+    return self.insert()
+           ~~~~~~~~~~~^^
+  File "apps/frappe/frappe/model/document.py", line 479, in insert
+    self.run_before_save_methods()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/model/document.py", line 1403, in run_before_save_methods
+    self.run_method("validate")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1252, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "apps/frappe/frappe/model/document.py", line 1653, in composer
+    return composed(self, method, *args, **kwargs)
+  File "apps/frappe/frappe/model/document.py", line 1627, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+                              ~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1249, in fn
+    return method_object(*args, **kwargs)
+  File "apps/frappe/frappe/core/doctype/data_import/data_import.py", line 61, in validate
+    self.validate_doctype()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/core/doctype/data_import/data_import.py", line 76, in validate_doctype
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_("Data Import is not allowed for {0}. Enable 'Allow Import' in DocType settings.").format(
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    		self.reference_doctype
+      ^^^^^^^^^^^^^^^^^^^^^^
+    	)
+     ^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Data Import is not allowed for Details. Enable 'Allow Import' in DocType settings.
+
+Wrote document file for Report Details Report at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/report/details_report/details_report.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/report/details_report/details_report.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/report/details_report/details_report.js already exists, skipping...
+Wrote document file for Report Details Report at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/report/details_report/details_report.json

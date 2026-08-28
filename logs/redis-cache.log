@@ -552,3 +552,25 @@
 370:M 26 Aug 2026 05:19:17.519 * Running mode=standalone, port=13001.
 370:M 26 Aug 2026 05:19:17.532 * Server initialized
 370:M 26 Aug 2026 05:19:17.532 * Ready to accept connections tcp
+370:signal-handler (1787752020) Received SIGTERM scheduling shutdown...
+370:M 26 Aug 2026 13:47:00.863 * User requested shutdown...
+370:M 26 Aug 2026 13:47:00.865 * Removing the pid file.
+370:M 26 Aug 2026 13:47:00.865 # Redis is now ready to exit, bye bye...
+508:C 27 Aug 2026 05:11:21.978 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+508:C 27 Aug 2026 05:11:21.978 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+508:C 27 Aug 2026 05:11:21.978 * Redis version=8.0.5, bits=64, commit=00000000, modified=0, pid=508, just started
+508:C 27 Aug 2026 05:11:21.978 * Configuration loaded
+508:M 27 Aug 2026 05:11:21.979 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+508:M 27 Aug 2026 05:11:21.979 * monotonic clock: POSIX clock_gettime
+508:M 27 Aug 2026 05:11:21.980 * Running mode=standalone, port=13001.
+508:M 27 Aug 2026 05:11:22.176 * Server initialized
+508:M 27 Aug 2026 05:11:22.176 * Ready to accept connections tcp
+505:C 28 Aug 2026 05:02:08.544 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+505:C 28 Aug 2026 05:02:08.544 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+505:C 28 Aug 2026 05:02:08.544 * Redis version=8.0.5, bits=64, commit=00000000, modified=0, pid=505, just started
+505:C 28 Aug 2026 05:02:08.544 * Configuration loaded
+505:M 28 Aug 2026 05:02:08.545 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+505:M 28 Aug 2026 05:02:08.545 * monotonic clock: POSIX clock_gettime
+505:M 28 Aug 2026 05:02:08.547 * Running mode=standalone, port=13001.
+505:M 28 Aug 2026 05:02:08.556 * Server initialized
+505:M 28 Aug 2026 05:02:08.557 * Ready to accept connections tcp

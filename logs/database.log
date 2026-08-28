@@ -2207,3 +2207,140 @@ alter table `tabChild_Table` add column if not exists parenttype varchar(140)
 alter table `tabChild_Table` add column if not exists parentfield varchar(140)
 2026-08-26 06:58:56,077 WARNING database DDL Query made to DB:
 ALTER TABLE `tabChild_Table` ADD COLUMN `project_date` date
+2026-08-27 09:21:20,423 WARNING database DDL Query made to DB:
+create table `tabIncome` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-08-27 09:23:36,978 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIncome` ADD COLUMN `principal_amount` decimal(21,2) NOT NULL DEFAULT 0.0, ADD COLUMN `remaining_amount` decimal(21,9) NOT NULL DEFAULT 0.0
+2026-08-27 09:23:54,358 WARNING database DDL Query made to DB:
+create sequence if not exists income_id_seq nocache nocycle
+2026-08-27 09:23:54,391 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIncome` MODIFY `name` bigint
+2026-08-27 09:24:27,207 WARNING database DDL Query made to DB:
+create table `tabInvoice` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-08-27 09:26:50,222 WARNING database DDL Query made to DB:
+ALTER TABLE `tabInvoice` ADD COLUMN `select_amount` varchar(140), ADD COLUMN `principal_amount` decimal(21,9) NOT NULL DEFAULT 0.0
+2026-08-27 09:27:44,667 WARNING database DDL Query made to DB:
+ALTER TABLE `tabInvoice` ADD COLUMN `remaining_amount` decimal(21,2) NOT NULL DEFAULT 0.0
+2026-08-27 09:27:44,691 WARNING database DDL Query made to DB:
+ALTER TABLE `tabInvoice` MODIFY `principal_amount` decimal(21,2) NOT NULL DEFAULT 0.0
+2026-08-27 09:30:59,147 WARNING database DDL Query made to DB:
+ALTER TABLE `tabInvoice` ADD COLUMN `using_amount` decimal(21,9) NOT NULL DEFAULT 0.0
+2026-08-27 09:31:58,209 WARNING database DDL Query made to DB:
+create table `tabAmount_Usage` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-08-27 09:34:06,963 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parent varchar(140)
+2026-08-27 09:34:06,966 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parenttype varchar(140)
+2026-08-27 09:34:06,968 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parentfield varchar(140)
+2026-08-27 09:34:07,059 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAmount_Usage` ADD COLUMN `invoice` varchar(140), ADD COLUMN `used_amount` decimal(21,2) NOT NULL DEFAULT 0.0
+2026-08-27 09:36:06,126 WARNING database DDL Query made to DB:
+ALTER TABLE `tabInvoice` ADD COLUMN `using_reason` varchar(140)
+2026-08-27 09:36:45,969 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parent varchar(140)
+2026-08-27 09:36:45,975 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parenttype varchar(140)
+2026-08-27 09:36:45,976 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parentfield varchar(140)
+2026-08-27 09:36:46,060 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAmount_Usage` ADD COLUMN `used_reason` varchar(140)
+2026-08-27 09:37:01,804 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parent varchar(140)
+2026-08-27 09:37:01,806 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parenttype varchar(140)
+2026-08-27 09:37:01,807 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parentfield varchar(140)
+2026-08-27 09:42:49,992 WARNING database DDL Query made to DB:
+ALTER TABLE `tabInvoice` ADD COLUMN `select_income` varchar(140)
+2026-08-27 09:43:49,833 WARNING database DDL Query made to DB:
+ALTER TABLE `tabInvoice` MODIFY `using_amount` decimal(21,2) NOT NULL DEFAULT 0.0
+2026-08-27 09:45:13,423 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parent varchar(140)
+2026-08-27 09:45:13,430 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parenttype varchar(140)
+2026-08-27 09:45:13,437 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parentfield varchar(140)
+2026-08-27 09:45:27,549 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parent varchar(140)
+2026-08-27 09:45:27,550 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parenttype varchar(140)
+2026-08-27 09:45:27,552 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parentfield varchar(140)
+2026-08-27 10:32:33,084 WARNING database DDL Query made to DB:
+create sequence if not exists invoice_id_seq nocache nocycle
+2026-08-27 10:32:33,138 WARNING database DDL Query made to DB:
+ALTER TABLE `tabInvoice` MODIFY `name` bigint
+2026-08-27 10:41:51,221 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parent varchar(140)
+2026-08-27 10:41:51,230 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parenttype varchar(140)
+2026-08-27 10:41:51,231 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parentfield varchar(140)
+2026-08-27 10:42:06,546 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parent varchar(140)
+2026-08-27 10:42:06,561 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parenttype varchar(140)
+2026-08-27 10:42:06,563 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parentfield varchar(140)
+2026-08-27 10:42:22,481 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parent varchar(140)
+2026-08-27 10:42:22,498 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parenttype varchar(140)
+2026-08-27 10:42:22,503 WARNING database DDL Query made to DB:
+alter table `tabAmount_Usage` add column if not exists parentfield varchar(140)
+2026-08-27 10:49:53,831 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIncome` MODIFY `remaining_amount` decimal(21,2) NOT NULL DEFAULT 0.0
+2026-08-27 11:01:36,507 WARNING database DDL Query made to DB:
+ALTER TABLE `tabInvoice` MODIFY `name` varchar(140)
+2026-08-27 11:01:41,804 WARNING database DDL Query made to DB:
+create sequence if not exists invoice_id_seq nocache nocycle
+2026-08-27 11:01:41,853 WARNING database DDL Query made to DB:
+ALTER TABLE `tabInvoice` MODIFY `name` bigint

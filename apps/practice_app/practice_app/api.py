@@ -351,3 +351,32 @@ def childtable():
 
 # explanation
 # when use "as" alias you will not get the child table filter
+
+
+
+@frappe.whitelist()
+def check_income_amount(income, using_amount):
+    docu = frappe.get_doc("Income", income)
+
+    if docu.remaining_amount < float(using_amount):
+        frappe.throw(
+            "INVALID AMOUNT REMAINING AMT : "
+            + str(docu.remaining_amount)
+        )
+
+
+@frappe.whitelist()
+def update_income(income, invoice, using_amount, using_reason):
+    docu = frappe.get_doc("Income", income)
+
+    docu.remaining_amount = (
+        docu.remaining_amount - float(using_amount)
+    )
+
+    docu.append("reference", {
+        "invoice": invoice,
+        "used_amount": using_amount,
+        "used_reason": using_reason
+    })
+
+    docu.save()

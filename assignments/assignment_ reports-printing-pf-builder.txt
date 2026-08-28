@@ -1,0 +1,72 @@
+JINJA JSON (TEST)
+----------------------------------------------------
+
+
+
+{
+ "absolute_value": 0,
+ "align_labels_right": 0,
+ "creation": "2026-08-13 12:47:47.606519",
+ "custom_format": 1,
+ "default_print_language": "en",
+ "disabled": 0,
+ "doc_type": "Details",
+ "docstatus": 0,
+ "doctype": "Print Format",
+ "font_size": 14,
+ "html": "<h2>Details Information</h2>\r\n\r\n<p>\r\n    <strong>Name:</strong>\r\n    {{ doc.name1 }}\r\n</p>\r\n\r\n<p>\r\n    <strong>Email:</strong>\r\n    {{ doc.email }}\r\n</p>\r\n\r\n<p>\r\n    <strong>Phone:</strong>\r\n    {{ doc.new_data }}\r\n</p>\r\n\r\n<p>\r\n    <strong>Status:</strong>\r\n    {{ doc.status }}\r\n</p>\r\n\r\n<p>\r\n    <strong>Checked:</strong>\r\n    {% if doc.check %}\r\n        Yes\r\n    {% else %}\r\n        No\r\n    {% endif %}\r\n</p>\r\n\r\n{% if doc.attachment %}\r\n<p>\r\n    <strong>Attachment:</strong>\r\n    <a href=\"{{ doc.attachment }}\">View Attachment</a>\r\n</p>\r\n{% endif %}",
+ "idx": 0,
+ "line_breaks": 0,
+ "margin_bottom": 15.0,
+ "margin_left": 15.0,
+ "margin_right": 15.0,
+ "margin_top": 15.0,
+ "modified": "2026-08-13 12:47:47.606519",
+ "modified_by": "Administrator",
+ "module": "Practice_App",
+ "name": "Test",
+ "owner": "Administrator",
+ "page_number": "Hide",
+ "pdf_generator": "wkhtmltopdf",
+ "print_format_builder": 0,
+ "print_format_builder_beta": 0,
+ "print_format_for": "DocType",
+ "print_format_type": "Jinja",
+ "raw_printing": 0,
+ "show_section_headings": 0,
+ "standard": "Yes"
+}
+
+
+
+
+
+
+
+
+HTML REPORT (DETAILS REPORT)
+-----------------------------------------------------------
+
+<h3>Details Report</h3>
+
+<p>Selected Status: <%= filters.status %></p>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Name 1</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% data.forEach(function(row) { %>
+            <tr>
+                <td><%= row.name %></td>
+                <td><%= row.name1 %></td>
+                <td><%= row.status %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
