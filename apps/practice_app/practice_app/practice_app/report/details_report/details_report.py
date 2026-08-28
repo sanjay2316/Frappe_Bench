@@ -18,6 +18,11 @@ def execute(filters=None):
             "label": _("Status"),
             "fieldname": "status",
             "fieldtype": "Data"
+        },
+        {
+            "label": _("Amount"),
+            "fieldname": "amount",
+            "fieldtype": "Currency"
         }
     ]
 
@@ -26,5 +31,8 @@ def execute(filters=None):
         filters={"status": filters.get("status")} if filters.get("status") else {},
         fields=["name", "name1", "status"]
     )
+
+    for i, row in enumerate(data):
+        row["amount"] = (i + 1) * 1000
 
     return columns, data

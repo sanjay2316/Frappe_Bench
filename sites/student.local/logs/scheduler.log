@@ -281,3 +281,6 @@
 2026-08-28 06:40:01,063 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
 2026-08-28 06:44:00,269 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
 2026-08-28 06:48:00,432 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
+2026-08-28 06:52:00,721 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
+2026-08-28 06:56:00,908 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
+2026-08-28 07:00:01,015 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
