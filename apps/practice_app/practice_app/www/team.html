@@ -1,0 +1,12 @@
+<h1>{{ title }}</h1>
+
+<h2>Our Team Members</h2>
+
+<ul>
+    {% for user in users %}
+        <li>
+            <strong>{{ user.name1 }}</strong>
+            - {{ user.email }}
+        </li>
+    {% endfor %}
+</ul>

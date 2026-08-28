@@ -464,3 +464,11 @@ MySQLdb.OperationalError: (1045, "Access denied for user '_822c72c2e1855b78'@'lo
 2026-08-28 06:52:00,721 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
 2026-08-28 06:56:00,908 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
 2026-08-28 07:00:01,015 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
+2026-08-28 07:04:00,179 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
+2026-08-28 07:08:00,355 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
+2026-08-28 07:16:00,901 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
+2026-08-28 07:31:24,558 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
+2026-08-28 07:32:00,781 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
+2026-08-28 08:37:34,575 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
+2026-08-28 08:40:00,771 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
+2026-08-28 08:44:00,974 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for student.local
