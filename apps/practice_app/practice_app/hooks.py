@@ -125,3 +125,4 @@ additional_timeline_content = {
         "practice_app.timeline.details_timeline"
     ]
 }
+fixtures = ["Client Script"]

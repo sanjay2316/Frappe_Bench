@@ -1,0 +1,233 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-07-30 11:47:33.657303",
+  "module": "Practice_App",
+  "name": "ClientSide",
+  "script": "frappe.ui.form.on('Details', {\n\trefresh(frm) {\n\t\tfrappe.msgprint(\"Hi from client_side\");\n\t}\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-07-29 16:54:34.975800",
+  "module": "Practice_App",
+  "name": "After_Save",
+  "script": "frappe.ui.form.on(\"Details\", {\n    after_save(frm) {\n        console.log(\"Record Saved Successfully\");\n    }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Leave_Submit",
+  "enabled": 0,
+  "modified": "2026-07-30 11:47:39.726650",
+  "module": "Practice_App",
+  "name": "Before_Submit",
+  "script": "frappe.ui.form.on('Leave_Submit', {\n\ton_submit(frm) {\n\t\tfrappe.msgprint(\"On Submit\");\n\t\tconsole.log(\"On Submit\");\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-07-30 11:47:50.383759",
+  "module": "Practice_App",
+  "name": "Email_Script",
+  "script": "frappe.ui.form.on('Details', {\n\tafter_save(frm) {\n\t\tfrm.email_doc(`Hello ${frm.doc.name1}`);\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-07-30 12:28:33.823423",
+  "module": "Practice_App",
+  "name": "Reload_Script",
+  "script": "frappe.ui.form.on(\"Details\", {\r\n    refresh(frm) {\r\n        frm.add_custom_button(\"Approve\", () => {\r\n            frappe.call({\r\n                method: \"practice_app.practice_app.doctype.details.details.change_status\",\r\n                args: {\r\n                    docname: frm.doc.name\r\n                },\r\n                callback() {\r\n                    frm.reload_doc();\r\n                }\r\n            });\r\n        });\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-07-30 15:40:49.717768",
+  "module": "Practice_App",
+  "name": "Set_Intro",
+  "script": "frappe.ui.form.on(\"Details\", {\r\n    refresh(frm) {\r\n        if (!frm.doc.new_data) {\r\n            frappe.throw(\"Please set the value of New Data.\");\r\n        }\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-07-30 15:27:51.416898",
+  "module": "Practice_App",
+  "name": "Custom_Button",
+  "script": "frappe.ui.form.on(\"Details\", {\r\n    refresh(frm) {\r\n        frm.add_custom_button(\"Open Current Document\", () => {\r\n            frappe.set_route(\"Form\", \"Details\", frm.doc.name);\r\n        });\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-07-30 15:40:58.612618",
+  "module": "Practice_App",
+  "name": "Df_Property",
+  "script": "frappe.ui.form.on('Details', {\n\trefresh(frm) {\n\t\tfrm.set_df_property(\"email\",\"reqd\",0);\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-07-30 16:07:53.182429",
+  "module": "Practice_App",
+  "name": "Toggle_Enable",
+  "script": "frappe.ui.form.on('Details', {\n\t    refresh(frm) {\n        let is_allowed = frappe.user_roles.includes(\"System Manager\");\n        frm.toggle_enable([\"status\"], is_allowed);\n    }\n\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-07-31 11:39:32.881922",
+  "module": "Practice_App",
+  "name": "Reqd_Toggle",
+  "script": "frappe.ui.form.on(\"Details\", {\r\n    refresh(frm) {\r\n        frm.toggle_reqd(\"new_data\", frm.doc.check);\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details_email",
+  "enabled": 0,
+  "modified": "2026-07-31 12:08:33.532335",
+  "module": "Practice_App",
+  "name": "Set_Query",
+  "script": "frappe.ui.form.on('Details_email', {\n    setup(frm) {\n        frm.set_query(\"select_data\", function() {\n            return {\n                filters: {\n                    check: 1\n                }\n            };\n        });\n    }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-07-31 15:15:11.978543",
+  "module": "Practice_App",
+  "name": "Add_Child",
+  "script": "frappe.ui.form.on(\"Details\", {\r\n    refresh(frm) {\r\n\r\n        let row = frm.add_child(\"table\");\r\n\r\n        row.project_id = \"PJ1\";\r\n        row.project_name = \"Project One\";\r\n        frm.refresh_field(\"table\");\r\n    }\r\n    \r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-08-07 11:48:11.256129",
+  "module": "Practice_App",
+  "name": "Add_Row",
+  "script": "frappe.ui.form.on('Details', {\n\trefresh(frm) {\n\t\t\n\t}\n})\n\nfrappe.ui.form.on('Child_Table', {\n\ttable_add(){\n\t    frappe.msgprint(\"New row added !\")\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-08-01 11:34:51.367051",
+  "module": "Practice_App",
+  "name": "Move_Child",
+  "script": "frappe.ui.form.on('Details', {\n\trefresh(frm) {\n\t\t// your code here\n\t}\n})\n\nfrappe.ui.form.on('Child_Table', {\n\ttable_move(){\n\t    frappe.msgprint(\"Table order changed !\")\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-08-01 11:34:56.881951",
+  "module": "Practice_App",
+  "name": "Before_Remove",
+  "script": "frappe.ui.form.on('Details', {\n\trefresh(frm) {\n\t\t// your code here\n\t}\n})\n\nfrappe.ui.form.on('Child_Table', {\n\tbefore_table_remove(frm,cdt,cdn) {\n\t\tfrappe.msgprint(\"Removing Row !\")\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-08-01 11:39:02.100941",
+  "module": "Practice_App",
+  "name": "Remove_Child",
+  "script": "frappe.ui.form.on('Details', {\n\trefresh(frm) {\n\t\t// your code here\n\t}\n})\n\nfrappe.ui.form.on('Child_Table', {\n    table_remove(frm) {\n\t\tfrappe.msgprint(\"Removed Row and Rows left are : \"+frm.doc.table.length)\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-08-01 11:41:50.914765",
+  "module": "Practice_App",
+  "name": "Form_Render",
+  "script": "frappe.ui.form.on('Details', {\n\trefresh(frm) {\n\t\t// your code here\n\t}\n})\n\nfrappe.ui.form.on('Child_Table', {\n\tform_render(frm) {\n\t\tfrappe.msgprint(\"Form opened\")\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Task",
+  "enabled": 0,
+  "modified": "2026-08-14 15:30:19.242529",
+  "module": "Practice_App",
+  "name": "Task_Dialog",
+  "script": "frappe.ui.form.on(\"Task\", {\r\n    refresh(frm) {\r\n        frm.add_custom_button(\"Create Task\", function () {\r\n\r\n            let dialog = new frappe.ui.Dialog({\r\n                title: \"Create Task\",\r\n                fields: [\r\n                    {\r\n                        label: \"Task Subject\",\r\n                        fieldname: \"task_subject\",\r\n                        fieldtype: \"Data\",\r\n                        reqd: 1\r\n                    }\r\n                ],\r\n                primary_action_label: \"Create Task\",\r\n                primary_action(values) {\r\n\r\n                    frappe.call({\r\n                        method: \"practice_app.api.create_task\",\r\n                        args: {\r\n                            task_subject: values.task_subject\r\n                        },\r\n                        callback: function (r) {\r\n\r\n                            dialog.hide();\r\n\r\n                            frappe.msgprint({\r\n                                title: \"Success\",\r\n                                indicator: \"green\",\r\n                                message: `Task ${r.message} created successfully.`\r\n                            });\r\n\r\n                        }\r\n                    });\r\n\r\n                }\r\n            });\r\n\r\n            dialog.show();\r\n\r\n        });\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-08-14 16:58:06.247998",
+  "module": "Practice_App",
+  "name": "Test_1",
+  "script": "frappe.ui.form.on('Details', {\n\trefresh(frm) {\n\t\tfrm.add_custom_button(\"Change Status\",()=>{\n\t\t    frm.set_value(\"status\",\"Approve\")\n\t\t    frm.refresh_field(\"status\")\n\t\t})\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 0,
+  "modified": "2026-08-29 15:12:54.184374",
+  "module": "Practice_App",
+  "name": "Test_2",
+  "script": "frappe.ui.form.on('Details', {\n\trefresh(frm) {\n\t\tif(frm.doc.status===\"Pending\"){\n\t\t    frm.add_custom_button(\"Approve\",()=>{\n\t\t        frm.set_value(\"status\",\"Approve\")\n\t\t        frappe.msgprint(\"Employee approved successfully\")\n\t\t        frm.remove_custom_button(\"Approve\")\n\t\t    })\n\t\t}\n\t},\n\tstatus(frm){\n\t\t if(frm.doc.status===\"Approve\"){\n\t\t        frm.remove_custom_button(\"Approve\")\n\t\t }\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "User",
+  "enabled": 1,
+  "modified": "2026-08-29 15:51:19.602707",
+  "module": "Practice_App",
+  "name": "User_Script",
+  "script": "frappe.ui.form.on('User', {\n\trefresh(frm) {\n\t\tfrm.add_custom_button(\"Send Email\",()=>{\n\t\t    frappe.msgprint(\"Mail Sent !\")\n\t\t},\"Actions\")\n\t}\n})",
+  "view": "Form"
+ }
+]
