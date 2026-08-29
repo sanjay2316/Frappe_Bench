@@ -749,3 +749,47 @@ q.run(as_dict=True)
 
 q.run(as_dict=True)
 2026-08-26 13:34:44,070 INFO ipython === session end ===
+2026-08-28 13:10:42,227 INFO ipython === bench console session ===
+2026-08-28 13:10:42,231 INFO ipython im
+2026-08-28 13:10:42,231 INFO ipython import frappe
+2026-08-28 13:10:42,231 INFO ipython frappe.get_all(
+    "Employee Portal",
+    fields=[
+        "name",
+        "employee_id",
+        "date",
+        "log",
+        "log_in_time",
+        "log_out_time"
+    ],
+    order_by="creation desc"
+)
+2026-08-28 13:10:42,231 INFO ipython frappe.db.exists(
+    "Employee Portal",
+    {
+        "employee_id": "YOUR_EMPLOYEE_ID",
+        "date": "2026-08-28",
+        "log": "In"
+    }
+)
+2026-08-28 13:10:42,231 INFO ipython === session end ===
+2026-08-28 13:52:04,893 INFO ipython === bench console session ===
+2026-08-28 13:52:04,913 INFO ipython frappe.get_all(
+    "Employee Portal",
+    fields=["name", "employee_id", "date", "log", "log_in_time"]
+)
+2026-08-28 13:52:04,914 INFO ipython from practice_app.api import check_first_in
+2026-08-28 13:52:04,914 INFO ipython check_first_in("2026-08-20", "1")
+2026-08-28 13:52:04,914 INFO ipython check_first_in("2026-08-21", "1")
+2026-08-28 13:52:04,914 INFO ipython frappe.get_all(
+    "Employee Portal",
+    filters={
+        "employee_id": "1",
+        "date": "2026-08-23",
+        "log": "In"
+    },
+    fields=["name", "employee_id", "date", "log", "log_in_time"]
+)
+2026-08-28 13:52:04,914 INFO ipython from practice_app.api import check_first_in
+2026-08-28 13:52:04,914 INFO ipython check_first_in("2026-08-23", "1")
+2026-08-28 13:52:04,914 INFO ipython === session end ===

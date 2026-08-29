@@ -380,3 +380,87 @@ def update_income(income, invoice, using_amount, using_reason):
     })
 
     docu.save()
+
+
+@frappe.whitelist()
+def check_first_in(date, emp_id):
+    records = frappe.get_all(
+        "Employee Portal",
+        filters={
+            "employee_id": emp_id,
+            "date": date,
+            "log": "In"
+        },
+        fields=["name"],
+        limit=1
+    )
+    if records:
+        return False
+    return True
+
+@frappe.whitelist()
+def check_out(date, emp_id):
+    records = frappe.get_all(
+        "Employee Portal",
+        filters={
+            "employee_id": emp_id,
+            "date": date,
+            "log": "In"
+        },
+        fields=["name"],
+        limit=1
+    )
+    if records:
+        return True
+    return False
+
+@frappe.whitelist()
+def check_out_details(date, emp_id):
+    records = frappe.get_all(
+        "Employee Portal",
+        filters={
+            "employee_id": emp_id,
+            "date": date,
+            "log": "In"
+        },
+        fields=["name", "log_in_time"],
+        limit=1
+    )
+    if records:
+        return records[0]
+    return None
+
+@frappe.whitelist()
+def update_attendance(date, emp_id, status , hours, intime, outtime):
+    records = frappe.get_all(
+        "Employee Portal",
+        filters={
+            "employee_id": emp_id,
+            "date": date,
+            "log": "In"
+        },
+        fields=["name"],
+        limit=1
+    )
+    if not records:
+        frappe.throw("Employee Portal record not found")
+
+    employee = frappe.get_doc("Employee", emp_id)
+
+    employee.append("attendance", {
+        "employee_id": emp_id,
+        "date": date,
+        "status": status,
+        "total_working_hours" : hours,
+        "in_time" : intime,
+        "out_time" : outtime,
+    })
+
+    employee.save()
+
+    frappe.delete_doc(
+        "Employee Portal",
+        records[0].name
+    )
+
+    return True

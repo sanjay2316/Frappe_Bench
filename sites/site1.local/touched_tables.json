@@ -1,9 +1,7 @@
 [
     "tabNavbar",
-    "tabError",
+    "tabSingles",
     "tabInstalled Application",
     "tabNavbar Item",
-    "tabInstalled",
-    "tabSingles",
-    "tabError Log"
+    "tabInstalled"
 ]

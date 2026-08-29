@@ -2344,3 +2344,140 @@ ALTER TABLE `tabInvoice` MODIFY `name` varchar(140)
 create sequence if not exists invoice_id_seq nocache nocycle
 2026-08-27 11:01:41,853 WARNING database DDL Query made to DB:
 ALTER TABLE `tabInvoice` MODIFY `name` bigint
+2026-08-28 10:43:14,175 WARNING database DDL Query made to DB:
+create table `tabEmployee` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-08-28 10:46:11,653 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee` ADD COLUMN `employee_id` varchar(140) UNIQUE, ADD COLUMN `employee_name` varchar(140), ADD COLUMN `date_of_birth` date
+2026-08-28 10:46:11,665 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee` ADD UNIQUE INDEX IF NOT EXISTS employee_id (`employee_id`)
+2026-08-28 10:46:38,776 WARNING database DDL Query made to DB:
+create sequence if not exists employee_id_seq nocache nocycle
+2026-08-28 10:46:38,817 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee` MODIFY `name` bigint
+2026-08-28 10:50:16,207 WARNING database DDL Query made to DB:
+create table `tabEmployee Attendance` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-08-28 10:52:17,098 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parent varchar(140)
+2026-08-28 10:52:17,109 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parenttype varchar(140)
+2026-08-28 10:52:17,112 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parentfield varchar(140)
+2026-08-28 10:52:17,214 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Attendance` ADD COLUMN `employee_id` varchar(140), ADD COLUMN `date` date, ADD COLUMN `status` varchar(140)
+2026-08-28 10:54:47,407 WARNING database DDL Query made to DB:
+create table `tabEmployee Portal` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-08-28 10:59:22,782 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Portal` ADD COLUMN `employee_id` varchar(140), ADD COLUMN `log` varchar(140), ADD COLUMN `log_in_time` time(6), ADD COLUMN `log_out_time` time(6)
+2026-08-28 11:02:53,387 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Portal` ADD COLUMN `date` date
+2026-08-28 11:08:40,214 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parent varchar(140)
+2026-08-28 11:08:40,217 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parenttype varchar(140)
+2026-08-28 11:08:40,220 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parentfield varchar(140)
+2026-08-28 11:12:13,172 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parent varchar(140)
+2026-08-28 11:12:13,178 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parenttype varchar(140)
+2026-08-28 11:12:13,180 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parentfield varchar(140)
+2026-08-28 11:12:44,077 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parent varchar(140)
+2026-08-28 11:12:44,083 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parenttype varchar(140)
+2026-08-28 11:12:44,084 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parentfield varchar(140)
+2026-08-29 06:32:21,662 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parent varchar(140)
+2026-08-29 06:32:21,678 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parenttype varchar(140)
+2026-08-29 06:32:21,680 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parentfield varchar(140)
+2026-08-29 06:32:21,970 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Attendance` ADD COLUMN `total_working_hours` int(11) NOT NULL DEFAULT 0
+2026-08-29 06:32:29,979 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parent varchar(140)
+2026-08-29 06:32:29,984 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parenttype varchar(140)
+2026-08-29 06:32:29,986 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parentfield varchar(140)
+2026-08-29 06:52:00,672 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parent varchar(140)
+2026-08-29 06:52:00,699 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parenttype varchar(140)
+2026-08-29 06:52:00,701 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parentfield varchar(140)
+2026-08-29 06:52:00,950 WARNING database DDL Query made to DB:
+ALTER TABLE `tabEmployee Attendance` ADD COLUMN `in_time` time(6), ADD COLUMN `out_time` time(6)
+2026-08-29 06:52:12,952 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parent varchar(140)
+2026-08-29 06:52:12,966 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parenttype varchar(140)
+2026-08-29 06:52:12,969 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parentfield varchar(140)
+2026-08-29 06:53:09,727 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parent varchar(140)
+2026-08-29 06:53:09,729 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parenttype varchar(140)
+2026-08-29 06:53:09,730 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parentfield varchar(140)
+2026-08-29 06:53:22,278 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parent varchar(140)
+2026-08-29 06:53:22,294 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parenttype varchar(140)
+2026-08-29 06:53:22,296 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parentfield varchar(140)
+2026-08-29 06:53:31,194 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parent varchar(140)
+2026-08-29 06:53:31,196 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parenttype varchar(140)
+2026-08-29 06:53:31,198 WARNING database DDL Query made to DB:
+alter table `tabEmployee Attendance` add column if not exists parentfield varchar(140)

@@ -574,3 +574,12 @@
 505:M 28 Aug 2026 05:02:08.547 * Running mode=standalone, port=13001.
 505:M 28 Aug 2026 05:02:08.556 * Server initialized
 505:M 28 Aug 2026 05:02:08.557 * Ready to accept connections tcp
+383:C 29 Aug 2026 05:03:47.606 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+383:C 29 Aug 2026 05:03:47.617 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+383:C 29 Aug 2026 05:03:47.617 * Redis version=8.0.5, bits=64, commit=00000000, modified=0, pid=383, just started
+383:C 29 Aug 2026 05:03:47.617 * Configuration loaded
+383:M 29 Aug 2026 05:03:47.641 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+383:M 29 Aug 2026 05:03:47.641 * monotonic clock: POSIX clock_gettime
+383:M 29 Aug 2026 05:03:47.647 * Running mode=standalone, port=13001.
+383:M 29 Aug 2026 05:03:47.970 * Server initialized
+383:M 29 Aug 2026 05:03:47.970 * Ready to accept connections tcp

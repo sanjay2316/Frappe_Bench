@@ -4054,3 +4054,934 @@ Wrote document file for Report Details Report at /home/sanjayh/frappe16-bench/ap
 /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/report/details_report/details_report.py already exists, skipping...
 /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/report/details_report/details_report.js already exists, skipping...
 Wrote document file for Report Details Report at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/report/details_report/details_report.json
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 217, in run
+    return _run(
+    	report_name=report_name,
+    ...<6 lines>...
+    	js_filters=js_filters,
+    )
+  File "apps/frappe/frappe/desk/query_report.py", line 269, in _run
+    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 92, in generate_report_result
+    res = get_report_result(report, filters) or []
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/query_report.py", line 68, in get_report_result
+    res = report.execute_script_report(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 199, in execute_script_report
+    res = self.execute_module(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 218, in execute_module
+    return self.get_module_method("execute")(frappe._dict(filters))
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/practice_app/practice_app/practice_app/report/test_report/test_report.py", line 11, in execute
+    data = frappe.db.get_all("Details",
+    	feilds=["name1","status","email"]
+    )
+  File "apps/frappe/frappe/database/database.py", line 823, in get_all
+    return frappe.get_all(*args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1405, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 1380, in get_list
+    return frappe.model.qb_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: DatabaseQuery.execute() got an unexpected keyword argument 'feilds'. Did you mean 'fields'?
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 217, in run
+    return _run(
+    	report_name=report_name,
+    ...<6 lines>...
+    	js_filters=js_filters,
+    )
+  File "apps/frappe/frappe/desk/query_report.py", line 269, in _run
+    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 92, in generate_report_result
+    res = get_report_result(report, filters) or []
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/query_report.py", line 68, in get_report_result
+    res = report.execute_script_report(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 199, in execute_script_report
+    res = self.execute_module(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 218, in execute_module
+    return self.get_module_method("execute")(frappe._dict(filters))
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/practice_app/practice_app/practice_app/report/test_report/test_report.py", line 11, in execute
+    {"label":"Status","fieldtype":"data","fieldname":"status"},
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    {"label":"Email","fieldtype":"data","fieldname":"email"}]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    
+    
+  File "apps/frappe/frappe/database/database.py", line 823, in get_all
+    return frappe.get_all(*args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1405, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 1380, in get_list
+    return frappe.model.qb_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: DatabaseQuery.execute() got an unexpected keyword argument 'feilds'. Did you mean 'fields'?
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 217, in run
+    return _run(
+    	report_name=report_name,
+    ...<6 lines>...
+    	js_filters=js_filters,
+    )
+  File "apps/frappe/frappe/desk/query_report.py", line 269, in _run
+    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 92, in generate_report_result
+    res = get_report_result(report, filters) or []
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/query_report.py", line 68, in get_report_result
+    res = report.execute_script_report(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 199, in execute_script_report
+    res = self.execute_module(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 218, in execute_module
+    return self.get_module_method("execute")(frappe._dict(filters))
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/practice_app/practice_app/practice_app/report/test_report/test_report.py", line 11, in execute
+    {"label":"Status","fieldtype":"data","fieldname":"status"},
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    {"label":"Email","fieldtype":"data","fieldname":"email"}]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    
+    
+  File "apps/frappe/frappe/database/database.py", line 823, in get_all
+    return frappe.get_all(*args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1405, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 1380, in get_list
+    return frappe.model.qb_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: DatabaseQuery.execute() got an unexpected keyword argument 'feilds'. Did you mean 'fields'?
+
+Wrote document file for Report Test Report at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/report/test_report/test_report.json
+Wrote document file for Report Details Report at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/report/details_report/details_report.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/report/details_report/details_report.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/report/details_report/details_report.js already exists, skipping...
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 217, in run
+    return _run(
+    	report_name=report_name,
+    ...<6 lines>...
+    	js_filters=js_filters,
+    )
+  File "apps/frappe/frappe/desk/query_report.py", line 269, in _run
+    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 92, in generate_report_result
+    res = get_report_result(report, filters) or []
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/query_report.py", line 65, in get_report_result
+    res = report.execute_query_report(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 173, in execute_query_report
+    frappe.throw(_("Must specify a Query to run"), title=_("Report Document Error"))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Must specify a Query to run
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 217, in run
+    return _run(
+    	report_name=report_name,
+    ...<6 lines>...
+    	js_filters=js_filters,
+    )
+  File "apps/frappe/frappe/desk/query_report.py", line 269, in _run
+    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 92, in generate_report_result
+    res = get_report_result(report, filters) or []
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/query_report.py", line 65, in get_report_result
+    res = report.execute_query_report(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 173, in execute_query_report
+    frappe.throw(_("Must specify a Query to run"), title=_("Report Document Error"))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Must specify a Query to run
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 217, in run
+    return _run(
+    	report_name=report_name,
+    ...<6 lines>...
+    	js_filters=js_filters,
+    )
+  File "apps/frappe/frappe/desk/query_report.py", line 269, in _run
+    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 92, in generate_report_result
+    res = get_report_result(report, filters) or []
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/query_report.py", line 65, in get_report_result
+    res = report.execute_query_report(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 173, in execute_query_report
+    frappe.throw(_("Must specify a Query to run"), title=_("Report Document Error"))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Must specify a Query to run
+
+Wrote document file for Report QUERY TEST at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/report/query_test/query_test.json
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 217, in run
+    return _run(
+    	report_name=report_name,
+    ...<6 lines>...
+    	js_filters=js_filters,
+    )
+  File "apps/frappe/frappe/desk/query_report.py", line 269, in _run
+    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 92, in generate_report_result
+    res = get_report_result(report, filters) or []
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/query_report.py", line 65, in get_report_result
+    res = report.execute_query_report(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 173, in execute_query_report
+    frappe.throw(_("Must specify a Query to run"), title=_("Report Document Error"))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Must specify a Query to run
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 217, in run
+    return _run(
+    	report_name=report_name,
+    ...<6 lines>...
+    	js_filters=js_filters,
+    )
+  File "apps/frappe/frappe/desk/query_report.py", line 269, in _run
+    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 92, in generate_report_result
+    res = get_report_result(report, filters) or []
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/query_report.py", line 65, in get_report_result
+    res = report.execute_query_report(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 173, in execute_query_report
+    frappe.throw(_("Must specify a Query to run"), title=_("Report Document Error"))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Must specify a Query to run
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 217, in run
+    return _run(
+    	report_name=report_name,
+    ...<6 lines>...
+    	js_filters=js_filters,
+    )
+  File "apps/frappe/frappe/desk/query_report.py", line 269, in _run
+    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 92, in generate_report_result
+    res = get_report_result(report, filters) or []
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/query_report.py", line 65, in get_report_result
+    res = report.execute_query_report(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 173, in execute_query_report
+    frappe.throw(_("Must specify a Query to run"), title=_("Report Document Error"))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Must specify a Query to run
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/desk/form/save.py", line 43, in savedocs
+    doc.save()
+    ~~~~~~~~^^
+  File "apps/frappe/frappe/model/document.py", line 550, in save
+    return self._save(*args, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 587, in _save
+    self.run_before_save_methods()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/model/document.py", line 1403, in run_before_save_methods
+    self.run_method("validate")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1252, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "apps/frappe/frappe/model/document.py", line 1653, in composer
+    return composed(self, method, *args, **kwargs)
+  File "apps/frappe/frappe/model/document.py", line 1627, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+                              ~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1249, in fn
+    return method_object(*args, **kwargs)
+  File "apps/frappe/frappe/core/doctype/doctype/doctype.py", line 208, in validate
+    validate_fields(self)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "apps/frappe/frappe/core/doctype/doctype/doctype.py", line 1756, in validate_fields
+    check_illegal_characters(d.fieldname)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "apps/frappe/frappe/core/doctype/doctype/doctype.py", line 1288, in check_illegal_characters
+    validate_column_name(fieldname)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "apps/frappe/frappe/database/schema.py", line 397, in validate_column_name
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_("Fieldname {0} cannot have special characters like {1}").format(
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    	frappe.db.InvalidColumnName,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.database.database.Database.InvalidColumnName: Fieldname <strong>log-in_time</strong> cannot have special characters like "-"
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/desk/form/save.py", line 43, in savedocs
+    doc.save()
+    ~~~~~~~~^^
+  File "apps/frappe/frappe/model/document.py", line 550, in save
+    return self._save(*args, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 587, in _save
+    self.run_before_save_methods()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/model/document.py", line 1403, in run_before_save_methods
+    self.run_method("validate")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1252, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "apps/frappe/frappe/model/document.py", line 1653, in composer
+    return composed(self, method, *args, **kwargs)
+  File "apps/frappe/frappe/model/document.py", line 1627, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+                              ~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1249, in fn
+    return method_object(*args, **kwargs)
+  File "apps/frappe/frappe/core/doctype/doctype/doctype.py", line 208, in validate
+    validate_fields(self)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "apps/frappe/frappe/core/doctype/doctype/doctype.py", line 1756, in validate_fields
+    check_illegal_characters(d.fieldname)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "apps/frappe/frappe/core/doctype/doctype/doctype.py", line 1288, in check_illegal_characters
+    validate_column_name(fieldname)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "apps/frappe/frappe/database/schema.py", line 397, in validate_column_name
+    frappe.throw(
+    ~~~~~~~~~~~~^
+    	_("Fieldname {0} cannot have special characters like {1}").format(
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    	frappe.db.InvalidColumnName,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.database.database.Database.InvalidColumnName: Fieldname <strong>log-out_time</strong> cannot have special characters like "-"
+
+Wrote document file for DocType Employee Portal at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/test_employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.js already exists, skipping...
+Wrote document file for DocType Employee at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/test_employee.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.js already exists, skipping...
+Wrote document file for DocType Employee Attendance at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_attendance/employee_attendance.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_attendance/employee_attendance.py already exists, skipping...
+Wrote document file for DocType Employee Portal at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/test_employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.js already exists, skipping...
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 217, in run
+    return _run(
+    	report_name=report_name,
+    ...<6 lines>...
+    	js_filters=js_filters,
+    )
+  File "apps/frappe/frappe/desk/query_report.py", line 269, in _run
+    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 92, in generate_report_result
+    res = get_report_result(report, filters) or []
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/query_report.py", line 65, in get_report_result
+    res = report.execute_query_report(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 173, in execute_query_report
+    frappe.throw(_("Must specify a Query to run"), title=_("Report Document Error"))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Must specify a Query to run
+
+Wrote document file for DocType Employee Attendance at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_attendance/employee_attendance.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_attendance/employee_attendance.py already exists, skipping...
+Wrote document file for DocType Employee Portal at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/test_employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.js already exists, skipping...
+Wrote document file for DocType Employee at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/test_employee.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.js already exists, skipping...
+Wrote document file for DocType Employee at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/test_employee.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.js already exists, skipping...
+Wrote document file for DocType Employee Portal at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/test_employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.js already exists, skipping...
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 217, in run
+    return _run(
+    	report_name=report_name,
+    ...<6 lines>...
+    	js_filters=js_filters,
+    )
+  File "apps/frappe/frappe/desk/query_report.py", line 269, in _run
+    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 92, in generate_report_result
+    res = get_report_result(report, filters) or []
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/query_report.py", line 65, in get_report_result
+    res = report.execute_query_report(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 173, in execute_query_report
+    frappe.throw(_("Must specify a Query to run"), title=_("Report Document Error"))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Must specify a Query to run
+
+Wrote document file for DocType Employee Portal at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/test_employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.js already exists, skipping...
+Wrote document file for DocType Employee Portal at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/test_employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.js already exists, skipping...
+Wrote document file for Report QUERY TEST at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/report/query_test/query_test.json
+Wrote document file for Report QUERY TEST at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/report/query_test/query_test.json
+Wrote document file for DocType Employee at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/test_employee.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.js already exists, skipping...
+Wrote document file for DocType Employee at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/test_employee.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.js already exists, skipping...
+Wrote document file for DocType Employee Attendance at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_attendance/employee_attendance.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_attendance/employee_attendance.py already exists, skipping...
+Wrote document file for DocType Employee at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.json
+Wrote document file for DocType Employee Attendance at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_attendance/employee_attendance.json
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 217, in run
+    return _run(
+    	report_name=report_name,
+    ...<6 lines>...
+    	js_filters=js_filters,
+    )
+  File "apps/frappe/frappe/desk/query_report.py", line 269, in _run
+    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 92, in generate_report_result
+    res = get_report_result(report, filters) or []
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/query_report.py", line 65, in get_report_result
+    res = report.execute_query_report(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 173, in execute_query_report
+    frappe.throw(_("Must specify a Query to run"), title=_("Report Document Error"))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Must specify a Query to run
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1147, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 217, in run
+    return _run(
+    	report_name=report_name,
+    ...<6 lines>...
+    	js_filters=js_filters,
+    )
+  File "apps/frappe/frappe/desk/query_report.py", line 269, in _run
+    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)
+  File "apps/frappe/frappe/__init__.py", line 508, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/query_report.py", line 92, in generate_report_result
+    res = get_report_result(report, filters) or []
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/query_report.py", line 65, in get_report_result
+    res = report.execute_query_report(filters)
+  File "apps/frappe/frappe/core/doctype/report/report.py", line 173, in execute_query_report
+    frappe.throw(_("Must specify a Query to run"), title=_("Report Document Error"))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Must specify a Query to run
+
+Wrote document file for DocType Employee at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/test_employee.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee/employee.js already exists, skipping...
+Wrote document file for DocType Employee Portal at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.json
+Wrote document file for DocType Employee Portal at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/test_employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.js already exists, skipping...
+Wrote document file for DocType Employee Attendance at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_attendance/employee_attendance.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_attendance/employee_attendance.py already exists, skipping...
+Wrote document file for DocType Employee Portal at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/test_employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.js already exists, skipping...
+Wrote document file for DocType Employee Portal at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/test_employee_portal.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/employee_portal/employee_portal.js already exists, skipping...
