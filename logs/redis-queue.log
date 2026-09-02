@@ -9000,3 +9000,8 @@
 2860:C 02 Sep 2026 08:56:31.106 * DB saved on disk
 2860:C 02 Sep 2026 08:56:31.107 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
 380:M 02 Sep 2026 08:56:31.192 * Background saving terminated with success
+380:M 02 Sep 2026 09:01:32.068 * 100 changes in 300 seconds. Saving...
+380:M 02 Sep 2026 09:01:32.080 * Background saving started by pid 3083
+3083:C 02 Sep 2026 09:01:32.097 * DB saved on disk
+3083:C 02 Sep 2026 09:01:32.098 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+380:M 02 Sep 2026 09:01:32.182 * Background saving terminated with success
