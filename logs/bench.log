@@ -1704,3 +1704,6 @@
 2026-09-02 07:21:12,491 INFO /usr/local/bin/bench schedule
 2026-09-02 07:21:12,518 INFO /usr/local/bin/bench worker --queue short,default
 2026-09-02 07:23:11,498 INFO /home/sanjayh/.local/bin/bench start
+2026-09-02 09:58:56,978 INFO /home/sanjayh/.local/bin/bench run-tests --app practice_app
+2026-09-02 09:59:11,059 INFO /home/sanjayh/.local/bin/bench --site site1.local set-config allow_tests true
+2026-09-02 09:59:14,044 INFO /home/sanjayh/.local/bin/bench run-tests --app practice_app

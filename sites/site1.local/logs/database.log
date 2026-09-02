@@ -306,3 +306,23 @@ alter table `tabEmployee Attendance` add column if not exists parent varchar(140
 alter table `tabEmployee Attendance` add column if not exists parenttype varchar(140)
 2026-08-29 06:53:31,198 WARNING database DDL Query made to DB:
 alter table `tabEmployee Attendance` add column if not exists parentfield varchar(140)
+2026-09-02 09:30:07,759 WARNING database DDL Query made to DB:
+create table `tabArticle` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-09-02 09:31:15,009 WARNING database DDL Query made to DB:
+ALTER TABLE `tabArticle` ADD COLUMN `title` varchar(140), ADD COLUMN `status` varchar(140)
