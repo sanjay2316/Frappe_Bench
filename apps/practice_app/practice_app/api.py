@@ -1,4 +1,5 @@
 import frappe
+from frappe.rate_limiter import rate_limit
 
 @frappe.whitelist()
 def create_task(task_subject):
@@ -464,3 +465,12 @@ def update_attendance(date, emp_id, status , hours, intime, outtime):
     )
 
     return True
+
+@frappe.whitelist(allow_guest=True)
+@rate_limit(limit=5, seconds=60)
+
+def limited_greeting():
+    logger = frappe.logger()
+    logger.info("Endpoint called.")
+
+    frappe.response["message"] = "Hello, Rate Limited World!"

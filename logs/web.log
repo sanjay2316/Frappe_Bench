@@ -5019,3 +5019,65 @@ Traceback (most recent call last):
     return func(*args, **kwargs)
 TypeError: getdoctype() missing 1 required positional argument: 'doctype'
 
+Wrote document file for DocType Article at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/article/article.json
+Wrote document file for DocType Article at /home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/article/article.json
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/article/article.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/article/test_article.py already exists, skipping...
+/home/sanjayh/frappe16-bench/apps/practice_app/practice_app/practice_app/doctype/article/article.js already exists, skipping...
+Traceback (most recent call last):
+  File "apps/frappe/frappe/handler.py", line 75, in execute_cmd
+    method = get_attr(cmd)
+  File "apps/frappe/frappe/handler.py", line 259, in get_attr
+    method = frappe.get_attr(cmd)
+  File "apps/frappe/frappe/__init__.py", line 1137, in get_attr
+    return getattr(get_module(modulename), methodname)
+                   ~~~~~~~~~~^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 837, in get_module
+    return importlib.import_module(modulename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "apps/practice_app/practice_app/api.py", line 468, in <module>
+    @frappe.whitelist(allow_guest=True, rate_limit=5)
+     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: whitelist() got an unexpected keyword argument 'rate_limit'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 77, in execute_cmd
+    frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/messages.py", line 159, in throw
+    msgprint(
+    ~~~~~~~~^
+    	msg,
+     ^^^^
+    ...<7 lines>...
+    	allow_dangerous_html=allow_dangerous_html,
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "apps/frappe/frappe/utils/messages.py", line 118, in msgprint
+    _raise_exception()
+    ~~~~~~~~~~~~~~~~^^
+  File "apps/frappe/frappe/utils/messages.py", line 59, in _raise_exception
+    raise exc
+frappe.exceptions.ValidationError: Failed to get method for command practice_app.api.limited_greeting with whitelist() got an unexpected keyword argument 'rate_limit'
+

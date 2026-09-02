@@ -9344,3 +9344,49 @@ ModuleNotFoundError: No module named 'practice_app.override'
 [2026-09-02 07:21:18 +0000] [1145] [INFO] Booting worker with pid: 1145
 [2026-09-02 07:21:18 +0000] [1146] [INFO] Booting worker with pid: 1146
 [2026-09-02 07:21:18 +0000] [1147] [INFO] Booting worker with pid: 1147
+[2026-09-02 11:01:48 +0000] [381] [INFO] Handling signal: term
+[2026-09-02 11:01:48 +0000] [1116] [INFO] Worker exiting (pid: 1116)
+[2026-09-02 11:01:48 +0000] [1117] [INFO] Worker exiting (pid: 1117)
+[2026-09-02 11:01:48 +0000] [1144] [INFO] Worker exiting (pid: 1144)
+[2026-09-02 11:01:48 +0000] [1147] [INFO] Worker exiting (pid: 1147)
+[2026-09-02 11:01:48 +0000] [1129] [INFO] Worker exiting (pid: 1129)
+[2026-09-02 11:01:48 +0000] [1143] [INFO] Worker exiting (pid: 1143)
+[2026-09-02 11:01:48 +0000] [1145] [INFO] Worker exiting (pid: 1145)
+[2026-09-02 11:01:48 +0000] [1142] [INFO] Worker exiting (pid: 1142)
+[2026-09-02 11:01:48 +0000] [1146] [INFO] Worker exiting (pid: 1146)
+[2026-09-02 11:01:54 +0000] [381] [INFO] Shutting down: Master
+[2026-09-02 11:01:58 +0000] [19687] [INFO] Starting gunicorn 23.0.0
+[2026-09-02 11:01:58 +0000] [19687] [INFO] Listening at: http://127.0.0.1:8001 (19687)
+[2026-09-02 11:01:58 +0000] [19687] [INFO] Using worker: sync
+[2026-09-02 11:01:58 +0000] [19706] [INFO] Booting worker with pid: 19706
+[2026-09-02 11:01:58 +0000] [19707] [INFO] Booting worker with pid: 19707
+[2026-09-02 11:01:59 +0000] [19712] [INFO] Booting worker with pid: 19712
+[2026-09-02 11:01:59 +0000] [19713] [INFO] Booting worker with pid: 19713
+[2026-09-02 11:01:59 +0000] [19714] [INFO] Booting worker with pid: 19714
+[2026-09-02 11:01:59 +0000] [19715] [INFO] Booting worker with pid: 19715
+[2026-09-02 11:01:59 +0000] [19718] [INFO] Booting worker with pid: 19718
+[2026-09-02 11:01:59 +0000] [19719] [INFO] Booting worker with pid: 19719
+[2026-09-02 11:01:59 +0000] [19720] [INFO] Booting worker with pid: 19720
+[2026-09-02 11:05:51 +0000] [19687] [INFO] Handling signal: term
+[2026-09-02 11:05:51 +0000] [19719] [INFO] Worker exiting (pid: 19719)
+[2026-09-02 11:05:51 +0000] [19713] [INFO] Worker exiting (pid: 19713)
+[2026-09-02 11:05:51 +0000] [19707] [INFO] Worker exiting (pid: 19707)
+[2026-09-02 11:05:51 +0000] [19706] [INFO] Worker exiting (pid: 19706)
+[2026-09-02 11:05:51 +0000] [19715] [INFO] Worker exiting (pid: 19715)
+[2026-09-02 11:05:51 +0000] [19720] [INFO] Worker exiting (pid: 19720)
+[2026-09-02 11:05:51 +0000] [19712] [INFO] Worker exiting (pid: 19712)
+[2026-09-02 11:05:51 +0000] [19718] [INFO] Worker exiting (pid: 19718)
+[2026-09-02 11:05:51 +0000] [19714] [INFO] Worker exiting (pid: 19714)
+[2026-09-02 11:05:53 +0000] [19687] [INFO] Shutting down: Master
+[2026-09-02 11:05:55 +0000] [19882] [INFO] Starting gunicorn 23.0.0
+[2026-09-02 11:05:55 +0000] [19882] [INFO] Listening at: http://127.0.0.1:8001 (19882)
+[2026-09-02 11:05:55 +0000] [19882] [INFO] Using worker: sync
+[2026-09-02 11:05:56 +0000] [19898] [INFO] Booting worker with pid: 19898
+[2026-09-02 11:05:56 +0000] [19899] [INFO] Booting worker with pid: 19899
+[2026-09-02 11:05:56 +0000] [19900] [INFO] Booting worker with pid: 19900
+[2026-09-02 11:05:56 +0000] [19901] [INFO] Booting worker with pid: 19901
+[2026-09-02 11:05:56 +0000] [19902] [INFO] Booting worker with pid: 19902
+[2026-09-02 11:05:56 +0000] [19903] [INFO] Booting worker with pid: 19903
+[2026-09-02 11:05:56 +0000] [19904] [INFO] Booting worker with pid: 19904
+[2026-09-02 11:05:56 +0000] [19905] [INFO] Booting worker with pid: 19905
+[2026-09-02 11:05:56 +0000] [19909] [INFO] Booting worker with pid: 19909

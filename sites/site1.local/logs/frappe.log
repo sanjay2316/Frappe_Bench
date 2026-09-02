@@ -874,3 +874,9 @@ Form Dict: {'doc': '{"name":"Employee Portal","owner":"Administrator","creation"
 2026-08-29 10:19:00,936 ERROR frappe New Exception collected in error log
 Site: site1.local
 Form Dict: {'with_parent': '1', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2026-09-02 11:03:06,268 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.limited_greeting'}
+2026-09-02 11:07:19,351 ERROR frappe New Exception collected in error log
+Site: site1.local
+Form Dict: {'cmd': 'practice_app.api.limited_greeting'}

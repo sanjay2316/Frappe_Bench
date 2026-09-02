@@ -1707,3 +1707,19 @@
 2026-09-02 09:58:56,978 INFO /home/sanjayh/.local/bin/bench run-tests --app practice_app
 2026-09-02 09:59:11,059 INFO /home/sanjayh/.local/bin/bench --site site1.local set-config allow_tests true
 2026-09-02 09:59:14,044 INFO /home/sanjayh/.local/bin/bench run-tests --app practice_app
+2026-09-02 10:18:46,652 INFO /home/sanjayh/.local/bin/bench run-tests --app practiec_app
+2026-09-02 11:01:40,847 INFO /home/sanjayh/.local/bin/bench restart
+2026-09-02 11:01:47,851 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-09-02 11:01:56,405 INFO /usr/local/bin/bench socketio
+2026-09-02 11:01:57,314 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-09-02 11:01:59,110 INFO /usr/local/bin/bench schedule
+2026-09-02 11:01:59,150 INFO /usr/local/bin/bench worker --queue short,default
+2026-09-02 11:01:59,320 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-09-02 11:04:19,943 INFO /home/sanjayh/.local/bin/bench version
+2026-09-02 11:05:51,153 INFO /home/sanjayh/.local/bin/bench restart
+2026-09-02 11:05:51,595 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-web:
+2026-09-02 11:05:54,913 INFO /usr/local/bin/bench socketio
+2026-09-02 11:05:55,977 DEBUG cd /home/sanjayh/frappe16-bench && sudo supervisorctl restart frappe16-bench-workers:
+2026-09-02 11:05:56,622 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-09-02 11:05:56,656 INFO /usr/local/bin/bench schedule
+2026-09-02 11:05:56,659 INFO /usr/local/bin/bench worker --queue short,default
