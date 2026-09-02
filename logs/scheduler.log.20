@@ -1,4 +1,4 @@
-2026-08-01 05:04:01,058 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 06:08:00,569 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -112,7 +112,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-08-01 05:08:00,170 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 06:12:00,683 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -226,7 +226,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-08-01 05:12:00,276 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 06:16:00,816 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -340,7 +340,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-08-01 05:16:00,364 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 06:20:00,897 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -454,7 +454,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-08-01 05:20:00,716 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 06:24:00,998 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -568,7 +568,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-08-01 05:24:00,930 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 06:28:00,100 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -682,7 +682,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-08-01 05:28:00,971 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 06:32:00,233 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -796,7 +796,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-08-01 05:32:00,276 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 06:36:00,363 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -910,7 +910,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-08-01 05:50:18,842 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 06:40:00,377 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -1024,7 +1024,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-08-01 05:52:00,089 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 06:44:01,335 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -1138,7 +1138,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-08-01 05:56:00,239 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 06:48:00,493 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -1252,7 +1252,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-08-01 06:00:00,282 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 06:52:00,675 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]
@@ -1366,7 +1366,7 @@ Traceback (most recent call last):
     super().__init__(*args, **kwargs2)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
 MySQLdb.OperationalError: (1045, "Access denied for user '_2c0861da27548010'@'localhost' (using password: YES)")
-2026-08-01 06:04:00,497 ERROR scheduler Exception in Enqueue Events for Site project1
+2026-08-01 06:56:00,719 ERROR scheduler Exception in Enqueue Events for Site project1
 Traceback (most recent call last):
   File "/home/sanjayh/frappe16-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
     return _cache[func][args_key]

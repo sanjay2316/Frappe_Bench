@@ -9321,3 +9321,26 @@ ModuleNotFoundError: No module named 'practice_app.override'
 [2026-08-29 05:03:56 +0000] [1138] [INFO] Booting worker with pid: 1138
 [2026-08-29 05:03:56 +0000] [1139] [INFO] Booting worker with pid: 1139
 [2026-08-29 05:03:56 +0000] [1140] [INFO] Booting worker with pid: 1140
+[2026-08-29 13:40:15 +0000] [385] [INFO] Handling signal: term
+[2026-08-29 13:40:15 +0000] [1134] [INFO] Worker exiting (pid: 1134)
+[2026-08-29 13:40:15 +0000] [1132] [INFO] Worker exiting (pid: 1132)
+[2026-08-29 13:40:15 +0000] [1139] [INFO] Worker exiting (pid: 1139)
+[2026-08-29 13:40:15 +0000] [1136] [INFO] Worker exiting (pid: 1136)
+[2026-08-29 13:40:15 +0000] [1140] [INFO] Worker exiting (pid: 1140)
+[2026-08-29 13:40:15 +0000] [1138] [INFO] Worker exiting (pid: 1138)
+[2026-08-29 13:40:15 +0000] [1137] [INFO] Worker exiting (pid: 1137)
+[2026-08-29 13:40:15 +0000] [1133] [INFO] Worker exiting (pid: 1133)
+[2026-08-29 13:40:15 +0000] [1135] [INFO] Worker exiting (pid: 1135)
+[2026-08-29 13:40:20 +0000] [385] [INFO] Shutting down: Master
+[2026-09-02 07:21:17 +0000] [381] [INFO] Starting gunicorn 23.0.0
+[2026-09-02 07:21:17 +0000] [381] [INFO] Listening at: http://127.0.0.1:8001 (381)
+[2026-09-02 07:21:17 +0000] [381] [INFO] Using worker: sync
+[2026-09-02 07:21:18 +0000] [1116] [INFO] Booting worker with pid: 1116
+[2026-09-02 07:21:18 +0000] [1117] [INFO] Booting worker with pid: 1117
+[2026-09-02 07:21:18 +0000] [1129] [INFO] Booting worker with pid: 1129
+[2026-09-02 07:21:18 +0000] [1143] [INFO] Booting worker with pid: 1143
+[2026-09-02 07:21:18 +0000] [1142] [INFO] Booting worker with pid: 1142
+[2026-09-02 07:21:18 +0000] [1144] [INFO] Booting worker with pid: 1144
+[2026-09-02 07:21:18 +0000] [1145] [INFO] Booting worker with pid: 1145
+[2026-09-02 07:21:18 +0000] [1146] [INFO] Booting worker with pid: 1146
+[2026-09-02 07:21:18 +0000] [1147] [INFO] Booting worker with pid: 1147

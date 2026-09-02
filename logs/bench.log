@@ -1698,3 +1698,9 @@
 2026-08-29 05:46:11,050 INFO /home/sanjayh/.local/bin/bench clear-cache
 2026-08-29 05:46:16,781 INFO /home/sanjayh/.local/bin/bench migrate
 2026-08-29 10:25:30,592 INFO /home/sanjayh/.local/bin/bench export-fixtures
+2026-08-29 12:00:02,127 INFO /home/sanjayh/.local/bin/bench --verbose --site all backup
+2026-09-02 07:21:12,474 INFO /usr/local/bin/bench socketio
+2026-09-02 07:21:12,474 INFO /usr/local/bin/bench worker --queue long,default,short
+2026-09-02 07:21:12,491 INFO /usr/local/bin/bench schedule
+2026-09-02 07:21:12,518 INFO /usr/local/bin/bench worker --queue short,default
+2026-09-02 07:23:11,498 INFO /home/sanjayh/.local/bin/bench start
